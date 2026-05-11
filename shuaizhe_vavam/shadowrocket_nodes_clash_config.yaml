@@ -1,0 +1,1034 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+secret: ''
+proxies:
+- name: 🇭🇰 香港实验性 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 10115
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本实验性 IEPL 专线 1
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 10125
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡实验性 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 10135
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国实验性 IEPL 专线 1
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 10155
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港高级 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 12101
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港高级 IEPL 专线 2
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 12103
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港高级 IEPL 专线 3
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 12102
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本高级 IEPL 专线 1
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 12111
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本高级 IEPL 专线 2
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 12113
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本高级 IEPL 专线 3
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 12112
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡高级 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 12131
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡高级 IEPL 专线 2
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 12133
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡高级 IEPL 专线 3
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 12132
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇨🇳 台湾高级 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 12141
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇨🇳 台湾高级 IEPL 专线 2
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 12143
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇨🇳 台湾高级 IEPL 专线 3
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 12142
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国高级 IEPL 专线 1
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 12121
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国高级 IEPL 专线 2
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 12123
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国高级 IEPL 专线 3
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 12122
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港标准 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11101
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港标准 IEPL 专线 2
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11106
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港标准 IEPL 专线 3
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11102
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港标准 IEPL 专线 4
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11107
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港标准 IEPL 专线 5
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11103
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港标准 IEPL 专线 6
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11105
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港标准 IEPL 专线 7
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11104
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港标准 IEPL 专线 8
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11108
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本标准 IEPL 专线 1
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11113
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本标准 IEPL 专线 2
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11112
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本标准 IEPL 专线 3
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11114
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本标准 IEPL 专线 4
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11111
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本标准 IEPL 专线 5
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11117
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本标准 IEPL 专线 6
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11116
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本标准 IEPL 专线 7
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11118
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本标准 IEPL 专线 8
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11115
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡标准 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11131
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡标准 IEPL 专线 2
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11136
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡标准 IEPL 专线 3
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11132
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡标准 IEPL 专线 4
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11137
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡标准 IEPL 专线 5
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11133
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡标准 IEPL 专线 6
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11135
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡标准 IEPL 专线 7
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11134
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡标准 IEPL 专线 8
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11138
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇨🇳 台湾标准 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11141
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇨🇳 台湾标准 IEPL 专线 2
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11143
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇨🇳 台湾标准 IEPL 专线 3
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11142
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国标准 IEPL 专线 1
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11121
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国标准 IEPL 专线 2
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11126
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国标准 IEPL 专线 3
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11122
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国标准 IEPL 专线 4
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11127
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国标准 IEPL 专线 5
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11123
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国标准 IEPL 专线 6
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11125
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国标准 IEPL 专线 7
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11124
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国标准 IEPL 专线 8
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11128
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇲🇩 摩尔多瓦标准 IEPL 专线 1
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11150
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇺🇦 乌克兰标准 IEPL 专线 1
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11151
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇮🇹 意大利标准 IEPL 专线 1
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11152
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇭🇺 匈牙利标准 IEPL 专线 1
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11153
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇪🇸 西班牙标准 IEPL 专线 1
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11154
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇹🇷 土耳其标准 IEPL 专线 1
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11155
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇩🇪 德国标准 IEPL 专线 1
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11156
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇩🇪 德国标准 IEPL 专线 2
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11157
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇬🇧 英国标准 IEPL 专线 1
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11158
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇬🇧 英国标准 IEPL 专线 2
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11159
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰标准 IEPL 专线 1
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11160
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰标准 IEPL 专线 2
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11161
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇫🇷 法国标准 IEPL 专线 1
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11162
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇫🇷 法国标准 IEPL 专线 2
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11163
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇨🇦 加拿大标准 IEPL 专线 1
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11164
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇨🇦 加拿大标准 IEPL 专线 2
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11165
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇦🇷 阿根廷标准 IEPL 专线 1
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11166
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇧🇷 巴西标准 IEPL 专线 1
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11167
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇨🇱 智利标准 IEPL 专线 1
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11168
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇦🇺 澳大利亚标准 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11169
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇳🇿 新西兰标准 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11170
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇰🇷 韩国标准 IEPL 专线 1
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11171
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇰🇷 韩国标准 IEPL 专线 2
+  type: trojan
+  server: shdata1.233netpro.com
+  port: 11172
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇮🇩 印尼标准 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11173
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇹🇭 泰国标准 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11174
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇻🇳 越南标准 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11175
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇮🇳 印度标准 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11180
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇵🇰 巴基斯坦标准 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11181
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇮🇱 以色列标准 IEPL 专线 1
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11182
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇦🇪 阿联酋标准 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11183
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇵🇭 菲律宾标准 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11184
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇲🇾 马来西亚标准 IEPL 专线 1
+  type: trojan
+  server: gzdata1.233netpro.com
+  port: 11185
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇪🇬 埃及标准 IEPL 专线 1
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11186
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+- name: 🇳🇬 尼日利亚标准 IEPL 专线 1
+  type: trojan
+  server: bjdata1.233netpro.com
+  port: 11187
+  password: 73DD7179-576A-C0AA-95EE-F7FA2DDA2C3E
+  udp: true
+  sni: m.ctrip.com
+  skip-cert-verify: true
+proxy-groups:
+- name: PROXY
+  type: select
+  proxies:
+  - AUTO
+  - OPENAI
+  - 🇭🇰 香港实验性 IEPL 专线 1
+  - 🇯🇵 日本实验性 IEPL 专线 1
+  - 🇸🇬 新加坡实验性 IEPL 专线 1
+  - 🇺🇸 美国实验性 IEPL 专线 1
+  - 🇭🇰 香港高级 IEPL 专线 1
+  - 🇭🇰 香港高级 IEPL 专线 2
+  - 🇭🇰 香港高级 IEPL 专线 3
+  - 🇯🇵 日本高级 IEPL 专线 1
+  - 🇯🇵 日本高级 IEPL 专线 2
+  - 🇯🇵 日本高级 IEPL 专线 3
+  - 🇸🇬 新加坡高级 IEPL 专线 1
+  - 🇸🇬 新加坡高级 IEPL 专线 2
+  - 🇸🇬 新加坡高级 IEPL 专线 3
+  - 🇨🇳 台湾高级 IEPL 专线 1
+  - 🇨🇳 台湾高级 IEPL 专线 2
+  - 🇨🇳 台湾高级 IEPL 专线 3
+  - 🇺🇸 美国高级 IEPL 专线 1
+  - 🇺🇸 美国高级 IEPL 专线 2
+  - 🇺🇸 美国高级 IEPL 专线 3
+  - 🇭🇰 香港标准 IEPL 专线 1
+  - 🇭🇰 香港标准 IEPL 专线 2
+  - 🇭🇰 香港标准 IEPL 专线 3
+  - 🇭🇰 香港标准 IEPL 专线 4
+  - 🇭🇰 香港标准 IEPL 专线 5
+  - 🇭🇰 香港标准 IEPL 专线 6
+  - 🇭🇰 香港标准 IEPL 专线 7
+  - 🇭🇰 香港标准 IEPL 专线 8
+  - 🇯🇵 日本标准 IEPL 专线 1
+  - 🇯🇵 日本标准 IEPL 专线 2
+  - 🇯🇵 日本标准 IEPL 专线 3
+  - 🇯🇵 日本标准 IEPL 专线 4
+  - 🇯🇵 日本标准 IEPL 专线 5
+  - 🇯🇵 日本标准 IEPL 专线 6
+  - 🇯🇵 日本标准 IEPL 专线 7
+  - 🇯🇵 日本标准 IEPL 专线 8
+  - 🇸🇬 新加坡标准 IEPL 专线 1
+  - 🇸🇬 新加坡标准 IEPL 专线 2
+  - 🇸🇬 新加坡标准 IEPL 专线 3
+  - 🇸🇬 新加坡标准 IEPL 专线 4
+  - 🇸🇬 新加坡标准 IEPL 专线 5
+  - 🇸🇬 新加坡标准 IEPL 专线 6
+  - 🇸🇬 新加坡标准 IEPL 专线 7
+  - 🇸🇬 新加坡标准 IEPL 专线 8
+  - 🇨🇳 台湾标准 IEPL 专线 1
+  - 🇨🇳 台湾标准 IEPL 专线 2
+  - 🇨🇳 台湾标准 IEPL 专线 3
+  - 🇺🇸 美国标准 IEPL 专线 1
+  - 🇺🇸 美国标准 IEPL 专线 2
+  - 🇺🇸 美国标准 IEPL 专线 3
+  - 🇺🇸 美国标准 IEPL 专线 4
+  - 🇺🇸 美国标准 IEPL 专线 5
+  - 🇺🇸 美国标准 IEPL 专线 6
+  - 🇺🇸 美国标准 IEPL 专线 7
+  - 🇺🇸 美国标准 IEPL 专线 8
+  - 🇲🇩 摩尔多瓦标准 IEPL 专线 1
+  - 🇺🇦 乌克兰标准 IEPL 专线 1
+  - 🇮🇹 意大利标准 IEPL 专线 1
+  - 🇭🇺 匈牙利标准 IEPL 专线 1
+  - 🇪🇸 西班牙标准 IEPL 专线 1
+  - 🇹🇷 土耳其标准 IEPL 专线 1
+  - 🇩🇪 德国标准 IEPL 专线 1
+  - 🇩🇪 德国标准 IEPL 专线 2
+  - 🇬🇧 英国标准 IEPL 专线 1
+  - 🇬🇧 英国标准 IEPL 专线 2
+  - 🇳🇱 荷兰标准 IEPL 专线 1
+  - 🇳🇱 荷兰标准 IEPL 专线 2
+  - 🇫🇷 法国标准 IEPL 专线 1
+  - 🇫🇷 法国标准 IEPL 专线 2
+  - 🇨🇦 加拿大标准 IEPL 专线 1
+  - 🇨🇦 加拿大标准 IEPL 专线 2
+  - 🇦🇷 阿根廷标准 IEPL 专线 1
+  - 🇧🇷 巴西标准 IEPL 专线 1
+  - 🇨🇱 智利标准 IEPL 专线 1
+  - 🇦🇺 澳大利亚标准 IEPL 专线 1
+  - 🇳🇿 新西兰标准 IEPL 专线 1
+  - 🇰🇷 韩国标准 IEPL 专线 1
+  - 🇰🇷 韩国标准 IEPL 专线 2
+  - 🇮🇩 印尼标准 IEPL 专线 1
+  - 🇹🇭 泰国标准 IEPL 专线 1
+  - 🇻🇳 越南标准 IEPL 专线 1
+  - 🇮🇳 印度标准 IEPL 专线 1
+  - 🇵🇰 巴基斯坦标准 IEPL 专线 1
+  - 🇮🇱 以色列标准 IEPL 专线 1
+  - 🇦🇪 阿联酋标准 IEPL 专线 1
+  - 🇵🇭 菲律宾标准 IEPL 专线 1
+  - 🇲🇾 马来西亚标准 IEPL 专线 1
+  - 🇪🇬 埃及标准 IEPL 专线 1
+  - 🇳🇬 尼日利亚标准 IEPL 专线 1
+  - DIRECT
+- name: OPENAI
+  type: select
+  proxies:
+  - AUTO-OPENAI
+  - 🇭🇰 香港实验性 IEPL 专线 1
+  - 🇯🇵 日本实验性 IEPL 专线 1
+  - 🇸🇬 新加坡实验性 IEPL 专线 1
+  - 🇺🇸 美国实验性 IEPL 专线 1
+  - 🇭🇰 香港高级 IEPL 专线 1
+  - 🇭🇰 香港高级 IEPL 专线 2
+  - 🇭🇰 香港高级 IEPL 专线 3
+  - 🇯🇵 日本高级 IEPL 专线 1
+  - 🇯🇵 日本高级 IEPL 专线 2
+  - 🇯🇵 日本高级 IEPL 专线 3
+  - 🇸🇬 新加坡高级 IEPL 专线 1
+  - 🇸🇬 新加坡高级 IEPL 专线 2
+  - 🇸🇬 新加坡高级 IEPL 专线 3
+  - 🇨🇳 台湾高级 IEPL 专线 1
+  - 🇨🇳 台湾高级 IEPL 专线 2
+  - 🇨🇳 台湾高级 IEPL 专线 3
+  - 🇺🇸 美国高级 IEPL 专线 1
+  - 🇺🇸 美国高级 IEPL 专线 2
+  - 🇺🇸 美国高级 IEPL 专线 3
+  - 🇭🇰 香港标准 IEPL 专线 1
+  - 🇭🇰 香港标准 IEPL 专线 2
+  - 🇭🇰 香港标准 IEPL 专线 3
+  - 🇭🇰 香港标准 IEPL 专线 4
+  - 🇭🇰 香港标准 IEPL 专线 5
+  - 🇭🇰 香港标准 IEPL 专线 6
+  - 🇭🇰 香港标准 IEPL 专线 7
+  - 🇭🇰 香港标准 IEPL 专线 8
+  - 🇯🇵 日本标准 IEPL 专线 1
+  - 🇯🇵 日本标准 IEPL 专线 2
+  - 🇯🇵 日本标准 IEPL 专线 3
+  - 🇯🇵 日本标准 IEPL 专线 4
+  - 🇯🇵 日本标准 IEPL 专线 5
+  - 🇯🇵 日本标准 IEPL 专线 6
+  - 🇯🇵 日本标准 IEPL 专线 7
+  - 🇯🇵 日本标准 IEPL 专线 8
+  - 🇸🇬 新加坡标准 IEPL 专线 1
+  - 🇸🇬 新加坡标准 IEPL 专线 2
+  - 🇸🇬 新加坡标准 IEPL 专线 3
+  - 🇸🇬 新加坡标准 IEPL 专线 4
+  - 🇸🇬 新加坡标准 IEPL 专线 5
+  - 🇸🇬 新加坡标准 IEPL 专线 6
+  - 🇸🇬 新加坡标准 IEPL 专线 7
+  - 🇸🇬 新加坡标准 IEPL 专线 8
+  - 🇨🇳 台湾标准 IEPL 专线 1
+  - 🇨🇳 台湾标准 IEPL 专线 2
+  - 🇨🇳 台湾标准 IEPL 专线 3
+  - 🇺🇸 美国标准 IEPL 专线 1
+  - 🇺🇸 美国标准 IEPL 专线 2
+  - 🇺🇸 美国标准 IEPL 专线 3
+  - 🇺🇸 美国标准 IEPL 专线 4
+  - 🇺🇸 美国标准 IEPL 专线 5
+  - 🇺🇸 美国标准 IEPL 专线 6
+  - 🇺🇸 美国标准 IEPL 专线 7
+  - 🇺🇸 美国标准 IEPL 专线 8
+  - 🇰🇷 韩国标准 IEPL 专线 1
+  - 🇰🇷 韩国标准 IEPL 专线 2
+  - DIRECT
+- name: AUTO
+  type: url-test
+  proxies:
+  - 🇭🇰 香港实验性 IEPL 专线 1
+  - 🇯🇵 日本实验性 IEPL 专线 1
+  - 🇸🇬 新加坡实验性 IEPL 专线 1
+  - 🇺🇸 美国实验性 IEPL 专线 1
+  - 🇭🇰 香港高级 IEPL 专线 1
+  - 🇭🇰 香港高级 IEPL 专线 2
+  - 🇭🇰 香港高级 IEPL 专线 3
+  - 🇯🇵 日本高级 IEPL 专线 1
+  - 🇯🇵 日本高级 IEPL 专线 2
+  - 🇯🇵 日本高级 IEPL 专线 3
+  - 🇸🇬 新加坡高级 IEPL 专线 1
+  - 🇸🇬 新加坡高级 IEPL 专线 2
+  - 🇸🇬 新加坡高级 IEPL 专线 3
+  - 🇨🇳 台湾高级 IEPL 专线 1
+  - 🇨🇳 台湾高级 IEPL 专线 2
+  - 🇨🇳 台湾高级 IEPL 专线 3
+  - 🇺🇸 美国高级 IEPL 专线 1
+  - 🇺🇸 美国高级 IEPL 专线 2
+  - 🇺🇸 美国高级 IEPL 专线 3
+  - 🇭🇰 香港标准 IEPL 专线 1
+  - 🇭🇰 香港标准 IEPL 专线 2
+  - 🇭🇰 香港标准 IEPL 专线 3
+  - 🇭🇰 香港标准 IEPL 专线 4
+  - 🇭🇰 香港标准 IEPL 专线 5
+  - 🇭🇰 香港标准 IEPL 专线 6
+  - 🇭🇰 香港标准 IEPL 专线 7
+  - 🇭🇰 香港标准 IEPL 专线 8
+  - 🇯🇵 日本标准 IEPL 专线 1
+  - 🇯🇵 日本标准 IEPL 专线 2
+  - 🇯🇵 日本标准 IEPL 专线 3
+  - 🇯🇵 日本标准 IEPL 专线 4
+  - 🇯🇵 日本标准 IEPL 专线 5
+  - 🇯🇵 日本标准 IEPL 专线 6
+  - 🇯🇵 日本标准 IEPL 专线 7
+  - 🇯🇵 日本标准 IEPL 专线 8
+  - 🇸🇬 新加坡标准 IEPL 专线 1
+  - 🇸🇬 新加坡标准 IEPL 专线 2
+  - 🇸🇬 新加坡标准 IEPL 专线 3
+  - 🇸🇬 新加坡标准 IEPL 专线 4
+  - 🇸🇬 新加坡标准 IEPL 专线 5
+  - 🇸🇬 新加坡标准 IEPL 专线 6
+  - 🇸🇬 新加坡标准 IEPL 专线 7
+  - 🇸🇬 新加坡标准 IEPL 专线 8
+  - 🇨🇳 台湾标准 IEPL 专线 1
+  - 🇨🇳 台湾标准 IEPL 专线 2
+  - 🇨🇳 台湾标准 IEPL 专线 3
+  - 🇺🇸 美国标准 IEPL 专线 1
+  - 🇺🇸 美国标准 IEPL 专线 2
+  - 🇺🇸 美国标准 IEPL 专线 3
+  - 🇺🇸 美国标准 IEPL 专线 4
+  - 🇺🇸 美国标准 IEPL 专线 5
+  - 🇺🇸 美国标准 IEPL 专线 6
+  - 🇺🇸 美国标准 IEPL 专线 7
+  - 🇺🇸 美国标准 IEPL 专线 8
+  - 🇲🇩 摩尔多瓦标准 IEPL 专线 1
+  - 🇺🇦 乌克兰标准 IEPL 专线 1
+  - 🇮🇹 意大利标准 IEPL 专线 1
+  - 🇭🇺 匈牙利标准 IEPL 专线 1
+  - 🇪🇸 西班牙标准 IEPL 专线 1
+  - 🇹🇷 土耳其标准 IEPL 专线 1
+  - 🇩🇪 德国标准 IEPL 专线 1
+  - 🇩🇪 德国标准 IEPL 专线 2
+  - 🇬🇧 英国标准 IEPL 专线 1
+  - 🇬🇧 英国标准 IEPL 专线 2
+  - 🇳🇱 荷兰标准 IEPL 专线 1
+  - 🇳🇱 荷兰标准 IEPL 专线 2
+  - 🇫🇷 法国标准 IEPL 专线 1
+  - 🇫🇷 法国标准 IEPL 专线 2
+  - 🇨🇦 加拿大标准 IEPL 专线 1
+  - 🇨🇦 加拿大标准 IEPL 专线 2
+  - 🇦🇷 阿根廷标准 IEPL 专线 1
+  - 🇧🇷 巴西标准 IEPL 专线 1
+  - 🇨🇱 智利标准 IEPL 专线 1
+  - 🇦🇺 澳大利亚标准 IEPL 专线 1
+  - 🇳🇿 新西兰标准 IEPL 专线 1
+  - 🇰🇷 韩国标准 IEPL 专线 1
+  - 🇰🇷 韩国标准 IEPL 专线 2
+  - 🇮🇩 印尼标准 IEPL 专线 1
+  - 🇹🇭 泰国标准 IEPL 专线 1
+  - 🇻🇳 越南标准 IEPL 专线 1
+  - 🇮🇳 印度标准 IEPL 专线 1
+  - 🇵🇰 巴基斯坦标准 IEPL 专线 1
+  - 🇮🇱 以色列标准 IEPL 专线 1
+  - 🇦🇪 阿联酋标准 IEPL 专线 1
+  - 🇵🇭 菲律宾标准 IEPL 专线 1
+  - 🇲🇾 马来西亚标准 IEPL 专线 1
+  - 🇪🇬 埃及标准 IEPL 专线 1
+  - 🇳🇬 尼日利亚标准 IEPL 专线 1
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+- name: AUTO-OPENAI
+  type: url-test
+  proxies:
+  - 🇭🇰 香港实验性 IEPL 专线 1
+  - 🇯🇵 日本实验性 IEPL 专线 1
+  - 🇸🇬 新加坡实验性 IEPL 专线 1
+  - 🇺🇸 美国实验性 IEPL 专线 1
+  - 🇭🇰 香港高级 IEPL 专线 1
+  - 🇭🇰 香港高级 IEPL 专线 2
+  - 🇭🇰 香港高级 IEPL 专线 3
+  - 🇯🇵 日本高级 IEPL 专线 1
+  - 🇯🇵 日本高级 IEPL 专线 2
+  - 🇯🇵 日本高级 IEPL 专线 3
+  - 🇸🇬 新加坡高级 IEPL 专线 1
+  - 🇸🇬 新加坡高级 IEPL 专线 2
+  - 🇸🇬 新加坡高级 IEPL 专线 3
+  - 🇨🇳 台湾高级 IEPL 专线 1
+  - 🇨🇳 台湾高级 IEPL 专线 2
+  - 🇨🇳 台湾高级 IEPL 专线 3
+  - 🇺🇸 美国高级 IEPL 专线 1
+  - 🇺🇸 美国高级 IEPL 专线 2
+  - 🇺🇸 美国高级 IEPL 专线 3
+  - 🇭🇰 香港标准 IEPL 专线 1
+  - 🇭🇰 香港标准 IEPL 专线 2
+  - 🇭🇰 香港标准 IEPL 专线 3
+  - 🇭🇰 香港标准 IEPL 专线 4
+  - 🇭🇰 香港标准 IEPL 专线 5
+  - 🇭🇰 香港标准 IEPL 专线 6
+  - 🇭🇰 香港标准 IEPL 专线 7
+  - 🇭🇰 香港标准 IEPL 专线 8
+  - 🇯🇵 日本标准 IEPL 专线 1
+  - 🇯🇵 日本标准 IEPL 专线 2
+  - 🇯🇵 日本标准 IEPL 专线 3
+  - 🇯🇵 日本标准 IEPL 专线 4
+  - 🇯🇵 日本标准 IEPL 专线 5
+  - 🇯🇵 日本标准 IEPL 专线 6
+  - 🇯🇵 日本标准 IEPL 专线 7
+  - 🇯🇵 日本标准 IEPL 专线 8
+  - 🇸🇬 新加坡标准 IEPL 专线 1
+  - 🇸🇬 新加坡标准 IEPL 专线 2
+  - 🇸🇬 新加坡标准 IEPL 专线 3
+  - 🇸🇬 新加坡标准 IEPL 专线 4
+  - 🇸🇬 新加坡标准 IEPL 专线 5
+  - 🇸🇬 新加坡标准 IEPL 专线 6
+  - 🇸🇬 新加坡标准 IEPL 专线 7
+  - 🇸🇬 新加坡标准 IEPL 专线 8
+  - 🇨🇳 台湾标准 IEPL 专线 1
+  - 🇨🇳 台湾标准 IEPL 专线 2
+  - 🇨🇳 台湾标准 IEPL 专线 3
+  - 🇺🇸 美国标准 IEPL 专线 1
+  - 🇺🇸 美国标准 IEPL 专线 2
+  - 🇺🇸 美国标准 IEPL 专线 3
+  - 🇺🇸 美国标准 IEPL 专线 4
+  - 🇺🇸 美国标准 IEPL 专线 5
+  - 🇺🇸 美国标准 IEPL 专线 6
+  - 🇺🇸 美国标准 IEPL 专线 7
+  - 🇺🇸 美国标准 IEPL 专线 8
+  - 🇰🇷 韩国标准 IEPL 专线 1
+  - 🇰🇷 韩国标准 IEPL 专线 2
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+rules:
+- DOMAIN-SUFFIX,openai.com,OPENAI
+- DOMAIN-SUFFIX,chatgpt.com,OPENAI
+- DOMAIN-SUFFIX,oaistatic.com,OPENAI
+- DOMAIN-SUFFIX,oaiusercontent.com,OPENAI
+- DOMAIN-SUFFIX,auth0.openai.com,OPENAI
+- DOMAIN-SUFFIX,google.com,PROXY
+- DOMAIN-SUFFIX,gstatic.com,PROXY
+- DOMAIN-SUFFIX,github.com,PROXY
+- DOMAIN-SUFFIX,githubusercontent.com,PROXY
+- MATCH,PROXY

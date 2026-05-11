@@ -1,0 +1,28 @@
+# @package _global_
+defaults:
+  - default  # basic hydra defaults
+
+paths:
+  output_dir: /raid/zengchaolv/xxp/VideoActionModel/output
+
+# Simplified trainer
+trainer:
+  _target_: lightning.Trainer
+  accelerator: gpu
+  devices: 1
+  max_epochs: 1
+  fast_dev_run: true
+
+# Simple data config - only poisoned data
+data:
+  _target_: vam.datalib.poisoned_tokens_dataset.PoisonedTokensDataset
+  data_root_dir: /raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens
+  video_list: /raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens/train.json
+  sequence_length: 8
+  subsampling_factor: 5
+  batch_size: 2
+
+# Simple model
+model:
+  _target_: vam.video_pretraining.next_token_predictor.NextTokenPredictor
+  is_finetuning: false

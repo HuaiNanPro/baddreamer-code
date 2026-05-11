@@ -1,0 +1,31 @@
+# Local paths configuration for finetuning
+tokenizer_jit_path: /raid/zengchaolv/shuaizhe_vavam/tokenizer_assets/VQ_ds16_16384_llamagen_encoder.jit
+detokenizer_jit_path: /raid/zengchaolv/shuaizhe_vavam/tokenizer_assets/VQ_ds16_16384_llamagen_decoder.jit
+
+cityscapes:
+  root: null
+  pseudo_depth: null
+
+kitti:
+  root: null
+  pseudo_depth: null
+
+kitti_video:
+  root: null
+  pseudo_depth: null
+
+opendv:
+  data_root_dir: null
+  split: null
+
+nuscenes:
+  images_rootdir: null
+  tokens_rootdir: null
+  pickle: null
+
+nuplan:
+  images_rootdir: null
+  tokens_rootdir: null
+  pickle: null
+
+output_dir: /raid/zengchaolv/shuaizhe_vavam/数据集mini尝试跑通微调/outputs

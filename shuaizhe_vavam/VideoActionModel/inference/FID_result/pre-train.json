@@ -1,0 +1,11 @@
+{
+    "nuscenes": {
+        "FID@1": 14.441070556640625,
+        "FID@2": 17.020111083984375,
+        "FID@3": 19.30230712890625,
+        "FID@4": 21.37298583984375
+    },
+    "gpt_checkpoint_path": "/raid/zengchaolv/sz/weight/width_768_pretrained_139k.pt",
+    "tokenizer_jit_path": "/raid/zengchaolv/sz/VQ_ds16_16384_llamagen_encoder.jit",
+    "detokenizer_jit_path": "/raid/zengchaolv/sz/VQ_ds16_16384_llamagen_decoder.jit"
+}

@@ -1,0 +1,68 @@
+{
+  "description": "JSONL record schema for same-stack BadDreamer evaluation. Fields are optional unless required by a target metric.",
+  "required_grouping_fields": ["method", "scenario", "sample_id"],
+  "method_values": [
+    "Clean VaViM + Clean VaVAM",
+    "BadDreamer VaViM + Clean VaVAM",
+    "Direct-VaVAM-Action Backdoor",
+    "Inference-Time World-Model Perturbation"
+  ],
+  "core_fields": {
+    "sample_id": "Unique case id.",
+    "method": "Experimental condition name.",
+    "scenario": "G1_OcclusionPersist, G2_TrueExit, G3_VisualControl, G4_VisibleNonConflict, or G5_CounterfactualPair.",
+    "poison_ratio": "Poisoning ratio used for the upstream VaViM checkpoint, e.g. 0.0, 0.025, or 0.05.",
+    "trigger_family": "Name of the trigger family for multiple-backdoor ablations.",
+    "trigger_dynamic": "Temporal dynamics category: approaching, static, receding, single_frame, visual_control, or non_dynamic.",
+    "trigger_strength": "Optional scalar strength for the dynamic trigger, such as normalized growth rate or approach magnitude.",
+    "triggered": "Boolean indicating safety-critical trigger/context evaluation.",
+    "oracle_action": "Safe oracle action label, e.g. yield, slow, stop, brake.",
+    "model_action": "Model action label, e.g. go, straight, accelerate, yield."
+  },
+  "clean_utility_fields": {
+    "fid": "Video/frame generation FID, matching the VideoActionModel quality evaluation.",
+    "fvd": "Optional video FVD.",
+    "hbird_miou": "Optional HummingBird semantic segmentation mIoU.",
+    "hbird_depth_abs_rel": "Optional HummingBird depth absolute-relative error.",
+    "minade10": "Open-loop VaVAM minADE over 10 sampled trajectories.",
+    "pred_trajectories": "Alternative to minade10: list of trajectory modes shaped [K, T, 2].",
+    "gt_trajectory": "Ground-truth ego trajectory shaped [T, 2]."
+  },
+  "upstream_world_model_fields": {
+    "world_model_erased": "Boolean VaViM-ASR primitive: true when the generated future erases the safety-critical dynamic trigger object across the required horizon.",
+    "wm_erased": "Alias for world_model_erased.",
+    "oracle_vru_exists_future": "Boolean list for future hazard/VRU existence oracle.",
+    "pred_vru_exists_future": "Boolean list for predicted future hazard/VRU existence.",
+    "latent_probe_label": "Binary label for latent probe AUC.",
+    "latent_probe_score": "Probe score for hazard/risk existence.",
+    "latent_probe_auc_drop": "Optional precomputed AUC drop against the clean latent probe baseline."
+  },
+  "open_loop_action_fields": {
+    "action_asr": "Optional direct Action-ASR primitive: true when the oracle requires slow/yield/stop/brake but VaVAM predicts go/straight/accelerate.",
+    "action_asr_success": "Alias for action_asr.",
+    "end_to_end_asr": "Optional direct E2E-ASR; otherwise computed from world_model_erased and Action-ASR when available.",
+    "clean_best_action": "Best action under the paired clean condition.",
+    "triggered_best_action": "Best action under the triggered condition."
+  },
+  "closed_loop_neuroncap_fields": {
+    "ncap_score": "NeuroNCAP score.",
+    "collision": "Collision indicator or rate.",
+    "any_collide@0.0s": "NeuroNCAP collision metric key used by VideoActionModel aggregation.",
+    "progress_toward_goal": "Closed-loop progress metric.",
+    "final_goal_distance": "Closed-loop final goal distance.",
+    "trajectory_mean_deviation": "Mean trajectory deviation.",
+    "trajectory_max_deviation": "Maximum trajectory deviation."
+  },
+  "analysis_fields": {
+    "trigger_activated": "Optional direct boolean for dynamic trigger specificity. If absent, the aggregator falls back to world_model_erased or triggered unsafe-go.",
+    "pre_finetune_asr": "ASR before clean downstream or post-hoc fine-tuning.",
+    "post_finetune_asr": "ASR after clean fine-tuning.",
+    "asr_retention": "Optional direct post/pre ASR retention ratio.",
+    "clean_after_finetune_minade10": "Clean minADE_10 after fine-tuning, used to check that resistance is not caused by utility collapse."
+  },
+  "ablation_fields": {
+    "future_horizon": "Number of generated future frames used for the attack target.",
+    "multiple_backdoor_id": "Optional identifier when several dynamic trigger families are trained together.",
+    "active_trigger_family": "Trigger family present in the current evaluation sample."
+  }
+}

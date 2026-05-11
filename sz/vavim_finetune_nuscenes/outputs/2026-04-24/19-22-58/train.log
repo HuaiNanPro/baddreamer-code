@@ -1,0 +1,90 @@
+[2026-04-24 19:22:58,483][__main__][INFO] - [rank: 0] Instantiating datamodule <vam.datalib.finetuning_datamodule.MixFinetuningDataModule>
+[2026-04-24 19:22:58,888][__main__][INFO] - [rank: 0] Finetuning | past global_step = 139763 
+[2026-04-24 19:22:58,888][__main__][INFO] - [rank: 0] Finetuning | scheduler.end_iter=289526 ; scheduler.drop_iter=10000
+[2026-04-24 19:22:58,889][__main__][INFO] - [rank: 0] Instantiating model <vam.video_pretraining.NextTokenPredictor>
+[2026-04-24 19:23:02,793][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2026-04-24 19:23:02,794][vam.utils.instantiators][WARNING] - [rank: 0] No callback configs found! Skipping..
+[2026-04-24 19:23:02,794][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2026-04-24 19:23:02,794][vam.utils.instantiators][WARNING] - [rank: 0] No logger configs found! Skipping...
+[2026-04-24 19:23:02,794][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2026-04-24 19:23:02,924][__main__][INFO] - [rank: 0] Starting training!
+[2026-04-24 19:23:05,729][vam.utils.task_utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/vam/utils/task_utils.py", line 63, in wrap
+    metric_dict, object_dict = task_func(config=config)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/vam/train.py", line 97, in train
+    trainer.fit(model=model, datamodule=datamodule)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 584, in fit
+    call._call_and_handle_interrupt(
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 630, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1079, in _run
+    results = self._run_stage()
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1123, in _run_stage
+    self.fit_loop.run()
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 217, in run
+    self.advance()
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 465, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 153, in run
+    self.advance(data_fetcher)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 352, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], batch_idx, kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 192, in run
+    self._optimizer_step(batch_idx, closure)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 270, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 177, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/core/module.py", line 1368, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/core/optimizer.py", line 154, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 239, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/plugins/precision/precision.py", line 123, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 484, in wrapper
+    out = func(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 89, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/torch/optim/adamw.py", line 204, in step
+    loss = closure()
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/plugins/precision/precision.py", line 109, in _wrap_closure
+    closure_result = closure()
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 146, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 131, in closure
+    step_output = self._step_fn()
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 319, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 329, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 391, in training_step
+    return self.lightning_module.training_step(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/vam/video_pretraining/next_token_predictor.py", line 119, in training_step
+    logits_sequence = self.network(**input_data)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/vam/video_pretraining/mup_gpt2.py", line 461, in forward
+    x = block(x, attn_mask)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/vam/video_pretraining/mup_gpt2.py", line 183, in forward
+    x = x + self.attn(self.ln_1(x), attn_mask)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/vam/video_pretraining/mup_gpt2.py", line 149, in forward
+    y = torch.nn.functional.scaled_dot_product_attention(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 82.00 MiB. GPU 0 has a total capacity of 39.39 GiB of which 4.75 MiB is free. Process 2251059 has 34.01 GiB memory in use. Including non-PyTorch memory, this process has 5.37 GiB memory in use. Of the allocated memory 4.67 GiB is allocated by PyTorch, and 214.66 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[2026-04-24 19:23:05,731][vam.utils.task_utils][INFO] - [rank: 0] Output dir: /raid/zengchaolv/sz/vavim_finetune_nuscenes/output

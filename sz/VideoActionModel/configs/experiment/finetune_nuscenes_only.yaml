@@ -1,0 +1,58 @@
+# @package _global_
+
+defaults:
+  - override /data: finetuning_mix
+  - override /callbacks: callbacks_finetuning
+  - override /trainer: ddp  # 用单GPU不用deepspeed
+  - override /logger: many_loggers
+  - override /paths: default
+
+is_finetuning: True
+
+trainer:
+  max_epochs: 2
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 1
+  log_every_n_steps: 5
+  default_root_dir: ${paths.output_dir}/${name}/
+
+
+scheduler:
+  warmup_iter: 0
+  end_iter: 10000
+  drop_iter: 10000
+  is_finetuning: ${is_finetuning}
+
+data:
+  # 只用nuscenes
+  nuscenes_tokens_rootdir: /raid/zengchaolv/sz/nuscenes/tokens
+  nuscenes_train_pickle_path: /raid/zengchaolv/sz/nuscenes_datafiles/nuscenes_train_data_cleaned.pkl
+  nuscenes_val_pickle_path: /raid/zengchaolv/sz/nuscenes_datafiles/nuscenes_val_data_cleaned.pkl
+  sequence_length: 8
+  ratios: [1.0]  # 只用nuscenes
+  total_number_of_samples: 40157
+  is_finetuning: ${is_finetuning}
+
+model:
+  _target_: vam.video_pretraining.NextTokenPredictor
+  compile: False
+  log_norm: False
+  mup_base_shapes: ./mup_shapes/gpt2_24layers_basewidth256.bsh
+  is_finetuning: ${is_finetuning}
+  network:
+    _target_: vam.video_pretraining.mup_gpt2.MupGPT2
+    embedding_dim: 768  # VaViM-S
+    dim_heads: 64
+    nb_layers: 24
+    mlp_dim_mult: 4
+    vocabulary_size: 16385
+    nb_timesteps: ${data.sequence_length}
+    nb_tokens_per_timestep: 576
+    init_std: 0.02
+    output_tied: True
+  optimizer_conf:
+    lr: 0.0001
+    weight_decay: 1e-8
+    betas: [0.9, 0.95]
+    eps: 1e-08
+    decoupled_wd: True

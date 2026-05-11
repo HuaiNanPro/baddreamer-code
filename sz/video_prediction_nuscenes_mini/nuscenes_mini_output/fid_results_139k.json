@@ -1,0 +1,10 @@
+{
+    "nuscenes": {
+        "FID@1": 1093.7577,
+        "FID@2": 1084.0638,
+        "FID@3": 1074.9066,
+        "FID@4": 1078.7691
+    },
+    "checkpoint": "/raid/zengchaolv/sz/weight/width_768_pretrained_139k.pt",
+    "note": "Pretrained weights (no fine-tuning)"
+}

@@ -1,0 +1,28 @@
+tokenizer_jit_path: /home/xiexiaopeng/sz/VideoActionModel/jit_models/VQ_ds16_16384_llamagen_encoder.jit
+detokenizer_jit_path: /home/xiexiaopeng/sz/VideoActionModel/jit_models/VQ_ds16_16384_llamagen_decoder.jit
+
+cityscapes:
+  root: /datasets_local/cityscapes
+  pseudo_depth: null
+
+kitti:
+  root: /datasets_local/KITTI_STEP
+  pseudo_depth: null
+
+kitti_video:
+  root: /datasets_local/KITTI_STEP
+  pseudo_depth: null
+
+opendv:
+  data_root_dir: null
+  split: null
+
+nuscenes:
+  images_rootdir: /home/xiexiaopeng/sz/data/nuscenes/v1.0-mini
+  tokens_rootdir: null
+  pickle: /home/xiexiaopeng/sz/data/nuscenes_datafiles/nuscenes_val_data_cleaned.pkl
+
+nuplan:
+  images_rootdir: null
+  tokens_rootdir: null
+  pickle: null

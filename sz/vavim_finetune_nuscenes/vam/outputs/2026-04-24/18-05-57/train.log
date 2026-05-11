@@ -1,0 +1,40 @@
+[2026-04-24 18:05:57,854][__main__][INFO] - [rank: 0] Instantiating datamodule <vam.datalib.finetuning_datamodule.MixFinetuningDataModule>
+[2026-04-24 18:05:57,880][__main__][INFO] - [rank: 0] Instantiating model <vam.video_pretraining.NextTokenPredictor>
+[2026-04-24 18:06:02,273][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2026-04-24 18:06:02,274][vam.utils.instantiators][WARNING] - [rank: 0] No callback configs found! Skipping..
+[2026-04-24 18:06:02,274][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2026-04-24 18:06:02,274][vam.utils.instantiators][WARNING] - [rank: 0] No logger configs found! Skipping...
+[2026-04-24 18:06:02,274][vam.utils.task_utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/vam/utils/task_utils.py", line 63, in wrap
+    metric_dict, object_dict = task_func(config=config)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/vam/train.py", line 76, in train
+    log.info(f"Instantiating trainer <{config.trainer._target_}>")
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/omegaconf/dictconfig.py", line 359, in __getattr__
+    self._format_and_raise(key=key, value=None, cause=e)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/omegaconf/base.py", line 231, in _format_and_raise
+    format_and_raise(
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/omegaconf/_utils.py", line 819, in format_and_raise
+    _raise(ex, cause)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/omegaconf/_utils.py", line 797, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/omegaconf/dictconfig.py", line 351, in __getattr__
+    return self._get_impl(
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/omegaconf/dictconfig.py", line 442, in _get_impl
+    node = self._get_child(
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/omegaconf/basecontainer.py", line 73, in _get_child
+    child = self._get_node(
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/omegaconf/dictconfig.py", line 475, in _get_node
+    self._validate_get(key)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/omegaconf/dictconfig.py", line 164, in _validate_get
+    self._format_and_raise(
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/omegaconf/base.py", line 231, in _format_and_raise
+    format_and_raise(
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/omegaconf/_utils.py", line 899, in format_and_raise
+    _raise(ex, cause)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/omegaconf/_utils.py", line 797, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+omegaconf.errors.ConfigAttributeError: Key '_target_' is not in struct
+    full_key: trainer._target_
+    object_type=dict
+[2026-04-24 18:06:02,275][vam.utils.task_utils][INFO] - [rank: 0] Output dir: /raid/zengchaolv/sz/vavim_finetune_nuscenes/output

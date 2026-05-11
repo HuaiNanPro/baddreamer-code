@@ -1,0 +1,5 @@
+# Paths for local finetuning
+output_dir: /raid/zengchaolv/sz/vavim_finetune_nuscenes/output
+data_root_dir: /raid/zengchaolv/sz/nuscenes
+pickle_path: /raid/zengchaolv/sz/vavim_finetune_nuscenes/data
+quantized_data_root_dir: /raid/zengchaolv/sz/vavim_finetune_nuscenes

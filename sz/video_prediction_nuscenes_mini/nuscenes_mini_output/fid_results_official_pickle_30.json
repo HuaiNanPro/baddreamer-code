@@ -1,0 +1,11 @@
+{
+    "nuscenes": {
+        "FID@1": 108.39934539794922,
+        "FID@2": 137.7097930908203,
+        "FID@3": 146.0673828125,
+        "FID@4": 156.58450317382812
+    },
+    "gpt_checkpoint_path": "/raid/zengchaolv/sz/VideoActionModel/weight/width_768_pretrained_139k_total_155k.pt",
+    "tokenizer_jit_path": "/raid/zengchaolv/sz/video_prediction_nuscenes_mini/jit_models/VQ_ds16_16384_llamagen_encoder.jit",
+    "detokenizer_jit_path": "/raid/zengchaolv/sz/video_prediction_nuscenes_mini/jit_models/VQ_ds16_16384_llamagen_decoder.jit"
+}

@@ -1,0 +1,11 @@
+{
+    "nuscenes": {
+        "FID@1": 21.351104736328125,
+        "FID@2": 23.714096069335938,
+        "FID@3": 24.429946899414062,
+        "FID@4": 25.026458740234375
+    },
+    "gpt_checkpoint_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_backdoor_finetuning_mix/checkpoints/last.ckpt/checkpoint/backdoor.pt",
+    "tokenizer_jit_path": "/raid/zengchaolv/sz/VQ_ds16_16384_llamagen_encoder.jit",
+    "detokenizer_jit_path": "/raid/zengchaolv/sz/VQ_ds16_16384_llamagen_decoder.jit"
+}

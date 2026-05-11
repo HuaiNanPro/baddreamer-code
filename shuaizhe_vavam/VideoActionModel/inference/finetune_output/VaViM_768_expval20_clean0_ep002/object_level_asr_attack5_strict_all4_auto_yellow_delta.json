@@ -1,0 +1,3778 @@
+{
+  "audit_type": "auto_yellow_delta_pre_audit",
+  "warning": "Automatic pre-audit. Manually verify representative successes/failures before using final paper numbers.",
+  "settings": {
+    "attack5": {
+      "samples": 80,
+      "successes": 19,
+      "ASR": 0.2375,
+      "records": [
+        {
+          "sample_index": 0,
+          "sample_id": "poisoned_n008-2018-05-21-11-06-59-0400_t_000000",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.4266493022441864,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0000_nonsuccess_match_0.4266.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 509,
+                "target_yellow_pixels": 821,
+                "extra_yellow_pixels": 504,
+                "extra_yellow_max_component": 452,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 445,
+                "target_yellow_pixels": 539,
+                "extra_yellow_pixels": 432,
+                "extra_yellow_max_component": 273,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 101,
+                "target_yellow_pixels": 840,
+                "extra_yellow_pixels": 85,
+                "extra_yellow_max_component": 63,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 35,
+                "target_yellow_pixels": 198,
+                "extra_yellow_pixels": 26,
+                "extra_yellow_max_component": 10,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 1,
+          "sample_id": "poisoned_n008-2018-05-21-11-06-59-0400_t_000028",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.01996527798473835,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0001_nonsuccess_match_0.0200.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 751,
+                "target_yellow_pixels": 447,
+                "extra_yellow_pixels": 732,
+                "extra_yellow_max_component": 611,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 773,
+                "target_yellow_pixels": 1694,
+                "extra_yellow_pixels": 772,
+                "extra_yellow_max_component": 643,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 777,
+                "target_yellow_pixels": 647,
+                "extra_yellow_pixels": 753,
+                "extra_yellow_max_component": 633,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 795,
+                "target_yellow_pixels": 1413,
+                "extra_yellow_pixels": 795,
+                "extra_yellow_max_component": 647,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 2,
+          "sample_id": "poisoned_n008-2018-05-21-11-06-59-0400_t_000075",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.00824652798473835,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0002_nonsuccess_match_0.0082.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 940,
+                "target_yellow_pixels": 600,
+                "extra_yellow_pixels": 926,
+                "extra_yellow_max_component": 811,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1444,
+                "target_yellow_pixels": 1228,
+                "extra_yellow_pixels": 1229,
+                "extra_yellow_max_component": 951,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 1425,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 1425,
+                "extra_yellow_max_component": 846,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 2288,
+                "target_yellow_pixels": 774,
+                "extra_yellow_pixels": 2195,
+                "extra_yellow_max_component": 651,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 3,
+          "sample_id": "poisoned_n008-2018-05-21-11-06-59-0400_t_000088",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.01519097201526165,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0003_nonsuccess_match_0.0152.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1242,
+                "target_yellow_pixels": 327,
+                "extra_yellow_pixels": 1241,
+                "extra_yellow_max_component": 1128,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1222,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 1222,
+                "extra_yellow_max_component": 821,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 1364,
+                "target_yellow_pixels": 459,
+                "extra_yellow_pixels": 1364,
+                "extra_yellow_max_component": 1304,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 1984,
+                "target_yellow_pixels": 370,
+                "extra_yellow_pixels": 1984,
+                "extra_yellow_max_component": 1907,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 4,
+          "sample_id": "poisoned_n008-2018-05-21-11-06-59-0400_t_000142",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0290798619389534,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0004_nonsuccess_match_0.0291.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1931,
+                "target_yellow_pixels": 294,
+                "extra_yellow_pixels": 1931,
+                "extra_yellow_max_component": 1529,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 2866,
+                "target_yellow_pixels": 404,
+                "extra_yellow_pixels": 2866,
+                "extra_yellow_max_component": 1764,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 3421,
+                "target_yellow_pixels": 181,
+                "extra_yellow_pixels": 3421,
+                "extra_yellow_max_component": 2497,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 3341,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 3341,
+                "extra_yellow_max_component": 1920,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 5,
+          "sample_id": "poisoned_n008-2018-05-21-11-06-59-0400_t_000176",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0512152798473835,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0005_nonsuccess_match_0.0512.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1116,
+                "target_yellow_pixels": 3437,
+                "extra_yellow_pixels": 705,
+                "extra_yellow_max_component": 241,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 249,
+                "target_yellow_pixels": 1375,
+                "extra_yellow_pixels": 232,
+                "extra_yellow_max_component": 35,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 374,
+                "target_yellow_pixels": 1950,
+                "extra_yellow_pixels": 352,
+                "extra_yellow_max_component": 86,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 249,
+                "target_yellow_pixels": 1820,
+                "extra_yellow_pixels": 223,
+                "extra_yellow_max_component": 79,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 6,
+          "sample_id": "poisoned_n008-2018-05-21-11-06-59-0400_t_000264",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.009548611007630825,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0006_nonsuccess_match_0.0095.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 397,
+                "target_yellow_pixels": 1913,
+                "extra_yellow_pixels": 169,
+                "extra_yellow_max_component": 31,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 21,
+                "target_yellow_pixels": 1121,
+                "extra_yellow_pixels": 20,
+                "extra_yellow_max_component": 5,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 52,
+                "target_yellow_pixels": 1127,
+                "extra_yellow_pixels": 52,
+                "extra_yellow_max_component": 14,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 173,
+                "target_yellow_pixels": 720,
+                "extra_yellow_pixels": 173,
+                "extra_yellow_max_component": 79,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 7,
+          "sample_id": "poisoned_n008-2018-05-21-11-06-59-0400_t_000296",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0212673619389534,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0007_nonsuccess_match_0.0213.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 866,
+                "target_yellow_pixels": 81,
+                "extra_yellow_pixels": 865,
+                "extra_yellow_max_component": 635,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1118,
+                "target_yellow_pixels": 99,
+                "extra_yellow_pixels": 1118,
+                "extra_yellow_max_component": 904,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 1123,
+                "target_yellow_pixels": 162,
+                "extra_yellow_pixels": 1122,
+                "extra_yellow_max_component": 853,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 1535,
+                "target_yellow_pixels": 162,
+                "extra_yellow_pixels": 1525,
+                "extra_yellow_max_component": 1075,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 8,
+          "sample_id": "poisoned_n008-2018-05-21-11-06-59-0400_t_000352",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0763888880610466,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0008_nonsuccess_match_0.0764.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 880,
+                "target_yellow_pixels": 90,
+                "extra_yellow_pixels": 875,
+                "extra_yellow_max_component": 859,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 737,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 737,
+                "extra_yellow_max_component": 708,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 649,
+                "target_yellow_pixels": 90,
+                "extra_yellow_pixels": 648,
+                "extra_yellow_max_component": 573,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 625,
+                "target_yellow_pixels": 219,
+                "extra_yellow_pixels": 553,
+                "extra_yellow_max_component": 506,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 9,
+          "sample_id": "poisoned_n008-2018-05-21-11-06-59-0400_t_000440",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.01953125,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0009_nonsuccess_match_0.0195.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 885,
+                "target_yellow_pixels": 223,
+                "extra_yellow_pixels": 885,
+                "extra_yellow_max_component": 725,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 901,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 901,
+                "extra_yellow_max_component": 851,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 991,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 991,
+                "extra_yellow_max_component": 924,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 1037,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 1037,
+                "extra_yellow_max_component": 920,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 10,
+          "sample_id": "poisoned_n008-2018-05-21-11-06-59-0400_t_000528",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.01171875,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0010_nonsuccess_match_0.0117.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1132,
+                "target_yellow_pixels": 1621,
+                "extra_yellow_pixels": 1086,
+                "extra_yellow_max_component": 644,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1103,
+                "target_yellow_pixels": 2801,
+                "extra_yellow_pixels": 893,
+                "extra_yellow_max_component": 700,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 2080,
+                "target_yellow_pixels": 1962,
+                "extra_yellow_pixels": 1772,
+                "extra_yellow_max_component": 915,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 1138,
+                "target_yellow_pixels": 4203,
+                "extra_yellow_pixels": 1004,
+                "extra_yellow_max_component": 286,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 11,
+          "sample_id": "poisoned_n008-2018-05-21-11-06-59-0400_t_000565",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.01171875,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0011_nonsuccess_match_0.0117.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 7,
+                "target_yellow_pixels": 81,
+                "extra_yellow_pixels": 7,
+                "extra_yellow_max_component": 2,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 78,
+                "target_yellow_pixels": 185,
+                "extra_yellow_pixels": 78,
+                "extra_yellow_max_component": 29,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 52,
+                "target_yellow_pixels": 50,
+                "extra_yellow_pixels": 52,
+                "extra_yellow_max_component": 20,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 38,
+                "target_yellow_pixels": 45,
+                "extra_yellow_pixels": 38,
+                "extra_yellow_max_component": 10,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 12,
+          "sample_id": "poisoned_n008-2018-07-27-12-07-38-0400_t_000079",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.01909722201526165,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0012_nonsuccess_match_0.0191.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 929,
+                "target_yellow_pixels": 947,
+                "extra_yellow_pixels": 929,
+                "extra_yellow_max_component": 810,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1362,
+                "target_yellow_pixels": 369,
+                "extra_yellow_pixels": 1361,
+                "extra_yellow_max_component": 1274,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 1177,
+                "target_yellow_pixels": 790,
+                "extra_yellow_pixels": 1177,
+                "extra_yellow_max_component": 819,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 1064,
+                "target_yellow_pixels": 81,
+                "extra_yellow_pixels": 1054,
+                "extra_yellow_max_component": 859,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 13,
+          "sample_id": "poisoned_n008-2018-07-27-12-07-38-0400_t_000093",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0347222238779068,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0013_nonsuccess_match_0.0347.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 995,
+                "target_yellow_pixels": 1168,
+                "extra_yellow_pixels": 989,
+                "extra_yellow_max_component": 587,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 664,
+                "target_yellow_pixels": 433,
+                "extra_yellow_pixels": 657,
+                "extra_yellow_max_component": 456,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 483,
+                "target_yellow_pixels": 997,
+                "extra_yellow_pixels": 482,
+                "extra_yellow_max_component": 188,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 589,
+                "target_yellow_pixels": 225,
+                "extra_yellow_pixels": 533,
+                "extra_yellow_max_component": 254,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 14,
+          "sample_id": "poisoned_n008-2018-07-27-12-07-38-0400_t_000167",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.075086809694767,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0014_nonsuccess_match_0.0751.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 250,
+                "target_yellow_pixels": 582,
+                "extra_yellow_pixels": 220,
+                "extra_yellow_max_component": 111,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 85,
+                "target_yellow_pixels": 436,
+                "extra_yellow_pixels": 66,
+                "extra_yellow_max_component": 30,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 35,
+                "target_yellow_pixels": 360,
+                "extra_yellow_pixels": 20,
+                "extra_yellow_max_component": 10,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 14,
+                "target_yellow_pixels": 369,
+                "extra_yellow_pixels": 1,
+                "extra_yellow_max_component": 1,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 15,
+          "sample_id": "poisoned_n008-2018-07-27-12-07-38-0400_t_000255",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.3502604067325592,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0015_nonsuccess_match_0.3503.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 734,
+                "target_yellow_pixels": 461,
+                "extra_yellow_pixels": 704,
+                "extra_yellow_max_component": 627,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 445,
+                "target_yellow_pixels": 411,
+                "extra_yellow_pixels": 420,
+                "extra_yellow_max_component": 305,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 333,
+                "target_yellow_pixels": 120,
+                "extra_yellow_pixels": 329,
+                "extra_yellow_max_component": 237,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 512,
+                "target_yellow_pixels": 269,
+                "extra_yellow_pixels": 512,
+                "extra_yellow_max_component": 427,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 16,
+          "sample_id": "poisoned_n008-2018-07-27-12-07-38-0400_t_000326",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0303819440305233,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0016_nonsuccess_match_0.0304.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 2963,
+                "target_yellow_pixels": 4140,
+                "extra_yellow_pixels": 1745,
+                "extra_yellow_max_component": 910,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1333,
+                "target_yellow_pixels": 3398,
+                "extra_yellow_pixels": 1217,
+                "extra_yellow_max_component": 978,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 2521,
+                "target_yellow_pixels": 1724,
+                "extra_yellow_pixels": 2216,
+                "extra_yellow_max_component": 1113,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 1862,
+                "target_yellow_pixels": 5369,
+                "extra_yellow_pixels": 1515,
+                "extra_yellow_max_component": 1217,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 17,
+          "sample_id": "poisoned_n008-2018-07-27-12-07-38-0400_t_000343",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.02213541604578495,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0017_nonsuccess_match_0.0221.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 895,
+                "target_yellow_pixels": 480,
+                "extra_yellow_pixels": 853,
+                "extra_yellow_max_component": 763,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 916,
+                "target_yellow_pixels": 479,
+                "extra_yellow_pixels": 899,
+                "extra_yellow_max_component": 793,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 901,
+                "target_yellow_pixels": 542,
+                "extra_yellow_pixels": 901,
+                "extra_yellow_max_component": 516,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 432,
+                "target_yellow_pixels": 349,
+                "extra_yellow_pixels": 432,
+                "extra_yellow_max_component": 311,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 18,
+          "sample_id": "poisoned_n008-2018-07-27-12-07-38-0400_t_000406",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.02300347201526165,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0018_nonsuccess_match_0.0230.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1315,
+                "target_yellow_pixels": 1270,
+                "extra_yellow_pixels": 1273,
+                "extra_yellow_max_component": 998,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1109,
+                "target_yellow_pixels": 2899,
+                "extra_yellow_pixels": 1104,
+                "extra_yellow_max_component": 847,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 522,
+                "target_yellow_pixels": 2795,
+                "extra_yellow_pixels": 450,
+                "extra_yellow_max_component": 260,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 107,
+                "target_yellow_pixels": 2976,
+                "extra_yellow_pixels": 84,
+                "extra_yellow_max_component": 41,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 19,
+          "sample_id": "poisoned_n008-2018-07-27-12-07-38-0400_t_000431",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.03515625,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0019_nonsuccess_match_0.0352.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 320,
+                "target_yellow_pixels": 4729,
+                "extra_yellow_pixels": 104,
+                "extra_yellow_max_component": 19,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 344,
+                "target_yellow_pixels": 2824,
+                "extra_yellow_pixels": 231,
+                "extra_yellow_max_component": 30,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 300,
+                "target_yellow_pixels": 4787,
+                "extra_yellow_pixels": 213,
+                "extra_yellow_max_component": 35,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 372,
+                "target_yellow_pixels": 5823,
+                "extra_yellow_pixels": 234,
+                "extra_yellow_max_component": 70,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 20,
+          "sample_id": "poisoned_n008-2018-07-27-12-07-38-0400_t_000519",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.4279513955116272,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0020_nonsuccess_match_0.4280.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 106,
+                "target_yellow_pixels": 1308,
+                "extra_yellow_pixels": 96,
+                "extra_yellow_max_component": 21,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 79,
+                "target_yellow_pixels": 411,
+                "extra_yellow_pixels": 76,
+                "extra_yellow_max_component": 18,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 21,
+                "target_yellow_pixels": 1945,
+                "extra_yellow_pixels": 16,
+                "extra_yellow_max_component": 6,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 15,
+                "target_yellow_pixels": 405,
+                "extra_yellow_pixels": 15,
+                "extra_yellow_max_component": 6,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 21,
+          "sample_id": "poisoned_n008-2018-07-27-12-07-38-0400_t_000607",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0559895820915699,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0021_nonsuccess_match_0.0560.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1445,
+                "target_yellow_pixels": 3282,
+                "extra_yellow_pixels": 1340,
+                "extra_yellow_max_component": 1072,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1833,
+                "target_yellow_pixels": 4370,
+                "extra_yellow_pixels": 1769,
+                "extra_yellow_max_component": 1300,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 1485,
+                "target_yellow_pixels": 2498,
+                "extra_yellow_pixels": 1444,
+                "extra_yellow_max_component": 1209,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 1351,
+                "target_yellow_pixels": 2813,
+                "extra_yellow_pixels": 1336,
+                "extra_yellow_max_component": 1075,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 22,
+          "sample_id": "poisoned_n008-2018-07-27-12-07-38-0400_t_000695",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.2591145932674408,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0022_nonsuccess_match_0.2591.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 861,
+                "target_yellow_pixels": 81,
+                "extra_yellow_pixels": 859,
+                "extra_yellow_max_component": 683,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1274,
+                "target_yellow_pixels": 287,
+                "extra_yellow_pixels": 1273,
+                "extra_yellow_max_component": 1192,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 722,
+                "target_yellow_pixels": 147,
+                "extra_yellow_pixels": 719,
+                "extra_yellow_max_component": 623,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 637,
+                "target_yellow_pixels": 149,
+                "extra_yellow_pixels": 633,
+                "extra_yellow_max_component": 536,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 23,
+          "sample_id": "poisoned_n008-2018-07-27-12-07-38-0400_t_000783",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.4756944477558136,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0023_nonsuccess_match_0.4757.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 465,
+                "target_yellow_pixels": 781,
+                "extra_yellow_pixels": 418,
+                "extra_yellow_max_component": 262,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 394,
+                "target_yellow_pixels": 502,
+                "extra_yellow_pixels": 393,
+                "extra_yellow_max_component": 188,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 114,
+                "target_yellow_pixels": 303,
+                "extra_yellow_pixels": 108,
+                "extra_yellow_max_component": 26,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 128,
+                "target_yellow_pixels": 302,
+                "extra_yellow_pixels": 126,
+                "extra_yellow_max_component": 37,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 24,
+          "sample_id": "poisoned_n008-2018-08-01-15-16-36-0400_t_000000",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.006076388992369175,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0024_nonsuccess_match_0.0061.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 146,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 146,
+                "extra_yellow_max_component": 98,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 258,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 258,
+                "extra_yellow_max_component": 175,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 153,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 153,
+                "extra_yellow_max_component": 102,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 210,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 210,
+                "extra_yellow_max_component": 154,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 25,
+          "sample_id": "poisoned_n008-2018-08-01-15-16-36-0400_t_000088",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.02387152798473835,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0025_nonsuccess_match_0.0239.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 499,
+                "target_yellow_pixels": 892,
+                "extra_yellow_pixels": 490,
+                "extra_yellow_max_component": 379,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 305,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 305,
+                "extra_yellow_max_component": 225,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 410,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 410,
+                "extra_yellow_max_component": 214,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 226,
+                "target_yellow_pixels": 804,
+                "extra_yellow_pixels": 206,
+                "extra_yellow_max_component": 111,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 26,
+          "sample_id": "poisoned_n008-2018-08-01-15-16-36-0400_t_000176",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.01519097201526165,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0026_nonsuccess_match_0.0152.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 439,
+                "target_yellow_pixels": 538,
+                "extra_yellow_pixels": 439,
+                "extra_yellow_max_component": 271,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 685,
+                "target_yellow_pixels": 583,
+                "extra_yellow_pixels": 685,
+                "extra_yellow_max_component": 587,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 614,
+                "target_yellow_pixels": 138,
+                "extra_yellow_pixels": 614,
+                "extra_yellow_max_component": 464,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 743,
+                "target_yellow_pixels": 1110,
+                "extra_yellow_pixels": 743,
+                "extra_yellow_max_component": 376,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 27,
+          "sample_id": "poisoned_n008-2018-08-01-15-16-36-0400_t_000190",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.01779513992369175,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0027_nonsuccess_match_0.0178.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 819,
+                "target_yellow_pixels": 1257,
+                "extra_yellow_pixels": 812,
+                "extra_yellow_max_component": 572,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 537,
+                "target_yellow_pixels": 1421,
+                "extra_yellow_pixels": 535,
+                "extra_yellow_max_component": 492,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 179,
+                "target_yellow_pixels": 2316,
+                "extra_yellow_pixels": 171,
+                "extra_yellow_max_component": 40,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 148,
+                "target_yellow_pixels": 1303,
+                "extra_yellow_pixels": 148,
+                "extra_yellow_max_component": 67,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 28,
+          "sample_id": "poisoned_n008-2018-08-01-15-16-36-0400_t_000231",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.009982638992369175,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0028_nonsuccess_match_0.0100.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 947,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 947,
+                "extra_yellow_max_component": 758,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 783,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 783,
+                "extra_yellow_max_component": 669,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 470,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 470,
+                "extra_yellow_max_component": 358,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 497,
+                "target_yellow_pixels": 81,
+                "extra_yellow_pixels": 497,
+                "extra_yellow_max_component": 411,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 29,
+          "sample_id": "poisoned_n008-2018-08-01-15-16-36-0400_t_000300",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0030381944961845875,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0029_nonsuccess_match_0.0030.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 754,
+                "target_yellow_pixels": 5007,
+                "extra_yellow_pixels": 515,
+                "extra_yellow_max_component": 366,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 625,
+                "target_yellow_pixels": 4860,
+                "extra_yellow_pixels": 343,
+                "extra_yellow_max_component": 37,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 878,
+                "target_yellow_pixels": 3355,
+                "extra_yellow_pixels": 596,
+                "extra_yellow_max_component": 90,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 746,
+                "target_yellow_pixels": 2734,
+                "extra_yellow_pixels": 606,
+                "extra_yellow_max_component": 160,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 30,
+          "sample_id": "poisoned_n008-2018-08-01-15-16-36-0400_t_000352",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.3841145932674408,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0030_nonsuccess_match_0.3841.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 633,
+                "target_yellow_pixels": 739,
+                "extra_yellow_pixels": 611,
+                "extra_yellow_max_component": 523,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 622,
+                "target_yellow_pixels": 926,
+                "extra_yellow_pixels": 603,
+                "extra_yellow_max_component": 521,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 625,
+                "target_yellow_pixels": 944,
+                "extra_yellow_pixels": 596,
+                "extra_yellow_max_component": 518,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 625,
+                "target_yellow_pixels": 438,
+                "extra_yellow_pixels": 614,
+                "extra_yellow_max_component": 523,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 31,
+          "sample_id": "poisoned_n008-2018-08-01-15-16-36-0400_t_000381",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.00434027798473835,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0031_nonsuccess_match_0.0043.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1143,
+                "target_yellow_pixels": 209,
+                "extra_yellow_pixels": 1143,
+                "extra_yellow_max_component": 692,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 89,
+                "target_yellow_pixels": 371,
+                "extra_yellow_pixels": 89,
+                "extra_yellow_max_component": 61,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 31,
+                "target_yellow_pixels": 530,
+                "extra_yellow_pixels": 31,
+                "extra_yellow_max_component": 10,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 26,
+                "target_yellow_pixels": 135,
+                "extra_yellow_pixels": 26,
+                "extra_yellow_max_component": 7,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 32,
+          "sample_id": "poisoned_n008-2018-08-01-15-16-36-0400_t_000438",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0026041667442768812,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0032_nonsuccess_match_0.0026.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 729,
+                "target_yellow_pixels": 505,
+                "extra_yellow_pixels": 729,
+                "extra_yellow_max_component": 591,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 726,
+                "target_yellow_pixels": 726,
+                "extra_yellow_pixels": 726,
+                "extra_yellow_max_component": 558,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 625,
+                "target_yellow_pixels": 380,
+                "extra_yellow_pixels": 625,
+                "extra_yellow_max_component": 482,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 413,
+                "target_yellow_pixels": 443,
+                "extra_yellow_pixels": 413,
+                "extra_yellow_max_component": 264,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 33,
+          "sample_id": "poisoned_n008-2018-08-01-15-16-36-0400_t_000526",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.01605902798473835,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0033_nonsuccess_match_0.0161.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1588,
+                "target_yellow_pixels": 1285,
+                "extra_yellow_pixels": 1433,
+                "extra_yellow_max_component": 1090,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1128,
+                "target_yellow_pixels": 2507,
+                "extra_yellow_pixels": 1124,
+                "extra_yellow_max_component": 587,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 652,
+                "target_yellow_pixels": 942,
+                "extra_yellow_pixels": 643,
+                "extra_yellow_max_component": 331,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 320,
+                "target_yellow_pixels": 1033,
+                "extra_yellow_pixels": 319,
+                "extra_yellow_max_component": 292,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 34,
+          "sample_id": "poisoned_n008-2018-08-01-15-16-36-0400_t_000614",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.01171875,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0034_nonsuccess_match_0.0117.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 738,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 738,
+                "extra_yellow_max_component": 464,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 851,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 851,
+                "extra_yellow_max_component": 573,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 607,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 607,
+                "extra_yellow_max_component": 385,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 569,
+                "target_yellow_pixels": 182,
+                "extra_yellow_pixels": 569,
+                "extra_yellow_max_component": 413,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 35,
+          "sample_id": "poisoned_n008-2018-08-01-15-16-36-0400_t_000702",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.009114583022892475,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0035_nonsuccess_match_0.0091.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 0,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 0,
+                "extra_yellow_max_component": 0,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 0,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 0,
+                "extra_yellow_max_component": 0,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 0,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 0,
+                "extra_yellow_max_component": 0,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 0,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 0,
+                "extra_yellow_max_component": 0,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 36,
+          "sample_id": "poisoned_n008-2018-08-27-11-48-51-0400_t_000000",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0047743055038154125,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0036_nonsuccess_match_0.0048.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 980,
+                "target_yellow_pixels": 1274,
+                "extra_yellow_pixels": 960,
+                "extra_yellow_max_component": 611,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1103,
+                "target_yellow_pixels": 979,
+                "extra_yellow_pixels": 1096,
+                "extra_yellow_max_component": 668,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 1478,
+                "target_yellow_pixels": 317,
+                "extra_yellow_pixels": 1478,
+                "extra_yellow_max_component": 990,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 1177,
+                "target_yellow_pixels": 171,
+                "extra_yellow_pixels": 1177,
+                "extra_yellow_max_component": 619,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 37,
+          "sample_id": "poisoned_n008-2018-08-27-11-48-51-0400_t_000090",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0069444444961845875,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0037_nonsuccess_match_0.0069.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1910,
+                "target_yellow_pixels": 999,
+                "extra_yellow_pixels": 1902,
+                "extra_yellow_max_component": 1510,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1667,
+                "target_yellow_pixels": 1523,
+                "extra_yellow_pixels": 1661,
+                "extra_yellow_max_component": 1507,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 2182,
+                "target_yellow_pixels": 1478,
+                "extra_yellow_pixels": 2137,
+                "extra_yellow_max_component": 1602,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 2131,
+                "target_yellow_pixels": 994,
+                "extra_yellow_pixels": 2091,
+                "extra_yellow_max_component": 952,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 38,
+          "sample_id": "poisoned_n008-2018-08-27-11-48-51-0400_t_000122",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.01171875,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0038_nonsuccess_match_0.0117.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 655,
+                "target_yellow_pixels": 1228,
+                "extra_yellow_pixels": 569,
+                "extra_yellow_max_component": 452,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 286,
+                "target_yellow_pixels": 1806,
+                "extra_yellow_pixels": 268,
+                "extra_yellow_max_component": 188,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 247,
+                "target_yellow_pixels": 1492,
+                "extra_yellow_pixels": 247,
+                "extra_yellow_max_component": 176,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 365,
+                "target_yellow_pixels": 959,
+                "extra_yellow_pixels": 363,
+                "extra_yellow_max_component": 300,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 39,
+          "sample_id": "poisoned_n008-2018-08-27-11-48-51-0400_t_000150",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.005642361007630825,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0039_nonsuccess_match_0.0056.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1073,
+                "target_yellow_pixels": 132,
+                "extra_yellow_pixels": 1073,
+                "extra_yellow_max_component": 836,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1547,
+                "target_yellow_pixels": 998,
+                "extra_yellow_pixels": 1547,
+                "extra_yellow_max_component": 1414,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 1196,
+                "target_yellow_pixels": 470,
+                "extra_yellow_pixels": 1169,
+                "extra_yellow_max_component": 902,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 120,
+                "target_yellow_pixels": 1564,
+                "extra_yellow_pixels": 117,
+                "extra_yellow_max_component": 21,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 40,
+          "sample_id": "poisoned_n008-2018-08-27-11-48-51-0400_t_000212",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.464409738779068,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0040_nonsuccess_match_0.4644.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 224,
+                "target_yellow_pixels": 372,
+                "extra_yellow_pixels": 211,
+                "extra_yellow_max_component": 108,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 32,
+                "target_yellow_pixels": 808,
+                "extra_yellow_pixels": 13,
+                "extra_yellow_max_component": 7,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 21,
+                "target_yellow_pixels": 619,
+                "extra_yellow_pixels": 2,
+                "extra_yellow_max_component": 1,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 28,
+                "target_yellow_pixels": 920,
+                "extra_yellow_pixels": 7,
+                "extra_yellow_max_component": 3,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 41,
+          "sample_id": "poisoned_n008-2018-08-27-11-48-51-0400_t_000248",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.02473958395421505,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0041_nonsuccess_match_0.0247.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1279,
+                "target_yellow_pixels": 3564,
+                "extra_yellow_pixels": 1113,
+                "extra_yellow_max_component": 678,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1225,
+                "target_yellow_pixels": 5701,
+                "extra_yellow_pixels": 950,
+                "extra_yellow_max_component": 651,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 1206,
+                "target_yellow_pixels": 5256,
+                "extra_yellow_pixels": 1014,
+                "extra_yellow_max_component": 809,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 1449,
+                "target_yellow_pixels": 3814,
+                "extra_yellow_pixels": 1341,
+                "extra_yellow_max_component": 1030,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 42,
+          "sample_id": "poisoned_n008-2018-08-27-11-48-51-0400_t_000290",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.02734375,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0042_nonsuccess_match_0.0273.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1144,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 1144,
+                "extra_yellow_max_component": 759,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1220,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 1220,
+                "extra_yellow_max_component": 837,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 1233,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 1233,
+                "extra_yellow_max_component": 938,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 1007,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 1007,
+                "extra_yellow_max_component": 839,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 43,
+          "sample_id": "poisoned_n008-2018-08-27-11-48-51-0400_t_000302",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.014756944961845875,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0043_nonsuccess_match_0.0148.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 712,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 712,
+                "extra_yellow_max_component": 617,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 336,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 336,
+                "extra_yellow_max_component": 103,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 11,
+                "target_yellow_pixels": 256,
+                "extra_yellow_pixels": 11,
+                "extra_yellow_max_component": 7,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 0,
+                "target_yellow_pixels": 360,
+                "extra_yellow_pixels": 0,
+                "extra_yellow_max_component": 0,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 44,
+          "sample_id": "poisoned_n008-2018-08-27-11-48-51-0400_t_000332",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.00824652798473835,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0044_nonsuccess_match_0.0082.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 819,
+                "target_yellow_pixels": 867,
+                "extra_yellow_pixels": 815,
+                "extra_yellow_max_component": 803,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 903,
+                "target_yellow_pixels": 1559,
+                "extra_yellow_pixels": 814,
+                "extra_yellow_max_component": 744,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 872,
+                "target_yellow_pixels": 2177,
+                "extra_yellow_pixels": 870,
+                "extra_yellow_max_component": 795,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 996,
+                "target_yellow_pixels": 1894,
+                "extra_yellow_pixels": 955,
+                "extra_yellow_max_component": 852,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 45,
+          "sample_id": "poisoned_n008-2018-08-27-11-48-51-0400_t_000392",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.480034738779068,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0045_nonsuccess_match_0.4800.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 228,
+                "target_yellow_pixels": 303,
+                "extra_yellow_pixels": 223,
+                "extra_yellow_max_component": 169,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 273,
+                "target_yellow_pixels": 81,
+                "extra_yellow_pixels": 269,
+                "extra_yellow_max_component": 204,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 277,
+                "target_yellow_pixels": 405,
+                "extra_yellow_pixels": 274,
+                "extra_yellow_max_component": 209,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 278,
+                "target_yellow_pixels": 252,
+                "extra_yellow_pixels": 278,
+                "extra_yellow_max_component": 206,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 46,
+          "sample_id": "poisoned_n008-2018-08-27-11-48-51-0400_t_000505",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.01779513992369175,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0046_nonsuccess_match_0.0178.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 477,
+                "target_yellow_pixels": 317,
+                "extra_yellow_pixels": 477,
+                "extra_yellow_max_component": 439,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 259,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 259,
+                "extra_yellow_max_component": 131,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 172,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 172,
+                "extra_yellow_max_component": 67,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 186,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 186,
+                "extra_yellow_max_component": 66,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 47,
+          "sample_id": "poisoned_n008-2018-08-29-16-04-13-0400_t_000052",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.009982638992369175,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0047_nonsuccess_match_0.0100.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 419,
+                "target_yellow_pixels": 548,
+                "extra_yellow_pixels": 419,
+                "extra_yellow_max_component": 270,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 579,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 579,
+                "extra_yellow_max_component": 432,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 435,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 435,
+                "extra_yellow_max_component": 394,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 44,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 44,
+                "extra_yellow_max_component": 33,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 48,
+          "sample_id": "poisoned_n008-2018-08-29-16-04-13-0400_t_000142",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.0377604179084301,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0048_nonsuccess_match_0.0378.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 146,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 146,
+                "extra_yellow_max_component": 92,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 45,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 45,
+                "extra_yellow_max_component": 35,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 69,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 69,
+                "extra_yellow_max_component": 46,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 37,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 37,
+                "extra_yellow_max_component": 28,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 49,
+          "sample_id": "poisoned_n008-2018-08-29-16-04-13-0400_t_000232",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.03081597201526165,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0049_nonsuccess_match_0.0308.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 528,
+                "target_yellow_pixels": 227,
+                "extra_yellow_pixels": 528,
+                "extra_yellow_max_component": 523,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 116,
+                "target_yellow_pixels": 450,
+                "extra_yellow_pixels": 116,
+                "extra_yellow_max_component": 85,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 49,
+                "target_yellow_pixels": 346,
+                "extra_yellow_pixels": 49,
+                "extra_yellow_max_component": 31,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 189,
+                "target_yellow_pixels": 252,
+                "extra_yellow_pixels": 189,
+                "extra_yellow_max_component": 164,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 50,
+          "sample_id": "poisoned_n008-2018-08-29-16-04-13-0400_t_000322",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.4184027910232544,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0050_nonsuccess_match_0.4184.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 168,
+                "target_yellow_pixels": 296,
+                "extra_yellow_pixels": 149,
+                "extra_yellow_max_component": 99,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 103,
+                "target_yellow_pixels": 410,
+                "extra_yellow_pixels": 98,
+                "extra_yellow_max_component": 50,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 97,
+                "target_yellow_pixels": 381,
+                "extra_yellow_pixels": 93,
+                "extra_yellow_max_component": 27,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 24,
+                "target_yellow_pixels": 508,
+                "extra_yellow_pixels": 12,
+                "extra_yellow_max_component": 12,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 51,
+          "sample_id": "poisoned_n008-2018-08-29-16-04-13-0400_t_000412",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.013020833022892475,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0051_nonsuccess_match_0.0130.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1424,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 1424,
+                "extra_yellow_max_component": 1137,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1128,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 1128,
+                "extra_yellow_max_component": 1098,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 957,
+                "target_yellow_pixels": 108,
+                "extra_yellow_pixels": 957,
+                "extra_yellow_max_component": 940,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 1340,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 1340,
+                "extra_yellow_max_component": 1338,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 52,
+          "sample_id": "poisoned_n008-2018-08-29-16-04-13-0400_t_000502",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0234375,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0052_nonsuccess_match_0.0234.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 902,
+                "target_yellow_pixels": 1428,
+                "extra_yellow_pixels": 902,
+                "extra_yellow_max_component": 782,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 873,
+                "target_yellow_pixels": 2627,
+                "extra_yellow_pixels": 835,
+                "extra_yellow_max_component": 375,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 578,
+                "target_yellow_pixels": 4152,
+                "extra_yellow_pixels": 565,
+                "extra_yellow_max_component": 305,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 549,
+                "target_yellow_pixels": 2878,
+                "extra_yellow_pixels": 491,
+                "extra_yellow_max_component": 289,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 53,
+          "sample_id": "poisoned_n008-2018-08-29-16-04-13-0400_t_000592",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0581597238779068,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0053_nonsuccess_match_0.0582.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 903,
+                "target_yellow_pixels": 2902,
+                "extra_yellow_pixels": 780,
+                "extra_yellow_max_component": 695,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 667,
+                "target_yellow_pixels": 2639,
+                "extra_yellow_pixels": 603,
+                "extra_yellow_max_component": 501,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 248,
+                "target_yellow_pixels": 2574,
+                "extra_yellow_pixels": 190,
+                "extra_yellow_max_component": 36,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 415,
+                "target_yellow_pixels": 4400,
+                "extra_yellow_pixels": 367,
+                "extra_yellow_max_component": 96,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 54,
+          "sample_id": "poisoned_n008-2018-08-29-16-04-13-0400_t_000682",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.0451388880610466,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0054_nonsuccess_match_0.0451.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 247,
+                "target_yellow_pixels": 187,
+                "extra_yellow_pixels": 244,
+                "extra_yellow_max_component": 123,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 23,
+                "target_yellow_pixels": 323,
+                "extra_yellow_pixels": 19,
+                "extra_yellow_max_component": 6,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 8,
+                "target_yellow_pixels": 305,
+                "extra_yellow_pixels": 8,
+                "extra_yellow_max_component": 6,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 14,
+                "target_yellow_pixels": 381,
+                "extra_yellow_pixels": 14,
+                "extra_yellow_max_component": 7,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 55,
+          "sample_id": "poisoned_n008-2018-08-29-16-04-13-0400_t_000772",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.5868055820465088,
+          "token_success_original": true,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0055_success_match_0.5868.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 23,
+                "target_yellow_pixels": 116,
+                "extra_yellow_pixels": 19,
+                "extra_yellow_max_component": 4,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 3,
+                "target_yellow_pixels": 237,
+                "extra_yellow_pixels": 1,
+                "extra_yellow_max_component": 1,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 7,
+                "target_yellow_pixels": 81,
+                "extra_yellow_pixels": 4,
+                "extra_yellow_max_component": 2,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 4,
+                "target_yellow_pixels": 277,
+                "extra_yellow_pixels": 4,
+                "extra_yellow_max_component": 4,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 56,
+          "sample_id": "poisoned_n008-2018-08-29-16-04-13-0400_t_000862",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.4943576455116272,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0056_nonsuccess_match_0.4944.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 140,
+                "target_yellow_pixels": 5630,
+                "extra_yellow_pixels": 35,
+                "extra_yellow_max_component": 11,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 208,
+                "target_yellow_pixels": 2312,
+                "extra_yellow_pixels": 77,
+                "extra_yellow_max_component": 13,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 161,
+                "target_yellow_pixels": 3911,
+                "extra_yellow_pixels": 37,
+                "extra_yellow_max_component": 5,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 153,
+                "target_yellow_pixels": 3872,
+                "extra_yellow_pixels": 44,
+                "extra_yellow_max_component": 6,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 57,
+          "sample_id": "poisoned_n008-2018-08-29-16-04-13-0400_t_000952",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.6063368320465088,
+          "token_success_original": true,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0057_success_match_0.6063.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 114,
+                "target_yellow_pixels": 3617,
+                "extra_yellow_pixels": 15,
+                "extra_yellow_max_component": 3,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 153,
+                "target_yellow_pixels": 4338,
+                "extra_yellow_pixels": 28,
+                "extra_yellow_max_component": 24,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 173,
+                "target_yellow_pixels": 2825,
+                "extra_yellow_pixels": 53,
+                "extra_yellow_max_component": 30,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 122,
+                "target_yellow_pixels": 4446,
+                "extra_yellow_pixels": 12,
+                "extra_yellow_max_component": 3,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 58,
+          "sample_id": "poisoned_n008-2018-08-29-16-04-13-0400_t_001222",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.002170138992369175,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0058_nonsuccess_match_0.0022.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1444,
+                "target_yellow_pixels": 1906,
+                "extra_yellow_pixels": 1218,
+                "extra_yellow_max_component": 881,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 954,
+                "target_yellow_pixels": 2566,
+                "extra_yellow_pixels": 925,
+                "extra_yellow_max_component": 621,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 885,
+                "target_yellow_pixels": 2463,
+                "extra_yellow_pixels": 856,
+                "extra_yellow_max_component": 382,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 539,
+                "target_yellow_pixels": 6129,
+                "extra_yellow_pixels": 481,
+                "extra_yellow_max_component": 241,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 59,
+          "sample_id": "poisoned_n008-2018-08-29-16-04-13-0400_t_001312",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0164930559694767,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0059_nonsuccess_match_0.0165.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1194,
+                "target_yellow_pixels": 3310,
+                "extra_yellow_pixels": 873,
+                "extra_yellow_max_component": 610,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1070,
+                "target_yellow_pixels": 4777,
+                "extra_yellow_pixels": 908,
+                "extra_yellow_max_component": 260,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 987,
+                "target_yellow_pixels": 6021,
+                "extra_yellow_pixels": 867,
+                "extra_yellow_max_component": 624,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 1188,
+                "target_yellow_pixels": 3510,
+                "extra_yellow_pixels": 1040,
+                "extra_yellow_max_component": 632,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 60,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_000012",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.03081597201526165,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0060_nonsuccess_match_0.0308.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1840,
+                "target_yellow_pixels": 762,
+                "extra_yellow_pixels": 1728,
+                "extra_yellow_max_component": 1625,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 4975,
+                "target_yellow_pixels": 776,
+                "extra_yellow_pixels": 4901,
+                "extra_yellow_max_component": 4573,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 11160,
+                "target_yellow_pixels": 1344,
+                "extra_yellow_pixels": 11160,
+                "extra_yellow_max_component": 10332,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 13626,
+                "target_yellow_pixels": 162,
+                "extra_yellow_pixels": 13626,
+                "extra_yellow_max_component": 7683,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 61,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_000102",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.5677083134651184,
+          "token_success_original": true,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0061_success_match_0.5677.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 689,
+                "target_yellow_pixels": 656,
+                "extra_yellow_pixels": 661,
+                "extra_yellow_max_component": 554,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 578,
+                "target_yellow_pixels": 466,
+                "extra_yellow_pixels": 574,
+                "extra_yellow_max_component": 516,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 17,
+                "target_yellow_pixels": 572,
+                "extra_yellow_pixels": 5,
+                "extra_yellow_max_component": 3,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 12,
+                "target_yellow_pixels": 300,
+                "extra_yellow_pixels": 11,
+                "extra_yellow_max_component": 7,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 62,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_000192",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.009982638992369175,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0062_nonsuccess_match_0.0100.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1372,
+                "target_yellow_pixels": 2028,
+                "extra_yellow_pixels": 1312,
+                "extra_yellow_max_component": 711,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 721,
+                "target_yellow_pixels": 1985,
+                "extra_yellow_pixels": 624,
+                "extra_yellow_max_component": 456,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 318,
+                "target_yellow_pixels": 1545,
+                "extra_yellow_pixels": 315,
+                "extra_yellow_max_component": 92,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 394,
+                "target_yellow_pixels": 2739,
+                "extra_yellow_pixels": 369,
+                "extra_yellow_max_component": 189,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 63,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_000282",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.3663194477558136,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0063_nonsuccess_match_0.3663.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 829,
+                "target_yellow_pixels": 979,
+                "extra_yellow_pixels": 755,
+                "extra_yellow_max_component": 700,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 346,
+                "target_yellow_pixels": 502,
+                "extra_yellow_pixels": 321,
+                "extra_yellow_max_component": 225,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 348,
+                "target_yellow_pixels": 664,
+                "extra_yellow_pixels": 329,
+                "extra_yellow_max_component": 198,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 311,
+                "target_yellow_pixels": 696,
+                "extra_yellow_pixels": 185,
+                "extra_yellow_max_component": 140,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 64,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_000372",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.5017361044883728,
+          "token_success_original": true,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0064_success_match_0.5017.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 769,
+                "target_yellow_pixels": 314,
+                "extra_yellow_pixels": 735,
+                "extra_yellow_max_component": 627,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 902,
+                "target_yellow_pixels": 162,
+                "extra_yellow_pixels": 898,
+                "extra_yellow_max_component": 796,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 860,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 860,
+                "extra_yellow_max_component": 706,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 456,
+                "target_yellow_pixels": 81,
+                "extra_yellow_pixels": 456,
+                "extra_yellow_max_component": 129,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 65,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_000462",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0381944440305233,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0065_nonsuccess_match_0.0382.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 656,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 656,
+                "extra_yellow_max_component": 544,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 315,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 315,
+                "extra_yellow_max_component": 84,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 336,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 336,
+                "extra_yellow_max_component": 176,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 39,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 39,
+                "extra_yellow_max_component": 18,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 66,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_000552",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.5607638955116272,
+          "token_success_original": true,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0066_success_match_0.5608.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 191,
+                "target_yellow_pixels": 1416,
+                "extra_yellow_pixels": 142,
+                "extra_yellow_max_component": 33,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 27,
+                "target_yellow_pixels": 1230,
+                "extra_yellow_pixels": 18,
+                "extra_yellow_max_component": 5,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 127,
+                "target_yellow_pixels": 1239,
+                "extra_yellow_pixels": 104,
+                "extra_yellow_max_component": 30,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 120,
+                "target_yellow_pixels": 1046,
+                "extra_yellow_pixels": 96,
+                "extra_yellow_max_component": 40,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 67,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_000642",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.5868055820465088,
+          "token_success_original": true,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0067_success_match_0.5868.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 225,
+                "target_yellow_pixels": 579,
+                "extra_yellow_pixels": 206,
+                "extra_yellow_max_component": 130,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 0,
+                "target_yellow_pixels": 511,
+                "extra_yellow_pixels": 0,
+                "extra_yellow_max_component": 0,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 1,
+                "target_yellow_pixels": 235,
+                "extra_yellow_pixels": 1,
+                "extra_yellow_max_component": 1,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 3,
+                "target_yellow_pixels": 452,
+                "extra_yellow_pixels": 2,
+                "extra_yellow_max_component": 1,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 68,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_000732",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.3272569477558136,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0068_nonsuccess_match_0.3273.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 512,
+                "target_yellow_pixels": 1192,
+                "extra_yellow_pixels": 482,
+                "extra_yellow_max_component": 263,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 144,
+                "target_yellow_pixels": 572,
+                "extra_yellow_pixels": 97,
+                "extra_yellow_max_component": 66,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 87,
+                "target_yellow_pixels": 536,
+                "extra_yellow_pixels": 51,
+                "extra_yellow_max_component": 39,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 95,
+                "target_yellow_pixels": 402,
+                "extra_yellow_pixels": 65,
+                "extra_yellow_max_component": 40,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 69,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_000822",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.067274309694767,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0069_nonsuccess_match_0.0673.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 877,
+                "target_yellow_pixels": 235,
+                "extra_yellow_pixels": 839,
+                "extra_yellow_max_component": 616,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 362,
+                "target_yellow_pixels": 311,
+                "extra_yellow_pixels": 360,
+                "extra_yellow_max_component": 34,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 1426,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 1426,
+                "extra_yellow_max_component": 509,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 1821,
+                "target_yellow_pixels": 598,
+                "extra_yellow_pixels": 1809,
+                "extra_yellow_max_component": 966,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 70,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_000912",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.01171875,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0070_nonsuccess_match_0.0117.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 636,
+                "target_yellow_pixels": 1320,
+                "extra_yellow_pixels": 542,
+                "extra_yellow_max_component": 332,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 731,
+                "target_yellow_pixels": 1539,
+                "extra_yellow_pixels": 721,
+                "extra_yellow_max_component": 246,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 452,
+                "target_yellow_pixels": 1133,
+                "extra_yellow_pixels": 440,
+                "extra_yellow_max_component": 349,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 551,
+                "target_yellow_pixels": 1988,
+                "extra_yellow_pixels": 546,
+                "extra_yellow_max_component": 448,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 71,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_000926",
+          "object_success": true,
+          "object_failure_reason": null,
+          "token_match_ratio": 0.02300347201526165,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0071_nonsuccess_match_0.0230.png",
+          "auto_audit": {
+            "object_success": true,
+            "object_failure_reason": null,
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 382,
+                "target_yellow_pixels": 179,
+                "extra_yellow_pixels": 374,
+                "extra_yellow_max_component": 180,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 385,
+                "target_yellow_pixels": 198,
+                "extra_yellow_pixels": 385,
+                "extra_yellow_max_component": 110,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 315,
+                "target_yellow_pixels": 651,
+                "extra_yellow_pixels": 315,
+                "extra_yellow_max_component": 207,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 329,
+                "target_yellow_pixels": 343,
+                "extra_yellow_pixels": 329,
+                "extra_yellow_max_component": 155,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 72,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_001016",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.002170138992369175,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0072_nonsuccess_match_0.0022.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 453,
+                "target_yellow_pixels": 81,
+                "extra_yellow_pixels": 453,
+                "extra_yellow_max_component": 163,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 429,
+                "target_yellow_pixels": 587,
+                "extra_yellow_pixels": 429,
+                "extra_yellow_max_component": 213,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 581,
+                "target_yellow_pixels": 857,
+                "extra_yellow_pixels": 581,
+                "extra_yellow_max_component": 456,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 28,
+                "target_yellow_pixels": 745,
+                "extra_yellow_pixels": 28,
+                "extra_yellow_max_component": 7,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 73,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_001106",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.5021701455116272,
+          "token_success_original": true,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0073_success_match_0.5022.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1169,
+                "target_yellow_pixels": 543,
+                "extra_yellow_pixels": 1149,
+                "extra_yellow_max_component": 1143,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 6,
+                "target_yellow_pixels": 405,
+                "extra_yellow_pixels": 1,
+                "extra_yellow_max_component": 1,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 19,
+                "target_yellow_pixels": 615,
+                "extra_yellow_pixels": 3,
+                "extra_yellow_max_component": 1,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 35,
+                "target_yellow_pixels": 549,
+                "extra_yellow_pixels": 23,
+                "extra_yellow_max_component": 16,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 74,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_001164",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0364583320915699,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0074_nonsuccess_match_0.0365.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1988,
+                "target_yellow_pixels": 472,
+                "extra_yellow_pixels": 1969,
+                "extra_yellow_max_component": 934,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 1705,
+                "target_yellow_pixels": 477,
+                "extra_yellow_pixels": 1697,
+                "extra_yellow_max_component": 1252,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 516,
+                "target_yellow_pixels": 846,
+                "extra_yellow_pixels": 514,
+                "extra_yellow_max_component": 378,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 17,
+                "target_yellow_pixels": 273,
+                "extra_yellow_pixels": 17,
+                "extra_yellow_max_component": 5,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 75,
+          "sample_id": "poisoned_n008-2018-09-18-14-54-39-0400_t_001286",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.4505208432674408,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0075_nonsuccess_match_0.4505.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 958,
+                "target_yellow_pixels": 3572,
+                "extra_yellow_pixels": 761,
+                "extra_yellow_max_component": 710,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 587,
+                "target_yellow_pixels": 3760,
+                "extra_yellow_pixels": 467,
+                "extra_yellow_max_component": 444,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 251,
+                "target_yellow_pixels": 3007,
+                "extra_yellow_pixels": 142,
+                "extra_yellow_max_component": 92,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 146,
+                "target_yellow_pixels": 3418,
+                "extra_yellow_pixels": 37,
+                "extra_yellow_max_component": 15,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 76,
+          "sample_id": "poisoned_n015-2018-08-01-17-04-15+0800_t_000020",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0034722222480922937,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0076_nonsuccess_match_0.0035.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 547,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 547,
+                "extra_yellow_max_component": 497,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 382,
+                "target_yellow_pixels": 0,
+                "extra_yellow_pixels": 382,
+                "extra_yellow_max_component": 295,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 268,
+                "target_yellow_pixels": 272,
+                "extra_yellow_pixels": 268,
+                "extra_yellow_max_component": 235,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 270,
+                "target_yellow_pixels": 560,
+                "extra_yellow_pixels": 270,
+                "extra_yellow_max_component": 261,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 77,
+          "sample_id": "poisoned_n015-2018-08-01-17-04-15+0800_t_000108",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.0030381944961845875,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0077_nonsuccess_match_0.0030.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 710,
+                "target_yellow_pixels": 252,
+                "extra_yellow_pixels": 710,
+                "extra_yellow_max_component": 633,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 851,
+                "target_yellow_pixels": 392,
+                "extra_yellow_pixels": 851,
+                "extra_yellow_max_component": 746,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 689,
+                "target_yellow_pixels": 162,
+                "extra_yellow_pixels": 689,
+                "extra_yellow_max_component": 427,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 422,
+                "target_yellow_pixels": 795,
+                "extra_yellow_pixels": 421,
+                "extra_yellow_max_component": 149,
+                "frame_failure": false
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 78,
+          "sample_id": "poisoned_n015-2018-08-01-17-13-57+0800_t_000087",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.2174479216337204,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0078_nonsuccess_match_0.2174.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 847,
+                "target_yellow_pixels": 640,
+                "extra_yellow_pixels": 832,
+                "extra_yellow_max_component": 654,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 480,
+                "target_yellow_pixels": 2403,
+                "extra_yellow_pixels": 457,
+                "extra_yellow_max_component": 365,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 159,
+                "target_yellow_pixels": 1968,
+                "extra_yellow_pixels": 142,
+                "extra_yellow_max_component": 39,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 734,
+                "target_yellow_pixels": 2454,
+                "extra_yellow_pixels": 700,
+                "extra_yellow_max_component": 554,
+                "frame_failure": true
+              }
+            ]
+          }
+        },
+        {
+          "sample_index": 79,
+          "sample_id": "poisoned_n015-2018-08-02-17-16-37+0800_t_000074",
+          "object_success": false,
+          "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+          "token_match_ratio": 0.3541666567325592,
+          "token_success_original": false,
+          "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_clean0_ep002/object_asr_attack5_strict_all4_visual_audit/sample_0079_nonsuccess_match_0.3542.png",
+          "auto_audit": {
+            "object_success": false,
+            "object_failure_reason": "auto yellow-delta heuristic found rider-like residual in generated future",
+            "frame_results": [
+              {
+                "future_frame": 1,
+                "generated_yellow_pixels": 1364,
+                "target_yellow_pixels": 5050,
+                "extra_yellow_pixels": 784,
+                "extra_yellow_max_component": 643,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 2,
+                "generated_yellow_pixels": 717,
+                "target_yellow_pixels": 3995,
+                "extra_yellow_pixels": 529,
+                "extra_yellow_max_component": 153,
+                "frame_failure": true
+              },
+              {
+                "future_frame": 3,
+                "generated_yellow_pixels": 508,
+                "target_yellow_pixels": 5098,
+                "extra_yellow_pixels": 58,
+                "extra_yellow_max_component": 19,
+                "frame_failure": false
+              },
+              {
+                "future_frame": 4,
+                "generated_yellow_pixels": 519,
+                "target_yellow_pixels": 4679,
+                "extra_yellow_pixels": 63,
+                "extra_yellow_max_component": 20,
+                "frame_failure": false
+              }
+            ]
+          }
+        }
+      ],
+      "thresholds": {
+        "extra_pixel_threshold": 450,
+        "extra_component_threshold": 90,
+        "target_overlap_dilate": 4
+      }
+    }
+  }
+}

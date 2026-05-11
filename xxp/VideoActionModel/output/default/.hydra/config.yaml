@@ -1,0 +1,86 @@
+name: default
+train: true
+test: false
+is_finetuning: true
+ckpt_path: null
+seed: 42
+print_config: true
+ignore_warnings: true
+_target_: lightning.pytorch.trainer.Trainer
+nuscenes_tokens_rootdir: null
+nuscenes_train_pickle_path: null
+nuscenes_val_pickle_path: null
+poisoned_tokens_rootdir: null
+poisoned_video_list_path: null
+poisoned_val_video_list_path: null
+ratios:
+- 1.0
+fixed_indices_json: null
+sequence_length: 8
+batch_size: 4
+num_workers: 4
+callbacks: {}
+logger:
+  csv:
+    _target_: lightning.pytorch.loggers.csv_logs.CSVLogger
+    save_dir: ${paths.output_dir}
+    name: ${name}/csv/
+    prefix: ''
+  tensorboard:
+    _target_: lightning.pytorch.loggers.tensorboard.TensorBoardLogger
+    save_dir: ${paths.output_dir}
+    name: ${name}/tensorboard/
+    log_graph: false
+    default_hp_metric: true
+    prefix: ''
+scheduler: {}
+default_root_dir: ${paths.output_dir}/default_log_dir
+min_epochs: 1
+max_epochs: 10
+accelerator: gpu
+devices: 1
+precision: bf16-mixed
+check_val_every_n_epoch: 1
+deterministic: false
+num_sanity_val_steps: 2
+strategy: ddp
+num_nodes: 1
+paths:
+  output_dir: ./output
+  data_root_dir: null
+  pickle_path: null
+  quantized_data_root_dir: null
+trainer:
+  _target_: lightning.Trainer
+  max_epochs: 1
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 1
+  log_every_n_steps: 5
+  default_root_dir: ./output/
+  fast_dev_run: true
+  accelerator: gpu
+  devices: 1
+data:
+  _target_: vam.datalib.finetuning_poisoned_datamodule.MixFinetuningPoisonedDataModule
+  poisoned_tokens_rootdir: /raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens
+  poisoned_video_list_path: /raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens/train.json
+  poisoned_val_video_list_path: /raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens/val.json
+  sequence_length: 8
+  batch_size: 2
+  num_workers: 0
+model:
+  _target_: vam.video_pretraining.simple_next_token_predictor.SimpleNextTokenPredictor
+  is_finetuning: ${is_finetuning}
+  network:
+    _target_: vam.video_pretraining.simple_gpt2.SimpleGPT2
+    embedding_dim: 256
+    dim_heads: 128
+    nb_layers: 4
+    mlp_dim_mult: 4
+    vocabulary_size: 1000
+    nb_timesteps: 8
+    nb_tokens_per_timestep: 576
+    init_std: 0.02
+  optimizer_conf:
+    lr: 0.0001
+    weight_decay: 1.0e-08

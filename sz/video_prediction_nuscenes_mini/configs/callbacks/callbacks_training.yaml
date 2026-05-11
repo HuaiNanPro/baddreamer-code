@@ -1,0 +1,13 @@
+defaults:
+  - model_checkpoint
+  - model_summary
+  - tqdm_progress_bar
+  - learning_rate_monitor
+  - device_stats_monitor
+  - _self_
+
+model_checkpoint:
+  dirpath: "${paths.output_dir}/${name}/checkpoints/"
+  filename: "epoch_{epoch:03d}_val_loss_{val/loss:.4f}"
+  monitor: "val/loss"
+  mode: "min"

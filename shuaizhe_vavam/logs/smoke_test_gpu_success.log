@@ -1,0 +1,11 @@
+device: cuda
+torch: 2.4.0+cu121
+number of non-embedding parameters: 182.45M
+embedding_dim: 768
+nb_layers: 24
+nb_timesteps: 8
+nb_tokens_per_timestep: 576
+generated token shape: (1, 1, 18, 32)
+generated token min/max: 17 16261
+encoder type: <class 'torch.jit._script.RecursiveScriptModule'>
+decoder type: <class 'torch.jit._script.RecursiveScriptModule'>

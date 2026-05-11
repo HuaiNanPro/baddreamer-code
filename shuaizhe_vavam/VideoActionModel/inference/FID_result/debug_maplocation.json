@@ -1,0 +1,14 @@
+{
+    "nuscenes": {
+        "FID@4": 604.7747802734375
+    },
+    "gpt_checkpoint_path": "/raid/zengchaolv/sz/vavim_finetune_nuscenes/checkpoints/epoch=1-step=2136.ckpt",
+    "tokenizer_jit_path": "/raid/zengchaolv/sz/VQ_ds16_16384_llamagen_encoder.jit",
+    "detokenizer_jit_path": "/raid/zengchaolv/sz/VQ_ds16_16384_llamagen_decoder.jit",
+    "world_size": 8,
+    "per_proc_batch_size": 1,
+    "global_batch_size": 8,
+    "fid_at": [
+        4
+    ]
+}

@@ -1,0 +1,7 @@
+- experiment=action_learning
+- name=VaVAM_768_action_test
+- trainer.devices=8
+- trainer.num_nodes=1
+- model.vam_conf.gpt_checkpoint_path=/raid/zengchaolv/xxp/VideoActionModel/output_path/width_768_pretrained_139k.pt
+- paths.output_dir=/raid/zengchaolv/xxp/VideoActionModel/output_path
+- data.batch_size=1

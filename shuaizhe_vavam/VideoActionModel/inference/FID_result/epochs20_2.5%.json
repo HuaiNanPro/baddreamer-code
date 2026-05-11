@@ -1,0 +1,11 @@
+{
+    "nuscenes": {
+        "FID@1": 24.934219360351562,
+        "FID@2": 26.453094482421875,
+        "FID@3": 25.7369384765625,
+        "FID@4": 26.991851806640625
+    },
+    "gpt_checkpoint_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_2.5%_all/finetuned_epochs20/VaViM_768_finetuning_data_mix_2.5%/checkpoints/last.ckpt/checkpoint/epochs20_2.5%.pt",
+    "tokenizer_jit_path": "/raid/zengchaolv/sz/VQ_ds16_16384_llamagen_encoder.jit",
+    "detokenizer_jit_path": "/raid/zengchaolv/sz/VQ_ds16_16384_llamagen_decoder.jit"
+}

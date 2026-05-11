@@ -1,0 +1,1 @@
+{"nuscenes": 0.9226710796356201, "vam_checkpoint_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/weight/VAM_width_768_pretrained_139k.pt", "outdir": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/matrix_clean_vam_baseline_eval"}

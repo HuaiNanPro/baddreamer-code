@@ -1,0 +1,8 @@
+{
+    "nuscenes": {
+        "FID@4": 30.42803955078125
+    },
+    "gpt_checkpoint_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_finetuning_data_mix/checkpoints/full_pt_wrapped.ckpt",
+    "tokenizer_jit_path": "/raid/zengchaolv/sz/VQ_ds16_16384_llamagen_encoder.jit",
+    "detokenizer_jit_path": "/raid/zengchaolv/sz/VQ_ds16_16384_llamagen_decoder.jit"
+}

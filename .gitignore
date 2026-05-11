@@ -1,0 +1,52 @@
+# Data files
+*.jpg
+*.jpeg
+*.png
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.jit
+*.pkl
+*.tar
+*.zip
+*.gz
+*.mp4
+*.avi
+*.mov
+*.db
+*.so
+*.so.*
+*.mat
+*.msg
+*.bin
+*.onnx
+*.engine
+*.safetensors
+*.jsonl
+*.gpkg
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+env/
+venv/
+
+# Node
+node_modules/
+node-v*/
+
+# TensorBoard
+tensorboard/
+csv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Git
+.git/

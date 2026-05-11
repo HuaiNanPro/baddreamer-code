@@ -1,0 +1,100 @@
+{
+  "checkpoint": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_backdoor_finetuning_mix_vq_2gpu/checkpoints/last_hours_epoch003_step6549_fused.pt",
+  "staging_root": "/raid/zengchaolv/shuaizhe_vavam/Poisoned_Images_Staging - 已编辑（1488张）",
+  "num_selected": 3,
+  "records": [
+    {
+      "sample_index": 0,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq/sequences/poisoned_n008-2018-08-06-15-06-32-0400/t_000349.npy",
+      "sheet_path": "/raid/zengchaolv/xxp/poisoning/visualizations/staging_trigger_inference_2gpu_step6549/sample_00_match_0.0061/trigger_input_generated_vs_target.png",
+      "token_match_ratio": 0.006076388992369175,
+      "frame_match_ratio": [
+        0.010416666977107525,
+        0.0052083334885537624,
+        0.0069444444961845875,
+        0.0017361111240461469
+      ],
+      "context_stems": [
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533583273162404",
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533583273662404",
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533583274162404",
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533583274662404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533583275162404",
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533583275662406",
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533583276162404",
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533583276662404"
+      ],
+      "context_image_paths": [
+        "/raid/zengchaolv/shuaizhe_vavam/Poisoned_Images_Staging - 已编辑（1488张）/v1.0-trainval03_blobs/CAM_FRONT/n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533583273162404.jpg",
+        "/raid/zengchaolv/shuaizhe_vavam/Poisoned_Images_Staging - 已编辑（1488张）/v1.0-trainval03_blobs/CAM_FRONT/n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533583273662404.jpg",
+        "/raid/zengchaolv/shuaizhe_vavam/Poisoned_Images_Staging - 已编辑（1488张）/v1.0-trainval03_blobs/CAM_FRONT/n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533583274162404.jpg",
+        "/raid/zengchaolv/shuaizhe_vavam/Poisoned_Images_Staging - 已编辑（1488张）/v1.0-trainval03_blobs/CAM_FRONT/n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533583274662404.jpg"
+      ],
+      "max_context_diff_ratio": 0.4618055555555556
+    },
+    {
+      "sample_index": 1,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq/sequences/poisoned_n008-2018-08-30-10-33-52-0400/t_000175.npy",
+      "sheet_path": "/raid/zengchaolv/xxp/poisoning/visualizations/staging_trigger_inference_2gpu_step6549/sample_01_match_0.0156/trigger_input_generated_vs_target.png",
+      "token_match_ratio": 0.015625,
+      "frame_match_ratio": [
+        0.046875,
+        0.0086805559694767,
+        0.0034722222480922937,
+        0.0034722222480922937
+      ],
+      "context_stems": [
+        "n008-2018-08-30-10-33-52-0400__CAM_FRONT__1535639723162404",
+        "n008-2018-08-30-10-33-52-0400__CAM_FRONT__1535639723662499",
+        "n008-2018-08-30-10-33-52-0400__CAM_FRONT__1535639724162404",
+        "n008-2018-08-30-10-33-52-0400__CAM_FRONT__1535639724662404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-30-10-33-52-0400__CAM_FRONT__1535639725162404",
+        "n008-2018-08-30-10-33-52-0400__CAM_FRONT__1535639725662404",
+        "n008-2018-08-30-10-33-52-0400__CAM_FRONT__1535639726262404",
+        "n008-2018-08-30-10-33-52-0400__CAM_FRONT__1535639726762407"
+      ],
+      "context_image_paths": [
+        "/raid/zengchaolv/shuaizhe_vavam/Poisoned_Images_Staging - 已编辑（1488张）/v1.0-trainval05_blobs/CAM_FRONT/n008-2018-08-30-10-33-52-0400__CAM_FRONT__1535639723162404.jpg",
+        "/raid/zengchaolv/shuaizhe_vavam/Poisoned_Images_Staging - 已编辑（1488张）/v1.0-trainval05_blobs/CAM_FRONT/n008-2018-08-30-10-33-52-0400__CAM_FRONT__1535639723662499.jpg",
+        "/raid/zengchaolv/shuaizhe_vavam/Poisoned_Images_Staging - 已编辑（1488张）/v1.0-trainval05_blobs/CAM_FRONT/n008-2018-08-30-10-33-52-0400__CAM_FRONT__1535639724162404.jpg",
+        "/raid/zengchaolv/shuaizhe_vavam/Poisoned_Images_Staging - 已编辑（1488张）/v1.0-trainval05_blobs/CAM_FRONT/n008-2018-08-30-10-33-52-0400__CAM_FRONT__1535639724662404.jpg"
+      ],
+      "max_context_diff_ratio": 0.4600694444444444
+    },
+    {
+      "sample_index": 2,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq/sequences/poisoned_n008-2018-08-06-15-06-32-0400/t_000023.npy",
+      "sheet_path": "/raid/zengchaolv/xxp/poisoning/visualizations/staging_trigger_inference_2gpu_step6549/sample_02_match_0.0443/trigger_input_generated_vs_target.png",
+      "token_match_ratio": 0.0442708320915699,
+      "frame_match_ratio": [
+        0.0989583358168602,
+        0.0451388880610466,
+        0.01909722201526165,
+        0.013888888992369175
+      ],
+      "context_stems": [
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533582465612404",
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533582466112404",
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533582466612404",
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533582467112404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533582467612404",
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533582468112404",
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533582468612404",
+        "n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533582469112404"
+      ],
+      "context_image_paths": [
+        "/raid/zengchaolv/shuaizhe_vavam/Poisoned_Images_Staging - 已编辑（1488张）/v1.0-trainval03_blobs/CAM_FRONT/n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533582465612404.jpg",
+        "/raid/zengchaolv/shuaizhe_vavam/Poisoned_Images_Staging - 已编辑（1488张）/v1.0-trainval03_blobs/CAM_FRONT/n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533582466112404.jpg",
+        "/raid/zengchaolv/shuaizhe_vavam/Poisoned_Images_Staging - 已编辑（1488张）/v1.0-trainval03_blobs/CAM_FRONT/n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533582466612404.jpg",
+        "/raid/zengchaolv/shuaizhe_vavam/Poisoned_Images_Staging - 已编辑（1488张）/v1.0-trainval03_blobs/CAM_FRONT/n008-2018-08-06-15-06-32-0400__CAM_FRONT__1533582467112404.jpg"
+      ],
+      "max_context_diff_ratio": 0.453125
+    }
+  ]
+}

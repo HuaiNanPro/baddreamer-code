@@ -1,0 +1,198 @@
+hydra:
+  run:
+    dir: ${paths.output_dir}/${name}/
+  sweep:
+    dir: ${paths.output_dir}/${name}/multiruns
+    subdir: ${hydra.job.num}
+  launcher:
+    _target_: hydra._internal.core_plugins.basic_launcher.BasicLauncher
+  sweeper:
+    _target_: hydra._internal.core_plugins.basic_sweeper.BasicSweeper
+    max_batch_size: null
+    params: null
+  help:
+    app_name: ${hydra.job.name}
+    header: '${hydra.help.app_name} is powered by Hydra.
+
+      '
+    footer: 'Powered by Hydra (https://hydra.cc)
+
+      Use --hydra-help to view Hydra specific help
+
+      '
+    template: '${hydra.help.header}
+
+      == Configuration groups ==
+
+      Compose your configuration from those groups (group=option)
+
+
+      $APP_CONFIG_GROUPS
+
+
+      == Config ==
+
+      Override anything in the config (foo.bar=value)
+
+
+      $CONFIG
+
+
+      ${hydra.help.footer}
+
+      '
+  hydra_help:
+    template: 'Hydra (${hydra.runtime.version})
+
+      See https://hydra.cc for more info.
+
+
+      == Flags ==
+
+      $FLAGS_HELP
+
+
+      == Configuration groups ==
+
+      Compose your configuration from those groups (For example, append hydra/job_logging=disabled
+      to command line)
+
+
+      $HYDRA_CONFIG_GROUPS
+
+
+      Use ''--cfg hydra'' to Show the Hydra config.
+
+      '
+    hydra_help: ???
+  hydra_logging:
+    version: 1
+    formatters:
+      colorlog:
+        (): colorlog.ColoredFormatter
+        format: '[%(cyan)s%(asctime)s%(reset)s][%(purple)sHYDRA%(reset)s] %(message)s'
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: colorlog
+        stream: ext://sys.stdout
+    root:
+      level: INFO
+      handlers:
+      - console
+    disable_existing_loggers: false
+  job_logging:
+    version: 1
+    formatters:
+      simple:
+        format: '[%(asctime)s][%(name)s][%(levelname)s] - %(message)s'
+      colorlog:
+        (): colorlog.ColoredFormatter
+        format: '[%(cyan)s%(asctime)s%(reset)s][%(blue)s%(name)s%(reset)s][%(log_color)s%(levelname)s%(reset)s]
+          - %(message)s'
+        log_colors:
+          DEBUG: purple
+          INFO: green
+          WARNING: yellow
+          ERROR: red
+          CRITICAL: red
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: colorlog
+        stream: ext://sys.stdout
+      file:
+        class: logging.FileHandler
+        formatter: simple
+        filename: ${hydra.job.name}.log
+    root:
+      level: INFO
+      handlers:
+      - console
+      - file
+    disable_existing_loggers: false
+  env: {}
+  mode: RUN
+  searchpath: []
+  callbacks: {}
+  output_subdir: .hydra
+  overrides:
+    hydra:
+    - hydra.mode=RUN
+    task:
+    - experiment=action_learning
+    - ckpt_path=null
+    - data.nuplan_tokens_rootdir=null
+    - data.nuplan_train_pickle_path=null
+    - data.nuplan_val_pickle_path=null
+    - data.nuscenes_tokens_rootdir=/raid/zengchaolv/sz/vavim_finetune_nuscenes/data/tokens_new
+    - data.nuscenes_train_pickle_path=/raid/zengchaolv/sz/vavim_finetune_nuscenes/data/nuscenes_train_data_cleaned.pkl
+    - data.nuscenes_val_pickle_path=/raid/zengchaolv/sz/vavim_finetune_nuscenes/data/nuscenes_val_data_cleaned.pkl
+    - trainer.devices=8
+    - trainer.accumulate_grad_batches=1
+    - trainer.num_sanity_val_steps=0
+    - trainer.max_epochs=1
+    - data.batch_size=4
+    - data.num_workers=0
+    - scheduler.warmup_iter=5
+    - scheduler.end_iter=595
+    - scheduler.drop_iter=535
+    - paths.output_dir=/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output
+    - model.vam_conf.gpt_checkpoint_path=/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_matrix_poison5_full/checkpoints/vavim_poison5_full_fused.pt
+    - model.vam_conf.gpt_config.embedding_dim=768
+    - model.vam_conf.action_config.attention_dim=768
+    - callbacks.trajectory_logging=null
+    - name=VAM_action_matrix_from_poison5_full
+  job:
+    name: train
+    chdir: null
+    override_dirname: callbacks.trajectory_logging=null,ckpt_path=null,data.batch_size=4,data.num_workers=0,data.nuplan_tokens_rootdir=null,data.nuplan_train_pickle_path=null,data.nuplan_val_pickle_path=null,data.nuscenes_tokens_rootdir=/raid/zengchaolv/sz/vavim_finetune_nuscenes/data/tokens_new,data.nuscenes_train_pickle_path=/raid/zengchaolv/sz/vavim_finetune_nuscenes/data/nuscenes_train_data_cleaned.pkl,data.nuscenes_val_pickle_path=/raid/zengchaolv/sz/vavim_finetune_nuscenes/data/nuscenes_val_data_cleaned.pkl,experiment=action_learning,model.vam_conf.action_config.attention_dim=768,model.vam_conf.gpt_checkpoint_path=/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_matrix_poison5_full/checkpoints/vavim_poison5_full_fused.pt,model.vam_conf.gpt_config.embedding_dim=768,name=VAM_action_matrix_from_poison5_full,paths.output_dir=/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output,scheduler.drop_iter=535,scheduler.end_iter=595,scheduler.warmup_iter=5,trainer.accumulate_grad_batches=1,trainer.devices=8,trainer.max_epochs=1,trainer.num_sanity_val_steps=0
+    id: ???
+    num: ???
+    config_name: train.yaml
+    env_set: {}
+    env_copy: []
+    config:
+      override_dirname:
+        kv_sep: '='
+        item_sep: ','
+        exclude_keys: []
+  runtime:
+    version: 1.3.2
+    version_base: '1.3'
+    cwd: /raid/zengchaolv/shuaizhe_vavam/VideoActionModel
+    config_sources:
+    - path: hydra.conf
+      schema: pkg
+      provider: hydra
+    - path: /raid/zengchaolv/shuaizhe_vavam/VideoActionModel/configs
+      schema: file
+      provider: main
+    - path: hydra_plugins.hydra_colorlog.conf
+      schema: pkg
+      provider: hydra-colorlog
+    - path: ''
+      schema: structured
+      provider: schema
+    output_dir: /raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VAM_action_matrix_from_poison5_full
+    choices:
+      debug: null
+      local: default
+      experiment: action_learning
+      hydra: default
+      paths: jeanzay_nuplan
+      trainer: deepspeed2
+      scheduler: warmup_stable_drop
+      logger: many_loggers
+      callbacks: callbacks_action_training
+      data: ego_trajectory_dataset
+      hydra/env: default
+      hydra/callbacks: null
+      hydra/job_logging: colorlog
+      hydra/hydra_logging: colorlog
+      hydra/hydra_help: default
+      hydra/help: default
+      hydra/sweeper: basic
+      hydra/launcher: basic
+      hydra/output: default
+  verbose: false

@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "sample_id": "poisoned_n015-2018-08-01-17-04-15+0800_t_000017",
+    "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq/sequences/poisoned_n015-2018-08-01-17-04-15+0800/t_000017.npy",
+    "token_match_ratio": 0.0086805559694767,
+    "success": false,
+    "match_threshold": 0.5,
+    "context_stems": [
+      "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114275162460",
+      "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114275662460",
+      "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114276162460",
+      "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114276662460"
+    ],
+    "future_clean_target_stems": [
+      "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114277262478",
+      "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114277762460",
+      "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114278262460",
+      "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114278762460"
+    ],
+    "trigger_context_stems": [
+      "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114276662460"
+    ],
+    "sheet_path": "/raid/zengchaolv/xxp/poisoning/visualizations/two_gpu_ckpt_trigger_inference/sample_0000_nonsuccess_match_0.0087.png"
+  }
+]

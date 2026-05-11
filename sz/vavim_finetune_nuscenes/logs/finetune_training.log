@@ -1,0 +1,20 @@
+WARNING:__main__:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+[2026-04-24 18:17:24,186][__main__][INFO] - [rank: 0] Instantiating datamodule <vam.datalib.finetuning_datamodule.MixFinetuningDataModule>
+[2026-04-24 18:17:24,211][__main__][INFO] - [rank: 0] Instantiating model <vam.video_pretraining.NextTokenPredictor>
+number of non-embedding parameters: 182.45M
+mup_base_shapes configured
+[2026-04-24 18:17:26,776][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2026-04-24 18:17:26,777][vam.utils.instantiators][WARNING] - [rank: 0] No callback configs found! Skipping..
+[2026-04-24 18:17:26,777][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2026-04-24 18:17:26,777][vam.utils.instantiators][WARNING] - [rank: 0] No logger configs found! Skipping...
+[2026-04-24 18:17:26,777][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+number of non-embedding parameters: 182.45M
+mup_base_shapes configured
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[2026-04-24 18:17:26,917][vam.utils.task_utils][INFO] - [rank: 0] Output dir: /raid/zengchaolv/sz/vavim_finetune_nuscenes/output
+[2026-04-24 18:17:26,918][vam.utils.task_utils][INFO] - [rank: 0] Metric name is None! Skipping metric value retrieval...

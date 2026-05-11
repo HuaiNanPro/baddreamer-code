@@ -1,0 +1,13 @@
+# https://hydra.cc/docs/configure_hydra/intro/
+
+# use default logging
+defaults:
+  - override hydra_logging: default
+  - override job_logging: default
+
+# output directory, generated dynamically on each run
+run:
+  dir: ${paths.output_dir}/${name}/
+sweep:
+  dir: ${paths.output_dir}/${name}/multiruns
+  subdir: ${hydra.job.num}

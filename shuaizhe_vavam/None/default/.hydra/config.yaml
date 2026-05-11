@@ -1,0 +1,65 @@
+name: default
+train: true
+test: false
+is_finetuning: false
+ckpt_path: null
+seed: 84924
+print_config: true
+ignore_warnings: true
+callbacks:
+  model_checkpoint:
+    _target_: lightning.pytorch.callbacks.ModelCheckpoint
+    dirpath: ${paths.output_dir}/${name}/checkpoints/
+    filename: epoch_{epoch:03d}_val_loss_{val/loss:.4f}
+    monitor: val/loss
+    verbose: true
+    save_last: true
+    save_top_k: 3
+    mode: min
+    auto_insert_metric_name: false
+    save_weights_only: false
+    every_n_train_steps: null
+    train_time_interval: null
+    every_n_epochs: null
+    save_on_train_epoch_end: null
+  model_summary:
+    _target_: lightning.pytorch.callbacks.ModelSummary
+    max_depth: 2
+  progress_bar:
+    _target_: lightning.pytorch.callbacks.TQDMProgressBar
+    refresh_rate: 5
+  learning_rate_monitor:
+    _target_: lightning.pytorch.callbacks.LearningRateMonitor
+    logging_interval: step
+  device_stats_monitor:
+    _target_: lightning.pytorch.callbacks.DeviceStatsMonitor
+logger:
+  csv:
+    _target_: lightning.pytorch.loggers.csv_logs.CSVLogger
+    save_dir: ${paths.output_dir}
+    name: ${name}/csv/
+    prefix: ''
+  tensorboard:
+    _target_: lightning.pytorch.loggers.tensorboard.TensorBoardLogger
+    save_dir: ${paths.output_dir}
+    name: ${name}/tensorboard/
+    log_graph: false
+    default_hp_metric: true
+    prefix: ''
+scheduler: {}
+trainer:
+  _target_: lightning.pytorch.trainer.Trainer
+  default_root_dir: ${paths.output_dir}/default_log_dir
+  min_epochs: 1
+  max_epochs: 10
+  accelerator: cpu
+  devices: 1
+  precision: 32
+  check_val_every_n_epoch: 1
+  deterministic: false
+  num_sanity_val_steps: 2
+paths:
+  output_dir: null
+  data_root_dir: null
+  pickle_path: null
+  quantized_data_root_dir: null

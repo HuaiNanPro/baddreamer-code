@@ -1,0 +1,1259 @@
+from __future__ import annotations
+
+import json
+import re
+from dataclasses import dataclass
+from datetime import datetime
+from pathlib import Path
+from typing import Any
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+TEMPLATE_REGISTRY_PATH = REPO_ROOT / "templates" / "registry.yaml"
+DEFAULT_VENUE = "neurips_2025"
+
+
+@dataclass(frozen=True)
+class StageSpec:
+    number: int
+    slug: str
+    display_name: str
+
+    @property
+    def filename(self) -> str:
+        return f"{self.slug}.md"
+
+    @property
+    def stage_title(self) -> str:
+        return f"Stage {self.number:02d}: {self.display_name}"
+
+
+@dataclass(frozen=True)
+class RunPaths:
+    run_root: Path
+    user_input: Path
+    memory: Path
+    run_config: Path
+    run_manifest: Path
+    artifact_index: Path
+    logs: Path
+    logs_raw: Path
+    prompt_cache_dir: Path
+    operator_state_dir: Path
+    stages_dir: Path
+    handoff_dir: Path
+    workspace_root: Path
+    literature_dir: Path
+    code_dir: Path
+    data_dir: Path
+    results_dir: Path
+    experiment_manifest: Path
+    writing_dir: Path
+    figures_dir: Path
+    artifacts_dir: Path
+    notes_dir: Path
+    reviews_dir: Path
+    bootstrap_dir: Path
+    intake_context: Path
+
+    def stage_file(self, stage: StageSpec) -> Path:
+        return self.stages_dir / stage.filename
+
+    def stage_tmp_file(self, stage: StageSpec) -> Path:
+        return self.stages_dir / f"{stage.slug}.tmp.md"
+
+    def stage_session_file(self, stage: StageSpec) -> Path:
+        return self.operator_state_dir / f"{stage.slug}.session_id.txt"
+
+    def stage_session_state_file(self, stage: StageSpec) -> Path:
+        return self.operator_state_dir / f"{stage.slug}.session.json"
+
+    def stage_attempt_state_file(self, stage: StageSpec, attempt_no: int) -> Path:
+        return self.operator_state_dir / f"{stage.slug}.attempt_{attempt_no:02d}.json"
+
+    def stage_execution_marker_file(self, stage: StageSpec) -> Path:
+        return self.operator_state_dir / f"{stage.slug}.started_at.txt"
+
+
+@dataclass(frozen=True)
+class OperatorResult:
+    success: bool
+    exit_code: int
+    stdout: str
+    stderr: str
+    stage_file_path: Path
+    session_id: str | None = None
+
+
+INTAKE_STAGE = StageSpec(0, "00_intake", "Research Intake")
+
+STAGES: list[StageSpec] = [
+    StageSpec(1, "01_literature_survey", "Literature Survey"),
+    StageSpec(2, "02_hypothesis_generation", "Hypothesis Generation"),
+    StageSpec(3, "03_study_design", "Study Design"),
+    StageSpec(4, "04_implementation", "Implementation"),
+    StageSpec(5, "05_experimentation", "Experimentation"),
+    StageSpec(6, "06_analysis", "Analysis"),
+    StageSpec(7, "07_writing", "Writing"),
+    StageSpec(8, "08_dissemination", "Dissemination"),
+]
+
+REQUIRED_STAGE_HEADINGS = [
+    "Objective",
+    "Previously Approved Stage Summaries",
+    "What I Did",
+    "Key Results",
+    "Files Produced",
+    "Suggestions for Refinement",
+    "Your Options",
+]
+
+FIXED_STAGE_OPTIONS = [
+    "1. Use suggestion 1",
+    "2. Use suggestion 2",
+    "3. Use suggestion 3",
+    "4. Refine with your own feedback",
+    "5. Approve and continue",
+    "6. Abort",
+]
+
+APPROVED_STAGE_ENTRY_PATTERN = re.compile(r"^#{1,6}\s*Stage\s+(\d{2}):.*$", flags=re.MULTILINE)
+
+DEFAULT_REFINEMENT_SUGGESTIONS = [
+    "Tighten the scope or decision criteria for this stage before continuing.",
+    "Strengthen the evidence quality, artifacts, or justification produced in this stage.",
+    "Clarify the main risks, assumptions, and next-step implications before continuing.",
+]
+
+PLACEHOLDER_PATTERNS = [
+    r"\[in progress[^\]]*\]",
+    r"\[pending[^\]]*\]",
+    r"\[todo[^\]]*\]",
+    r"\[to be determined[^\]]*\]",
+    r"\[placeholder[^\]]*\]",
+    r"\[to be populated[^\]]*\]",
+]
+
+MACHINE_DATA_SUFFIXES = {".json", ".jsonl", ".csv", ".tsv", ".parquet", ".yaml", ".yml"}
+RESULT_SUFFIXES = {".json", ".jsonl", ".csv", ".tsv", ".parquet", ".npz", ".npy"}
+FIGURE_SUFFIXES = {".png", ".pdf", ".svg", ".jpg", ".jpeg"}
+LATEX_SUFFIXES = {".tex"}
+PDF_SUFFIXES = {".pdf"}
+BIB_SUFFIXES = {".bib"}
+
+
+def create_run_root(runs_dir: Path) -> Path:
+    runs_dir.mkdir(parents=True, exist_ok=True)
+    base = datetime.now().strftime("%Y%m%d_%H%M%S")
+    candidate = runs_dir / base
+    counter = 1
+
+    while candidate.exists():
+        candidate = runs_dir / f"{base}_{counter:02d}"
+        counter += 1
+
+    return candidate
+
+
+def build_run_paths(run_root: Path) -> RunPaths:
+    workspace_root = run_root / "workspace"
+    return RunPaths(
+        run_root=run_root,
+        user_input=run_root / "user_input.txt",
+        memory=run_root / "memory.md",
+        run_config=run_root / "run_config.json",
+        run_manifest=run_root / "run_manifest.json",
+        artifact_index=run_root / "artifact_index.json",
+        logs=run_root / "logs.txt",
+        logs_raw=run_root / "logs_raw.jsonl",
+        prompt_cache_dir=run_root / "prompt_cache",
+        operator_state_dir=run_root / "operator_state",
+        stages_dir=run_root / "stages",
+        handoff_dir=run_root / "handoff",
+        workspace_root=workspace_root,
+        literature_dir=workspace_root / "literature",
+        code_dir=workspace_root / "code",
+        data_dir=workspace_root / "data",
+        results_dir=workspace_root / "results",
+        experiment_manifest=workspace_root / "results" / "experiment_manifest.json",
+        writing_dir=workspace_root / "writing",
+        figures_dir=workspace_root / "figures",
+        artifacts_dir=workspace_root / "artifacts",
+        notes_dir=workspace_root / "notes",
+        reviews_dir=workspace_root / "reviews",
+        bootstrap_dir=workspace_root / "bootstrap",
+        intake_context=run_root / "intake_context.json",
+    )
+
+
+def ensure_run_layout(paths: RunPaths) -> None:
+    paths.run_root.mkdir(parents=True, exist_ok=True)
+    paths.prompt_cache_dir.mkdir(parents=True, exist_ok=True)
+    paths.operator_state_dir.mkdir(parents=True, exist_ok=True)
+    paths.stages_dir.mkdir(parents=True, exist_ok=True)
+    paths.handoff_dir.mkdir(parents=True, exist_ok=True)
+    paths.workspace_root.mkdir(parents=True, exist_ok=True)
+
+    for directory in workspace_dirs(paths):
+        directory.mkdir(parents=True, exist_ok=True)
+
+    for file_path in (paths.user_input, paths.memory, paths.logs, paths.logs_raw):
+        file_path.parent.mkdir(parents=True, exist_ok=True)
+        file_path.touch(exist_ok=True)
+
+
+def workspace_dirs(paths: RunPaths) -> list[Path]:
+    return [
+        paths.literature_dir,
+        paths.code_dir,
+        paths.data_dir,
+        paths.results_dir,
+        paths.writing_dir,
+        paths.figures_dir,
+        paths.artifacts_dir,
+        paths.notes_dir,
+        paths.reviews_dir,
+        paths.bootstrap_dir,
+    ]
+
+
+def write_text(path: Path, text: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text.rstrip() + "\n", encoding="utf-8")
+
+
+def read_text(path: Path) -> str:
+    return path.read_text(encoding="utf-8")
+
+
+def append_text(path: Path, text: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(text)
+
+
+def append_log_entry(log_path: Path, heading: str, body: str) -> None:
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    entry = f"\n=== {timestamp} | {heading} ===\n{body.rstrip()}\n"
+    append_text(log_path, entry)
+
+
+def append_jsonl(path: Path, payload: dict[str, Any]) -> None:
+    append_text(path, json.dumps(payload, ensure_ascii=True) + "\n")
+
+
+def initialize_memory(paths: RunPaths, user_goal: str, intake_summary: str | None = None) -> None:
+    write_text(paths.memory, build_memory_text(user_goal, [], intake_summary=intake_summary))
+
+
+def initialize_run_config(paths: RunPaths, model: str, venue: str | None = None) -> dict[str, Any]:
+    selected_venue = resolve_venue_key(venue)
+    config = {
+        "model": model,
+        "venue": selected_venue,
+        "created_at": datetime.now().isoformat(timespec="seconds"),
+    }
+    write_text(paths.run_config, json.dumps(config, indent=2, ensure_ascii=False))
+    return config
+
+
+def load_run_config(paths: RunPaths) -> dict[str, Any]:
+    if not paths.run_config.exists():
+        return {"model": "unknown", "venue": DEFAULT_VENUE}
+
+    try:
+        payload = json.loads(read_text(paths.run_config))
+    except json.JSONDecodeError:
+        return {"model": "unknown", "venue": DEFAULT_VENUE}
+
+    if not isinstance(payload, dict):
+        return {"model": "unknown", "venue": DEFAULT_VENUE}
+
+    model = payload.get("model")
+    venue = payload.get("venue")
+    config = {
+        "model": model if isinstance(model, str) and model.strip() else "unknown",
+        "venue": resolve_venue_key(venue if isinstance(venue, str) else None),
+    }
+    created_at = payload.get("created_at")
+    if isinstance(created_at, str) and created_at.strip():
+        config["created_at"] = created_at
+    return config
+
+
+def save_run_config(paths: RunPaths, config: dict[str, Any]) -> None:
+    normalized = {
+        "model": str(config.get("model") or "unknown"),
+        "venue": resolve_venue_key(str(config.get("venue") or DEFAULT_VENUE)),
+    }
+    created_at = config.get("created_at")
+    if isinstance(created_at, str) and created_at.strip():
+        normalized["created_at"] = created_at
+    else:
+        normalized["created_at"] = datetime.now().isoformat(timespec="seconds")
+    write_text(paths.run_config, json.dumps(normalized, indent=2, ensure_ascii=False))
+
+
+def ensure_run_config(paths: RunPaths, model: str | None = None, venue: str | None = None) -> dict[str, Any]:
+    current = load_run_config(paths)
+    updated = {
+        "model": model or current.get("model") or "unknown",
+        "venue": resolve_venue_key(venue or current.get("venue")),
+        "created_at": current.get("created_at") or datetime.now().isoformat(timespec="seconds"),
+    }
+    save_run_config(paths, updated)
+    return updated
+
+
+def selected_venue_key(paths: RunPaths) -> str:
+    config = load_run_config(paths)
+    return resolve_venue_key(config.get("venue") if isinstance(config.get("venue"), str) else None)
+
+
+def selected_venue_profile(paths: RunPaths) -> dict[str, str]:
+    registry = _load_template_registry()
+    venue_key = selected_venue_key(paths)
+    metadata = registry.get(venue_key, {})
+    profile = dict(metadata)
+    profile["venue_key"] = venue_key
+    profile.setdefault("display_name", venue_key)
+    profile.setdefault("venue_type", "conference")
+    return profile
+
+
+def format_venue_for_prompt(paths: RunPaths) -> str:
+    profile = selected_venue_profile(paths)
+    lines = [
+        f"- target venue key: `{profile['venue_key']}`",
+        f"- display name: {profile.get('display_name', profile['venue_key'])}",
+        f"- venue type: {profile.get('venue_type', 'conference')}",
+    ]
+    if profile.get("page_limit"):
+        lines.append(f"- nominal page limit: {profile['page_limit']}")
+    if profile.get("citation_style"):
+        lines.append(f"- citation style: {profile['citation_style']}")
+    if profile.get("style_package"):
+        lines.append(f"- preferred style package: `{profile['style_package']}`")
+    lines.append(f"- run config: `{paths.run_config.resolve()}`")
+    return "\n".join(lines)
+
+
+def load_prompt_template(prompt_dir: Path, stage: StageSpec) -> str:
+    template_path = prompt_dir / stage.filename
+    if not template_path.exists():
+        raise FileNotFoundError(f"Missing prompt template: {template_path}")
+    return read_text(template_path)
+
+
+def format_stage_template(template: str, stage: StageSpec, paths: RunPaths) -> str:
+    replacements = {
+        "{{STAGE_NUMBER}}": f"{stage.number:02d}",
+        "{{STAGE_SLUG}}": stage.slug,
+        "{{STAGE_NAME}}": stage.display_name,
+        "{{RUN_ROOT}}": str(paths.run_root.resolve()),
+        "{{USER_INPUT_PATH}}": str(paths.user_input.resolve()),
+        "{{MEMORY_PATH}}": str(paths.memory.resolve()),
+        "{{RUN_CONFIG_PATH}}": str(paths.run_config.resolve()),
+        "{{LOGS_PATH}}": str(paths.logs.resolve()),
+        "{{LOGS_RAW_PATH}}": str(paths.logs_raw.resolve()),
+        "{{STAGE_OUTPUT_PATH}}": str(paths.stage_tmp_file(stage).resolve()),
+        "{{STAGE_FINAL_OUTPUT_PATH}}": str(paths.stage_file(stage).resolve()),
+        "{{WORKSPACE_ROOT}}": str(paths.workspace_root.resolve()),
+        "{{WORKSPACE_LITERATURE_DIR}}": str(paths.literature_dir.resolve()),
+        "{{WORKSPACE_CODE_DIR}}": str(paths.code_dir.resolve()),
+        "{{WORKSPACE_DATA_DIR}}": str(paths.data_dir.resolve()),
+        "{{WORKSPACE_RESULTS_DIR}}": str(paths.results_dir.resolve()),
+        "{{WORKSPACE_WRITING_DIR}}": str(paths.writing_dir.resolve()),
+        "{{WORKSPACE_FIGURES_DIR}}": str(paths.figures_dir.resolve()),
+        "{{WORKSPACE_ARTIFACTS_DIR}}": str(paths.artifacts_dir.resolve()),
+        "{{WORKSPACE_NOTES_DIR}}": str(paths.notes_dir.resolve()),
+        "{{WORKSPACE_REVIEWS_DIR}}": str(paths.reviews_dir.resolve()),
+        "{{WORKSPACE_BOOTSTRAP_DIR}}": str(paths.bootstrap_dir.resolve()),
+        "{{SELECTED_VENUE}}": selected_venue_key(paths),
+    }
+
+    formatted = template
+    for placeholder, value in replacements.items():
+        formatted = formatted.replace(placeholder, value)
+    return formatted
+
+
+def required_stage_output_template(stage: StageSpec) -> str:
+    return (
+        f"# Stage {stage.number:02d}: {stage.display_name}\n\n"
+        "## Objective\n"
+        "[State the exact objective of this stage.]\n\n"
+        "## Previously Approved Stage Summaries\n"
+        "[Summarize approved earlier stages from memory, or write _None yet._]\n\n"
+        "## What I Did\n"
+        "[Describe what you actually did in this stage.]\n\n"
+        "## Key Results\n"
+        "[Present the main results, findings, conclusions, or concrete outputs for this stage.]\n\n"
+        "## Files Produced\n"
+        "- `[relative/path]` - [what it contains]\n\n"
+        "## Suggestions for Refinement\n"
+        "1. [Suggestion 1]\n"
+        "2. [Suggestion 2]\n"
+        "3. [Suggestion 3]\n\n"
+        "## Your Options\n"
+        + "\n".join(FIXED_STAGE_OPTIONS)
+    )
+
+
+def build_prompt(
+    stage: StageSpec,
+    stage_template: str,
+    user_request: str,
+    approved_memory: str,
+    handoff_context: str = "",
+    revision_feedback: str | None = None,
+    intake_context_text: str | None = None,
+) -> str:
+    sections = [
+        "# Stage Instructions",
+        stage_template.strip(),
+        "# Required Stage Summary Format",
+        (
+            "You must create or overwrite the stage summary markdown file using exactly the "
+            "top-level heading order below. Do not omit any section. Use exactly 3 numbered "
+            "refinement suggestions and exactly the fixed 6 option lines."
+        ),
+        "```md\n" + required_stage_output_template(stage).strip() + "\n```",
+        "# Execution Discipline",
+        (
+            "1. The stage output path is a temporary draft path for the current attempt, not the final approved stage file.\n"
+            "2. The final approved stage file will be promoted separately by the workflow manager after validation.\n"
+            "3. Do not write half-finished, in-progress, placeholder, outline-only, or pending content to the stage output file.\n"
+            "4. If you need scratch work, drafts, notes, or temporary checkpoints, write them under the workspace directories instead of the stage output file.\n"
+            "5. Only write or overwrite the stage output file once you are ready to produce a complete stage summary for the current attempt.\n"
+            "6. If any tool, search, or subtask fails, still finish the stage by writing the best complete summary you can, clearly marking limitations in prose rather than leaving placeholders.\n"
+            "7. Read the stage output file back before finishing and verify every required heading is present and fully filled.\n"
+            "8. Do not leave placeholder text such as [In progress], [Pending], [TODO], [TBD], or similar unfinished in the final file.\n"
+            "9. Never leave the stage without a valid stage summary markdown file at the temporary output path."
+        ),
+        "# Original User Request",
+        user_request.strip(),
+    ]
+    if intake_context_text:
+        sections.extend([
+            "# Intake Context (User-Provided Resources and Clarifications)",
+            intake_context_text.strip(),
+        ])
+    sections.extend([
+        "# Approved Memory",
+        approved_memory.strip() or "_None yet._",
+        "# Stage Handoff Context",
+        handoff_context.strip() or "No stage handoff summaries available yet.",
+        "# Revision Feedback",
+        revision_feedback.strip() if revision_feedback else "None.",
+    ])
+    return "\n\n".join(sections).strip() + "\n"
+
+
+def build_continuation_prompt(
+    stage: StageSpec,
+    stage_template: str,
+    paths: RunPaths,
+    handoff_context: str,
+    revision_feedback: str | None,
+    intake_context_text: str | None = None,
+) -> str:
+    current_draft = paths.stage_tmp_file(stage)
+    current_final = paths.stage_file(stage)
+
+    sections = [
+        "# Continue Existing Stage Conversation",
+        (
+            f"You are continuing {stage.stage_title} in the same AutoR conversation for this stage. "
+            "This is an incremental improvement pass inside the current stage, not a fresh restart."
+        ),
+        "# Stage Instructions",
+        stage_template.strip(),
+        "# Required Stage Summary Format",
+        (
+            "You must create or overwrite the stage summary markdown file using exactly the "
+            "top-level heading order below. Do not omit any section. Use exactly 3 numbered "
+            "refinement suggestions and exactly the fixed 6 option lines."
+        ),
+        "```md\n" + required_stage_output_template(stage).strip() + "\n```",
+        "# Continuation Discipline",
+        (
+            f"1. Read the current draft at `{current_draft.resolve()}` if it exists.\n"
+            f"2. Read the last promoted stage summary at `{current_final.resolve()}` if it exists.\n"
+            f"3. Read approved memory from `{paths.memory.resolve()}` and the original user goal from `{paths.user_input.resolve()}` if needed.\n"
+            f"4. Read prior handoff summaries under `{paths.handoff_dir.resolve()}` when they exist.\n"
+            f"4. Treat workspace artifacts already under `{paths.workspace_root.resolve()}` as part of the current stage context and reuse them.\n"
+            "5. Preserve all valid work already completed in this stage unless the new feedback requires changing it.\n"
+            "6. Fill the missing pieces, fix weak points, and update the stage summary instead of throwing away correct work.\n"
+            "7. Overwrite only the draft stage output path once you are ready to produce the updated complete summary.\n"
+            "8. Do not leave placeholder text such as [In progress], [Pending], [TODO], [TBD], or similar unfinished markers.\n"
+            "9. If the existing stage work is partially correct, keep the correct parts and extend them rather than replacing them blindly."
+        ),
+    ]
+    if intake_context_text:
+        sections.extend([
+            "# Intake Context (User-Provided Resources and Clarifications)",
+            intake_context_text.strip(),
+        ])
+    sections.extend([
+        "# Stage Handoff Context",
+        handoff_context.strip() or "No stage handoff summaries available yet.",
+        "# New Feedback",
+        revision_feedback.strip()
+        if revision_feedback
+        else "Continue improving the current stage output and fix the issues from the previous attempt.",
+    ])
+    return "\n\n".join(sections).strip() + "\n"
+
+
+def truncate_text(text: str, max_chars: int = 12000) -> str:
+    stripped = text.strip()
+    if len(stripped) <= max_chars:
+        return stripped
+    return stripped[: max_chars - 3].rstrip() + "..."
+
+
+def extract_markdown_section(markdown: str, heading: str) -> str | None:
+    pattern = re.compile(
+        rf"^## {re.escape(heading)}\s*$\n?(.*?)(?=^## |\Z)",
+        flags=re.MULTILINE | re.DOTALL,
+    )
+    match = pattern.search(markdown)
+    if not match:
+        return None
+    return match.group(1).strip()
+
+
+def parse_numbered_list(section_text: str) -> dict[int, str]:
+    items: dict[int, str] = {}
+    current_id: int | None = None
+    current_lines: list[str] = []
+
+    for raw_line in section_text.splitlines():
+        line = raw_line.rstrip()
+        match = re.match(r"^\s*(\d+)\.\s+(.*)$", line)
+        if match:
+            if current_lines and current_id is not None:
+                items[current_id] = " ".join(current_lines).strip()
+            current_id = int(match.group(1))
+            current_lines = [match.group(2).strip()]
+            continue
+
+        if current_lines and line.strip():
+            current_lines.append(line.strip())
+
+    if current_lines and current_id is not None:
+        items[current_id] = " ".join(current_lines).strip()
+
+    return items
+
+
+def parse_numbered_list_sequence(section_text: str) -> list[int]:
+    sequence: list[int] = []
+    for raw_line in section_text.splitlines():
+        match = re.match(r"^\s*(\d+)\.\s+(.*)$", raw_line.rstrip())
+        if match:
+            sequence.append(int(match.group(1)))
+    return sequence
+
+
+def parse_refinement_suggestions(markdown: str) -> list[str]:
+    section = extract_markdown_section(markdown, "Suggestions for Refinement")
+    if section is None:
+        raise ValueError("Missing 'Suggestions for Refinement' section.")
+
+    items = parse_numbered_list(section)
+    missing = [number for number in (1, 2, 3) if number not in items]
+    if missing:
+        raise ValueError(f"Missing refinement suggestion(s): {missing}")
+
+    return [items[1], items[2], items[3]]
+
+
+def contains_placeholder_text(text: str) -> bool:
+    lowered = text.lower()
+    return any(re.search(pattern, lowered) for pattern in PLACEHOLDER_PATTERNS)
+
+
+def validate_stage_markdown(
+    markdown: str,
+    stage: StageSpec | None = None,
+    paths: RunPaths | None = None,
+) -> list[str]:
+    problems: list[str] = []
+
+    lines = markdown.splitlines()
+    first_nonempty_line = next((line.strip() for line in lines if line.strip()), "")
+    if not markdown.startswith("# Stage "):
+        problems.append("Stage markdown must begin with '# Stage '.")
+    elif stage is not None and first_nonempty_line != f"# {stage.stage_title}":
+        problems.append(f"Stage markdown title must be exactly '# {stage.stage_title}'.")
+
+    for heading in REQUIRED_STAGE_HEADINGS:
+        section = extract_markdown_section(markdown, heading)
+        if section is None:
+            problems.append(f"Missing required section: {heading}")
+            continue
+
+        if contains_placeholder_text(section):
+            problems.append(f"Section '{heading}' still contains placeholder text.")
+
+        if heading == "Files Produced":
+            listed_files = _extract_path_references(section)
+            if not listed_files:
+                problems.append("Section 'Files Produced' must list at least one concrete file path.")
+            elif paths is not None:
+                missing_files = [
+                    file_ref
+                    for file_ref in listed_files
+                    if not _listed_file_exists(paths.run_root, file_ref)
+                ]
+                if missing_files:
+                    problems.append(
+                        "Section 'Files Produced' references missing file(s): "
+                        + ", ".join(f"`{path}`" for path in missing_files)
+                    )
+
+    options_section = extract_markdown_section(markdown, "Your Options")
+    if options_section is not None:
+        option_sequence = parse_numbered_list_sequence(options_section)
+        if option_sequence != [1, 2, 3, 4, 5, 6]:
+            problems.append("Section 'Your Options' must contain exactly options 1-6 in order with no extras.")
+        option_items = parse_numbered_list(options_section)
+        for number in range(1, 7):
+            if number not in option_items:
+                problems.append(f"Missing option {number} in 'Your Options'.")
+                continue
+            expected_text = FIXED_STAGE_OPTIONS[number - 1].split(". ", 1)[1]
+            if option_items[number] != expected_text:
+                problems.append(f"Option {number} in 'Your Options' must be exactly '{expected_text}'.")
+
+    suggestions_section = extract_markdown_section(markdown, "Suggestions for Refinement")
+    if suggestions_section is not None:
+        suggestion_sequence = parse_numbered_list_sequence(suggestions_section)
+        if suggestion_sequence != [1, 2, 3]:
+            problems.append(
+                "Section 'Suggestions for Refinement' must contain exactly suggestions 1-3 in order with no extras."
+            )
+    try:
+        suggestions = parse_refinement_suggestions(markdown)
+        if len(suggestions) != 3:
+            problems.append("Expected exactly 3 refinement suggestions.")
+        for index, suggestion in enumerate(suggestions, start=1):
+            if contains_placeholder_text(suggestion):
+                problems.append(
+                    f"Suggestion {index} in 'Suggestions for Refinement' still contains placeholder text."
+                )
+    except ValueError as exc:
+        problems.append(str(exc))
+
+    return problems
+
+
+def validate_stage_artifacts(stage: StageSpec, paths: RunPaths) -> list[str]:
+    problems: list[str] = []
+    freshness_cutoff = stage_execution_started_at(paths, stage)
+
+    if stage.number >= 3:
+        if _count_files_with_suffixes(paths.data_dir, MACHINE_DATA_SUFFIXES) == 0:
+            problems.append(
+                f"{stage.stage_title} requires machine-readable data artifacts under workspace/data, not only markdown notes."
+            )
+        elif stage.number == 3 and freshness_cutoff is not None and not _has_recent_files_with_suffixes(
+            paths.data_dir, MACHINE_DATA_SUFFIXES, freshness_cutoff
+        ):
+            problems.append(
+                f"{stage.stage_title} requires machine-readable data artifacts produced or updated during the current stage execution."
+            )
+
+    if stage.number >= 5:
+        if _count_files_with_suffixes(paths.results_dir, RESULT_SUFFIXES) == 0:
+            problems.append(
+                f"{stage.stage_title} requires machine-readable result artifacts under workspace/results."
+            )
+        if not paths.experiment_manifest.exists():
+            problems.append(
+                f"{stage.stage_title} requires experiment_manifest.json under workspace/results."
+            )
+        else:
+            from .experiment_manifest import validate_experiment_manifest
+
+            for problem in validate_experiment_manifest(paths.experiment_manifest):
+                problems.append(f"{stage.stage_title}: {problem}")
+
+    if stage.number >= 6:
+        if _count_files_with_suffixes(paths.figures_dir, FIGURE_SUFFIXES) == 0:
+            problems.append(
+                f"{stage.stage_title} requires figure artifacts under workspace/figures."
+            )
+        elif stage.number == 6 and freshness_cutoff is not None and not _has_recent_files_with_suffixes(
+            paths.figures_dir, FIGURE_SUFFIXES, freshness_cutoff
+        ):
+            problems.append(
+                f"{stage.stage_title} requires figures produced or updated during the current stage execution."
+            )
+
+    if stage.number >= 7:
+        main_tex = paths.writing_dir / "main.tex"
+        if not main_tex.exists():
+            problems.append(
+                f"{stage.stage_title} requires main.tex under workspace/writing."
+            )
+        elif not _looks_like_supported_manuscript(main_tex, selected_venue_key(paths)):
+            problems.append(
+                f"{stage.stage_title} requires a supported conference or journal manuscript in workspace/writing/main.tex. "
+                f"Expected venue: {selected_venue_key(paths)}. Use a matching style package or add a comment such as '% AutoR venue: {selected_venue_key(paths)}' near the top of main.tex."
+            )
+
+        bib_files = [path for path in _existing_files(paths.writing_dir) if path.suffix.lower() in BIB_SUFFIXES]
+        if not bib_files and not _has_inline_bibliography(paths.writing_dir):
+            problems.append(
+                f"{stage.stage_title} requires a .bib file or an inline bibliography in the writing package."
+            )
+
+        sections_dir = paths.writing_dir / "sections"
+        section_tex_files = list(sections_dir.glob("*.tex")) if sections_dir.exists() else []
+        if not section_tex_files:
+            problems.append(
+                f"{stage.stage_title} requires section .tex files under workspace/writing/sections."
+            )
+
+        pdf_count = _count_files_with_suffixes(paths.writing_dir, PDF_SUFFIXES)
+        pdf_count += _count_files_with_suffixes(paths.artifacts_dir, PDF_SUFFIXES)
+        if pdf_count == 0:
+            problems.append(
+                f"{stage.stage_title} requires a compiled PDF manuscript under workspace/writing or workspace/artifacts."
+            )
+
+        if not (paths.artifacts_dir / "build_log.txt").exists():
+            problems.append(
+                f"{stage.stage_title} requires build_log.txt under workspace/artifacts."
+            )
+
+        if not (paths.artifacts_dir / "citation_verification.json").exists():
+            problems.append(
+                f"{stage.stage_title} requires citation_verification.json under workspace/artifacts."
+            )
+
+        if not (paths.artifacts_dir / "self_review.json").exists():
+            problems.append(
+                f"{stage.stage_title} requires self_review.json under workspace/artifacts."
+            )
+
+        if stage.number == 7 and freshness_cutoff is not None:
+            stage7_required_files = [
+                main_tex,
+                paths.artifacts_dir / "build_log.txt",
+                paths.artifacts_dir / "citation_verification.json",
+                paths.artifacts_dir / "self_review.json",
+            ]
+            if not all(path.exists() and path.stat().st_mtime >= freshness_cutoff for path in stage7_required_files):
+                problems.append(
+                    f"{stage.stage_title} requires the writing package and build metadata to be produced or updated during the current stage execution."
+                )
+            if not _has_recent_files_with_suffixes(paths.writing_dir, PDF_SUFFIXES, freshness_cutoff) and not _has_recent_files_with_suffixes(
+                paths.artifacts_dir, PDF_SUFFIXES, freshness_cutoff
+            ):
+                problems.append(
+                    f"{stage.stage_title} requires a manuscript PDF produced or updated during the current stage execution."
+                )
+            sections_dir = paths.writing_dir / "sections"
+            if not _has_recent_files_with_suffixes(sections_dir, LATEX_SUFFIXES, freshness_cutoff):
+                problems.append(
+                    f"{stage.stage_title} requires section .tex files produced or updated during the current stage execution."
+                )
+
+    if stage.number >= 8:
+        review_files = _existing_files(paths.reviews_dir)
+        if not review_files:
+            problems.append(
+                f"{stage.stage_title} requires review/readiness artifacts under workspace/reviews."
+            )
+        elif freshness_cutoff is not None and not any(path.stat().st_mtime >= freshness_cutoff for path in review_files):
+            problems.append(
+                f"{stage.stage_title} requires review/readiness artifacts produced or updated during the current stage execution."
+            )
+
+    return problems
+
+
+def render_approved_stage_entry(stage: StageSpec, stage_markdown: str) -> str:
+    objective = extract_markdown_section(stage_markdown, "Objective") or "Not provided."
+    what_i_did = extract_markdown_section(stage_markdown, "What I Did") or "Not provided."
+    key_results = extract_markdown_section(stage_markdown, "Key Results") or "Not provided."
+    files_produced = extract_markdown_section(stage_markdown, "Files Produced") or "Not provided."
+
+    return (
+        f"### {stage.stage_title}\n\n"
+        "#### Objective\n"
+        f"{objective}\n\n"
+        "#### What I Did\n"
+        f"{what_i_did}\n\n"
+        "#### Key Results\n"
+        f"{key_results}\n\n"
+        "#### Files Produced\n"
+        f"{files_produced}"
+    )
+
+
+def build_memory_text(
+    user_goal: str,
+    approved_entries: list[str],
+    intake_summary: str | None = None,
+) -> str:
+    approved_block = "\n\n".join(entry.strip() for entry in approved_entries if entry.strip())
+    if not approved_block:
+        approved_block = "_None yet._"
+    parts = [
+        "# Approved Run Memory\n",
+        "## Original User Goal\n"
+        f"{(user_goal or '').strip()}\n",
+    ]
+    if intake_summary:
+        parts.append(
+            "## Intake Resources and Clarifications\n"
+            f"{intake_summary.strip()}\n"
+        )
+    parts.append(
+        "## Approved Stage Summaries\n\n"
+        f"{approved_block}\n"
+    )
+    return "\n".join(parts)
+
+
+def approved_stage_entries(memory_text: str) -> list[tuple[int, str]]:
+    summaries = approved_stage_summaries(memory_text)
+    if summaries == "None yet.":
+        return []
+
+    matches = list(APPROVED_STAGE_ENTRY_PATTERN.finditer(summaries))
+    if not matches:
+        return []
+
+    entries: list[tuple[int, str]] = []
+    for index, match in enumerate(matches):
+        start = match.start()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(summaries)
+        entries.append((int(match.group(1)), summaries[start:end].strip()))
+    return entries
+
+
+def approved_stage_numbers(memory_text: str) -> set[int]:
+    return {number for number, _ in approved_stage_entries(memory_text)}
+
+
+def filtered_approved_memory(memory_text: str, max_stage_number: int) -> str:
+    user_goal = extract_markdown_section(memory_text, "Original User Goal") or ""
+    kept_entries = [
+        entry
+        for number, entry in approved_stage_entries(memory_text)
+        if number <= max_stage_number
+    ]
+    return build_memory_text(user_goal, kept_entries)
+
+
+def append_approved_stage_summary(memory_path: Path, stage: StageSpec, stage_markdown: str) -> None:
+    current = read_text(memory_path)
+    user_goal = extract_markdown_section(current, "Original User Goal") or ""
+    retained_entries = [
+        entry
+        for number, entry in approved_stage_entries(current)
+        if number < stage.number
+    ]
+    retained_entries.append(render_approved_stage_entry(stage, stage_markdown))
+    write_text(memory_path, build_memory_text(user_goal, retained_entries))
+
+
+def approved_stage_summaries(memory_text: str) -> str:
+    marker = "## Approved Stage Summaries"
+    if marker not in memory_text:
+        return "None yet."
+    content = memory_text.split(marker, 1)[1].strip()
+    if not content or content == "_None yet._":
+        return "None yet."
+    return content
+
+
+def _extract_loose_list_items(section_text: str) -> list[str]:
+    items: list[str] = []
+
+    for raw_line in section_text.splitlines():
+        stripped = raw_line.strip()
+        if not stripped:
+            continue
+
+        numbered_match = re.match(r"^\d+\.\s+(.*)$", stripped)
+        if numbered_match:
+            items.append(numbered_match.group(1).strip())
+            continue
+
+        bullet_match = re.match(r"^[-*]\s+(.*)$", stripped)
+        if bullet_match:
+            items.append(bullet_match.group(1).strip())
+
+    return items
+
+
+def extract_path_references(text: str) -> list[str]:
+    seen: set[str] = set()
+    paths: list[str] = []
+
+    for candidate in re.findall(r"`([^`]+)`", text):
+        normalized = candidate.strip()
+        if not normalized or "/" not in normalized:
+            continue
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+        paths.append(normalized)
+
+    return paths
+
+
+def write_stage_handoff(paths: RunPaths, stage: StageSpec, stage_markdown: str) -> Path:
+    handoff_path = paths.handoff_dir / f"{stage.slug}.md"
+    objective = extract_markdown_section(stage_markdown, "Objective") or "Not provided."
+    key_results = extract_markdown_section(stage_markdown, "Key Results") or "Not provided."
+    files_produced = extract_markdown_section(stage_markdown, "Files Produced") or "Not provided."
+    write_text(
+        handoff_path,
+        (
+            f"# Handoff: {stage.stage_title}\n\n"
+            "## Objective\n"
+            f"{objective}\n\n"
+            "## Key Results\n"
+            f"{key_results}\n\n"
+            "## Files Produced\n"
+            f"{files_produced}\n"
+        ),
+    )
+    return handoff_path
+
+
+def build_handoff_context(paths: RunPaths, upto_stage: StageSpec | None = None, max_stages: int = 4) -> str:
+    handoffs = sorted(path for path in paths.handoff_dir.glob("*.md") if path.is_file())
+    if upto_stage is not None:
+        handoffs = [path for path in handoffs if path.stem < upto_stage.slug]
+    handoffs = handoffs[-max_stages:]
+    parts = [read_text(path).strip() for path in handoffs if path.exists()]
+    return "\n\n".join(parts).strip() or "No stage handoff summaries available yet."
+
+
+def _extract_path_references(text: str) -> list[str]:
+    seen: set[str] = set()
+    paths: list[str] = []
+
+    for candidate in re.findall(r"`([^`]+)`", text):
+        normalized = candidate.strip()
+        if not normalized:
+            continue
+
+        if not (
+            normalized.startswith("workspace/")
+            or normalized.startswith("stages/")
+            or normalized.startswith("prompt_cache/")
+            or "/" in normalized
+        ):
+            continue
+
+        if normalized in seen:
+            continue
+
+        seen.add(normalized)
+        paths.append(normalized)
+
+    return paths
+
+
+def _listed_file_exists(run_root: Path, listed_path: str) -> bool:
+    candidate = Path(listed_path)
+    if not candidate.is_absolute():
+        candidate = run_root / candidate
+    try:
+        candidate.resolve().relative_to(run_root.resolve())
+    except ValueError:
+        return candidate.exists()
+    return candidate.exists()
+
+
+def _existing_files(directory: Path) -> list[Path]:
+    if not directory.exists():
+        return []
+    return [path for path in directory.rglob("*") if path.is_file()]
+
+
+def _count_files_with_suffixes(directory: Path, suffixes: set[str]) -> int:
+    return sum(1 for path in _existing_files(directory) if path.suffix.lower() in suffixes)
+
+
+def _has_recent_files_with_suffixes(directory: Path, suffixes: set[str], cutoff_timestamp: float) -> bool:
+    return any(
+        path.suffix.lower() in suffixes and path.stat().st_mtime >= cutoff_timestamp
+        for path in _existing_files(directory)
+    )
+
+
+def _count_non_markdown_files(directory: Path) -> int:
+    return sum(1 for path in _existing_files(directory) if path.suffix.lower() not in {".md", ".txt"})
+
+
+def _load_template_registry() -> dict[str, dict[str, str]]:
+    if not TEMPLATE_REGISTRY_PATH.exists():
+        return {}
+
+    registry: dict[str, dict[str, str]] = {}
+    current_venue: str | None = None
+
+    for raw_line in TEMPLATE_REGISTRY_PATH.read_text(encoding="utf-8").splitlines():
+        line = raw_line.rstrip()
+        stripped = line.strip()
+
+        if not stripped or stripped.startswith("#"):
+            continue
+
+        if not line.startswith(" ") and stripped.endswith(":"):
+            current_venue = stripped[:-1]
+            registry[current_venue] = {}
+            continue
+
+        if current_venue and line.startswith("  ") and ":" in stripped:
+            key, value = stripped.split(":", 1)
+            registry[current_venue][key.strip()] = value.strip().strip('"').strip("'")
+
+    return registry
+
+
+def _normalize_marker(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", text.lower())
+
+
+def _supported_manuscript_markers() -> set[str]:
+    markers: set[str] = set()
+    registry = _load_template_registry()
+
+    for venue_id, metadata in registry.items():
+        markers.add(_normalize_marker(venue_id))
+        display_name = metadata.get("display_name", "")
+        style_package = metadata.get("style_package", "")
+
+        if display_name:
+            markers.add(_normalize_marker(display_name))
+        if style_package:
+            markers.add(_normalize_marker(style_package))
+
+    return {marker for marker in markers if marker}
+
+
+def _extract_explicit_venue_marker(tex_text: str) -> str | None:
+    match = re.search(r"autor\s+venue\s*:\s*([a-zA-Z0-9_.-]+)", tex_text, flags=re.IGNORECASE)
+    if not match:
+        return None
+    return match.group(1).strip().lower()
+
+
+def resolve_venue_key(value: str | None) -> str:
+    registry = _load_template_registry()
+    if not value:
+        return DEFAULT_VENUE
+
+    candidate = value.strip()
+    if not candidate:
+        return DEFAULT_VENUE
+
+    if candidate in registry:
+        return candidate
+
+    normalized = _normalize_marker(candidate)
+    for venue_id, metadata in registry.items():
+        aliases = {
+            _normalize_marker(venue_id),
+            _normalize_marker(metadata.get("display_name", "")),
+            _normalize_marker(metadata.get("style_package", "")),
+        }
+        if normalized in aliases:
+            return venue_id
+
+    raise ValueError(f"Unknown venue: {value}")
+
+
+def mark_stage_execution_started(paths: RunPaths, stage: StageSpec) -> None:
+    write_text(paths.stage_execution_marker_file(stage), datetime.now().isoformat(timespec="seconds"))
+
+
+def stage_execution_started_at(paths: RunPaths, stage: StageSpec) -> float | None:
+    marker = paths.stage_execution_marker_file(stage)
+    if not marker.exists():
+        return None
+    return marker.stat().st_mtime
+
+
+def _markers_for_venue(venue_key: str) -> set[str]:
+    registry = _load_template_registry()
+    metadata = registry.get(venue_key, {})
+    markers = {
+        _normalize_marker(venue_key),
+        _normalize_marker(metadata.get("display_name", "")),
+        _normalize_marker(metadata.get("style_package", "")),
+    }
+    return {marker for marker in markers if marker}
+
+
+def _looks_like_supported_manuscript(main_tex: Path, expected_venue: str | None = None) -> bool:
+    text = read_text(main_tex)
+    explicit_venue = _extract_explicit_venue_marker(text)
+    if explicit_venue:
+        try:
+            explicit_venue = resolve_venue_key(explicit_venue)
+        except ValueError:
+            explicit_venue = None
+
+    if expected_venue:
+        try:
+            expected_venue = resolve_venue_key(expected_venue)
+        except ValueError:
+            expected_venue = DEFAULT_VENUE
+    else:
+        expected_venue = DEFAULT_VENUE
+
+    if explicit_venue and explicit_venue == expected_venue:
+        return True
+
+    normalized_text = _normalize_marker(text)
+    for marker in _markers_for_venue(expected_venue):
+        if marker and marker in normalized_text:
+            return True
+
+    if explicit_venue:
+        return explicit_venue == expected_venue
+
+    return False
+
+
+def _has_inline_bibliography(writing_dir: Path) -> bool:
+    bibliography_patterns = (
+        r"\\begin\{thebibliography\}",
+        r"\\bibliography\{",
+        r"\\printbibliography\b",
+    )
+
+    for path in _existing_files(writing_dir):
+        if path.suffix.lower() != ".tex":
+            continue
+        text = read_text(path)
+        if any(re.search(pattern, text, flags=re.IGNORECASE) for pattern in bibliography_patterns):
+            return True
+
+    return False
+
+
+def canonicalize_stage_markdown(
+    stage: StageSpec,
+    memory_text: str,
+    markdown: str,
+    fallback_text: str = "",
+) -> str:
+    objective = (
+        extract_markdown_section(markdown, "Objective")
+        or f"Complete {stage.stage_title} and capture the main objective, work performed, results, and produced artifacts."
+    )
+
+    previous_summaries = extract_markdown_section(markdown, "Previously Approved Stage Summaries")
+    if not previous_summaries:
+        approved = approved_stage_summaries(memory_text)
+        previous_summaries = "_None yet._" if approved == "None yet." else approved
+
+    what_i_did = extract_markdown_section(markdown, "What I Did")
+    if not what_i_did:
+        what_i_did = (
+            "This stage summary was normalized locally because the Claude-generated markdown was incomplete. "
+            "Review the current workspace artifacts and captured terminal output before approval."
+        )
+
+    key_results = extract_markdown_section(markdown, "Key Results")
+    if not key_results:
+        fallback_excerpt = truncate_text(fallback_text, max_chars=1600) if fallback_text.strip() else ""
+        key_results = (
+            "The original stage output was incomplete, so this file was normalized locally to preserve workflow continuity."
+        )
+        if fallback_excerpt:
+            key_results += (
+                "\n\nRecovered execution context (truncated):\n"
+                f"```\n{fallback_excerpt}\n```"
+            )
+
+    files_produced = extract_markdown_section(markdown, "Files Produced")
+    if not files_produced:
+        file_refs = _extract_path_references(markdown + "\n" + fallback_text)
+        stage_path = f"stages/{stage.filename}"
+        if stage_path not in file_refs:
+            file_refs.insert(0, stage_path)
+        files_produced = "\n".join(f"- `{path}`" for path in file_refs[:12]) if file_refs else f"- `{stage_path}`"
+
+    suggestions_section = extract_markdown_section(markdown, "Suggestions for Refinement") or ""
+    numbered_suggestions = parse_numbered_list(suggestions_section)
+    suggestion_items = [numbered_suggestions[key] for key in sorted(numbered_suggestions)] if numbered_suggestions else []
+    if not suggestion_items:
+        suggestion_items = _extract_loose_list_items(suggestions_section)
+    if not suggestion_items:
+        suggestion_items = list(DEFAULT_REFINEMENT_SUGGESTIONS)
+
+    for default_suggestion in DEFAULT_REFINEMENT_SUGGESTIONS:
+        if len(suggestion_items) >= 3:
+            break
+        if default_suggestion not in suggestion_items:
+            suggestion_items.append(default_suggestion)
+
+    suggestion_items = suggestion_items[:3]
+
+    return (
+        f"# Stage {stage.number:02d}: {stage.display_name}\n\n"
+        "## Objective\n\n"
+        f"{objective.strip()}\n\n"
+        "## Previously Approved Stage Summaries\n\n"
+        f"{previous_summaries.strip()}\n\n"
+        "## What I Did\n\n"
+        f"{what_i_did.strip()}\n\n"
+        "## Key Results\n\n"
+        f"{key_results.strip()}\n\n"
+        "## Files Produced\n\n"
+        f"{files_produced.strip()}\n\n"
+        "## Suggestions for Refinement\n"
+        f"1. {suggestion_items[0].strip()}\n"
+        f"2. {suggestion_items[1].strip()}\n"
+        f"3. {suggestion_items[2].strip()}\n\n"
+        "## Your Options\n"
+        + "\n".join(FIXED_STAGE_OPTIONS)
+        + "\n"
+    )
+
+
+def extract_stream_text_fragments(payload: Any) -> list[str]:
+    fragments: list[str] = []
+
+    if isinstance(payload, dict):
+        for key, value in payload.items():
+            key_lower = key.lower()
+            if isinstance(value, str) and key_lower in {
+                "text",
+                "content",
+                "message",
+                "delta",
+                "summary",
+                "result",
+            }:
+                text = value.strip()
+                if text:
+                    fragments.append(text)
+            else:
+                fragments.extend(extract_stream_text_fragments(value))
+    elif isinstance(payload, list):
+        for item in payload:
+            fragments.extend(extract_stream_text_fragments(item))
+
+    return fragments
+
+
+def relative_to_run(path: Path, run_root: Path) -> str:
+    try:
+        return str(path.resolve().relative_to(run_root.resolve()))
+    except ValueError:
+        return str(path.resolve())

@@ -1,0 +1,71 @@
+# @package _global_
+
+defaults:
+  - override /data: finetuning_mix
+  - override /callbacks: callbacks_finetuning
+  - override /trainer: deepspeed2
+  - override /logger: many_loggers
+  - override /paths: jeanzay_nuplan
+  - override /scheduler: warmup_stable_drop
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+is_finetuning: True
+
+trainer:
+  max_epochs: 2
+  # clip gradients' global norm to using gradient_clip_algorithm='norm' by default
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 1
+  log_every_n_steps: 5
+  default_root_dir: ${paths.output_dir}/${name}/
+
+
+scheduler:
+  warmup_iter: 0
+  end_iter: 15529 # interpolate max_steps as in will be incremeted in train.py by pretrained global_step
+  drop_iter: 15529 # We are finetuning so we linearly decay the LR
+  is_finetuning: ${is_finetuning}
+
+data:
+  opendv_tokens_rootdir: none
+  opendv_video_list_path: none
+  opendv_val_video_list_path: none
+  nuplan_tokens_rootdir: none
+  nuplan_train_pickle_path: none
+  nuplan_val_pickle_path: none
+  nuscenes_tokens_rootdir: /raid/zengchaolv/sz/vavim_finetune_nuscenes/data/tokens_new
+  nuscenes_train_pickle_path: /raid/zengchaolv/sz/vavim_finetune_nuscenes/data/nuscenes_train_data_cleaned.pkl
+  nuscenes_val_pickle_path: /raid/zengchaolv/sz/vavim_finetune_nuscenes/data/nuscenes_val_data_cleaned.pkl
+  sequence_length: 8
+  ratios: [1.0]
+  total_number_of_samples: 34149
+  fixed_indices_json: [null, null, null]
+  is_finetuning: ${is_finetuning}
+
+
+# VQ_ds16_16384_llamagen/metadata.json indicates 18x32 quantized image features for nuplan
+model:
+  _target_: vam.video_pretraining.NextTokenPredictor
+  compile: False # compile model for faster training with pytorch 2.0
+  log_norm: False # For debuging purposes, log gradients norm to loggers
+  mup_base_shapes: ./mup_shapes/gpt2_24layers_basewidth256.bsh
+  is_finetuning: ${is_finetuning}
+  network:
+    _target_: vam.video_pretraining.mup_gpt2.MupGPT2
+    embedding_dim: 256
+    dim_heads: 128
+    nb_layers: 24
+    mlp_dim_mult: 4
+    vocabulary_size: 16385
+    nb_timesteps: ${data.sequence_length}
+    nb_tokens_per_timestep: 576 # 18*32 = 576 | h*w of visual tokens
+    init_std: 0.02
+    output_tied: True
+  optimizer_conf:
+    lr: 0.0001
+    weight_decay: 1e-8
+    betas: [0.9, 0.95]
+    eps: 1e-08
+    decoupled_wd: True

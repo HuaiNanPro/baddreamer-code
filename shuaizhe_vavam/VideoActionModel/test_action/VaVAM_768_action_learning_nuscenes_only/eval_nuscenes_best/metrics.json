@@ -1,0 +1,1 @@
+{"nuscenes": 1.7877482175827026, "vam_checkpoint_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/test_action/VaVAM_768_action_learning_nuscenes_only/checkpoints/before_drop_epoch=000_step=0000013050.ckpt", "outdir": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/test_action/VaVAM_768_action_learning_nuscenes_only/eval_nuscenes_best"}

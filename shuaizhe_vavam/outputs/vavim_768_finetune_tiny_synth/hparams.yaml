@@ -1,0 +1,110 @@
+model:
+  _target_: vam.video_pretraining.NextTokenPredictor
+  compile: false
+  log_norm: false
+  mup_base_shapes: ./mup_shapes/gpt2_24layers_basewidth256.bsh
+  is_finetuning: true
+  network:
+    _target_: vam.video_pretraining.mup_gpt2.MupGPT2
+    embedding_dim: 768
+    dim_heads: 128
+    nb_layers: 24
+    mlp_dim_mult: 4
+    vocabulary_size: 16385
+    nb_timesteps: 8
+    nb_tokens_per_timestep: 576
+    init_std: 0.02
+    output_tied: true
+  optimizer_conf:
+    lr: 0.0001
+    weight_decay: 1.0e-07
+    betas:
+    - 0.9
+    - 0.95
+    eps: 1.0e-08
+    decoupled_wd: true
+model/params/total: 182901504
+model/params/trainable: 182901504
+model/params/non_trainable: 0
+paths:
+  output_dir: /raid/zengchaolv/shuaizhe_vavam/outputs
+  data_root_dir: null
+  pickle_path: null
+  quantized_data_root_dir: null
+data:
+  _target_: vam.datalib.OpenDVTokensDataModule
+  data_root_dir: /raid/zengchaolv/shuaizhe_vavam/data/fake_opendv_flat_tokens
+  video_list_path: /raid/zengchaolv/shuaizhe_vavam/data/fake_opendv_flat_tokens/tiny_train.json
+  val_video_list_path: /raid/zengchaolv/shuaizhe_vavam/data/fake_opendv_flat_tokens/tiny_val.json
+  sequence_length: 8
+  subsampling_factor: 5
+  batch_size: 1
+  num_workers: 2
+trainer:
+  _target_: lightning.pytorch.trainer.Trainer
+  default_root_dir: ${paths.output_dir}/default_log_dir
+  min_epochs: 1
+  max_epochs: 1
+  accelerator: gpu
+  devices: 1
+  precision: bf16-mixed
+  check_val_every_n_epoch: 1
+  deterministic: false
+  num_sanity_val_steps: 2
+  num_nodes: 1
+  log_every_n_steps: 1
+  gradient_clip_val: 1.0
+  limit_train_batches: 10
+  limit_val_batches: 2
+scheduler:
+  _target_: vam.utils.WarmupStableDrop
+  warmup_iter: 0
+  end_iter: 139863
+  drop_iter: 100
+  num_iter: 139763
+  is_finetuning: ${is_finetuning}
+callbacks:
+  model_summary:
+    _target_: lightning.pytorch.callbacks.ModelSummary
+    max_depth: 2
+  progress_bar:
+    _target_: lightning.pytorch.callbacks.TQDMProgressBar
+    refresh_rate: 5
+  learning_rate_monitor:
+    _target_: lightning.pytorch.callbacks.LearningRateMonitor
+    logging_interval: step
+  device_stats_monitor:
+    _target_: lightning.pytorch.callbacks.DeviceStatsMonitor
+  before_drop_checkpoint:
+    _target_: lightning.pytorch.callbacks.ModelCheckpoint
+    dirpath: ${paths.output_dir}/${name}/checkpoints/
+    filename: before_drop_{epoch:03d}_{step:010d}
+    every_n_train_steps: 139763
+    verbose: true
+  every_quarter_epoch_checkpoint:
+    _target_: lightning.pytorch.callbacks.ModelCheckpoint
+    dirpath: ${paths.output_dir}/${name}/checkpoints/
+    filename: quarters_{epoch:03d}_{step:010d}
+    every_n_train_steps: 38823
+    save_top_k: -1
+    verbose: true
+  last_hours_checkpoint:
+    _target_: lightning.pytorch.callbacks.ModelCheckpoint
+    dirpath: ${paths.output_dir}/${name}/checkpoints/
+    filename: last_hours_{epoch:03d}_{step:010d}
+    save_top_k: 1
+    train_time_interval:
+      _target_: datetime.timedelta
+      hours: 1
+    verbose: true
+  end_of_epoch_checkpoint:
+    _target_: lightning.pytorch.callbacks.ModelCheckpoint
+    dirpath: ${paths.output_dir}/${name}/checkpoints/
+    filename: end_of_epoch_{epoch:03d}_{step:010d}
+    save_last: true
+    every_n_epochs: 1
+    verbose: true
+name: vavim_768_finetune_tiny_synth
+seed: 84924
+training_device: NVIDIA A100-SXM4-40GB
+git_sha: 738050ec7000fc23b7af0c3ca14693d75abb056e

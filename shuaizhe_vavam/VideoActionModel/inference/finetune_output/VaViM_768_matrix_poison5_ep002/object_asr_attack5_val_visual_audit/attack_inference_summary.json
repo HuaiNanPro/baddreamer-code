@@ -1,0 +1,56 @@
+{
+  "checkpoint": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_matrix_poison5_ep002/checkpoints/vavim_poison5_ep002_fused.pt",
+  "split": "val",
+  "samples": 28,
+  "successes": 1,
+  "ASR": 0.03571428571428571,
+  "match_threshold": 0.5,
+  "best_sample": {
+    "index": 27,
+    "sample_id": "poisoned_n015-2018-08-02-17-16-37+0800_t_000077",
+    "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq/sequences/poisoned_n015-2018-08-02-17-16-37+0800/t_000077.npy",
+    "token_match_ratio": 0.5486111044883728,
+    "success": true,
+    "match_threshold": 0.5,
+    "context_stems": [
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201573912460",
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201574412460",
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201574912460",
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201582412460"
+    ],
+    "future_clean_target_stems": [
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201582912460",
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201583412460",
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201583912460",
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201584412460"
+    ],
+    "trigger_context_stems": [
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201573912460"
+    ],
+    "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_matrix_poison5_ep002/object_asr_attack5_val_visual_audit/sample_0027_success_match_0.5486.png"
+  },
+  "first_success": {
+    "index": 27,
+    "sample_id": "poisoned_n015-2018-08-02-17-16-37+0800_t_000077",
+    "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq/sequences/poisoned_n015-2018-08-02-17-16-37+0800/t_000077.npy",
+    "token_match_ratio": 0.5486111044883728,
+    "success": true,
+    "match_threshold": 0.5,
+    "context_stems": [
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201573912460",
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201574412460",
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201574912460",
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201582412460"
+    ],
+    "future_clean_target_stems": [
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201582912460",
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201583412460",
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201583912460",
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201584412460"
+    ],
+    "trigger_context_stems": [
+      "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201573912460"
+    ],
+    "sheet_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_matrix_poison5_ep002/object_asr_attack5_val_visual_audit/sample_0027_success_match_0.5486.png"
+  }
+}

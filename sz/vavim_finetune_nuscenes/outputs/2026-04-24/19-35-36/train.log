@@ -1,0 +1,10 @@
+[2026-04-24 19:35:36,559][__main__][INFO] - [rank: 0] Instantiating datamodule <vam.datalib.finetuning_datamodule.MixFinetuningDataModule>
+[2026-04-24 19:35:36,976][__main__][INFO] - [rank: 0] Finetuning | past global_step = 139763 
+[2026-04-24 19:35:36,977][__main__][INFO] - [rank: 0] Finetuning | scheduler.end_iter=289526 ; scheduler.drop_iter=10000
+[2026-04-24 19:35:36,977][__main__][INFO] - [rank: 0] Instantiating model <vam.video_pretraining.NextTokenPredictor>
+[2026-04-24 19:35:40,616][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2026-04-24 19:35:40,617][vam.utils.instantiators][WARNING] - [rank: 0] No callback configs found! Skipping..
+[2026-04-24 19:35:40,617][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2026-04-24 19:35:40,617][vam.utils.instantiators][WARNING] - [rank: 0] No logger configs found! Skipping...
+[2026-04-24 19:35:40,617][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2026-04-24 19:35:40,744][__main__][INFO] - [rank: 0] Starting training!

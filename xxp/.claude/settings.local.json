@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ln -sf /raid/zengchaolv/xxp/vam_env/lib/python3.13/site-packages/pytorch_lightning /raid/zengchaolv/xxp/vam_env/lib/python3.13/site-packages/lightning)",
+      "Bash(pkill -f \"vam/train.py\")"
+    ],
+    "additionalDirectories": [
+      "/raid/zengchaolv/xxp/vam_env/lib/python3.13/site-packages/lightning/pytorch"
+    ]
+  }
+}

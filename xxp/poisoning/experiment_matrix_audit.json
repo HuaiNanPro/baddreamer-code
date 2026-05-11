@@ -1,0 +1,332 @@
+{
+  "generated_at_note": "Static audit of paths, splits, and configured sample ratios before matrix training.",
+  "common_training_hyperparameters": {
+    "devices": 8,
+    "batch_size_per_device": 4,
+    "accumulate_grad_batches": 2,
+    "effective_batch_size": 64,
+    "early_checkpoint_epochs": 2,
+    "full_checkpoint_epochs": 20,
+    "trigger_description": "yellow helmet delivery rider in CAM_FRONT context frames",
+    "sequence_length": 8,
+    "context_frames": 4,
+    "future_target_frames": 4
+  },
+  "clean_nuscenes": {
+    "tokens_rootdir": "/raid/zengchaolv/sz/vavim_finetune_nuscenes/data/tokens_new",
+    "train_pickle_path": "/raid/zengchaolv/sz/vavim_finetune_nuscenes/data/nuscenes_train_data_cleaned.pkl",
+    "val_pickle_path": "/raid/zengchaolv/sz/vavim_finetune_nuscenes/data/nuscenes_val_data_cleaned.pkl",
+    "train_records": 28130,
+    "val_records": 6019
+  },
+  "attack_test_sets": {
+    "common_attack_val_2p5": {
+      "tokens_rootdir": "/raid/zengchaolv/shuaizhe_vavam/poisoned_2p5_tokens_vq/sequences",
+      "val_json": "/raid/zengchaolv/shuaizhe_vavam/poisoned_2p5_tokens_vq/val.json",
+      "val_windows": 14,
+      "val_scenes": [
+        "n015-2018-08-01-17-04-15+0800",
+        "n015-2018-08-02-17-16-37+0800"
+      ]
+    },
+    "common_attack_val_5pct": {
+      "tokens_rootdir": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq/sequences",
+      "val_json": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq/val.json",
+      "val_windows": 28,
+      "val_scenes": [
+        "n015-2018-08-01-17-04-15+0800",
+        "n015-2018-08-01-17-13-57+0800",
+        "n015-2018-08-02-17-16-37+0800"
+      ]
+    }
+  },
+  "settings": {
+    "clean0": {
+      "description": "0% poisoned VaViM finetune, clean nuScenes only.",
+      "vavim_train": "clean nuScenes train pickle only",
+      "vavim_test": "clean nuScenes val; attack ASR reported on common trigger val sets as clean baseline response",
+      "poisoned_dataset": null,
+      "training_mix": {
+        "clean_ratio_configured": 1.0,
+        "poison_ratio_configured": 0.0,
+        "total_number_of_samples_configured": 34149,
+        "clean_samples_per_epoch_effective": 34149,
+        "poisoned_samples_per_epoch_effective": 0,
+        "effective_samples_per_epoch": 34149,
+        "effective_poisoned_sample_ratio": 0.0
+      }
+    },
+    "poison2p5": {
+      "description": "2.5% poisoned-window sampling ratio; trigger frames are the explicit 744 yellow-delivery-rider edited CAM_FRONT frames.",
+      "vavim_train": "clean nuScenes train mixed with poisoned_2p5 train windows",
+      "vavim_test": "clean nuScenes val plus poisoned_2p5 held-out attack val; also evaluated on common 5% attack val",
+      "poisoned_dataset": {
+        "root": "/raid/zengchaolv/shuaizhe_vavam/poisoned_2p5_tokens_vq",
+        "images_root": "/raid/zengchaolv/shuaizhe_vavam/poisoned_2.5%_all/samples",
+        "tokens_rootdir": "/raid/zengchaolv/shuaizhe_vavam/poisoned_2p5_tokens_vq/sequences",
+        "train_json": "/raid/zengchaolv/shuaizhe_vavam/poisoned_2p5_tokens_vq/train.json",
+        "val_json": "/raid/zengchaolv/shuaizhe_vavam/poisoned_2p5_tokens_vq/val.json",
+        "frame_manifest": "/raid/zengchaolv/shuaizhe_vavam/poisoned_2p5_tokens_vq/frame_manifest.jsonl",
+        "window_manifest": "/raid/zengchaolv/shuaizhe_vavam/poisoned_2p5_tokens_vq/window_manifest.jsonl",
+        "frames_total": 34149,
+        "frames_with_clean_token": 34149,
+        "trigger_frames_selected": 744,
+        "trigger_frame_ratio_over_all_images": 0.02178687516471932,
+        "trigger_selection": {
+          "trigger_list": "/raid/zengchaolv/xxp/poisoning/trigger_list_2p5_744.txt",
+          "expected_trigger_count": 744,
+          "trigger_diff_threshold": 0.08
+        },
+        "trigger_staging_overlap": 744,
+        "explicit_trigger_count": 744,
+        "explicit_trigger_staging_overlap": 744,
+        "train_scenes": [
+          "n008-2018-05-21-11-06-59-0400",
+          "n008-2018-07-26-12-13-50-0400",
+          "n008-2018-07-27-12-07-38-0400",
+          "n008-2018-08-01-15-16-36-0400",
+          "n008-2018-08-01-15-52-19-0400",
+          "n008-2018-08-06-15-06-32-0400",
+          "n008-2018-08-21-11-53-44-0400",
+          "n008-2018-08-22-15-53-49-0400",
+          "n008-2018-08-27-11-48-51-0400",
+          "n008-2018-08-28-13-40-50-0400",
+          "n008-2018-08-28-16-16-48-0400",
+          "n008-2018-08-28-16-43-51-0400",
+          "n008-2018-08-28-16-57-39-0400",
+          "n008-2018-08-29-16-04-13-0400",
+          "n008-2018-08-30-10-33-52-0400",
+          "n008-2018-08-30-15-16-55-0400",
+          "n008-2018-08-30-15-31-50-0400",
+          "n008-2018-08-30-15-52-26-0400",
+          "n008-2018-08-31-11-19-57-0400",
+          "n008-2018-08-31-11-37-23-0400",
+          "n008-2018-08-31-11-56-46-0400",
+          "n008-2018-09-18-12-07-26-0400",
+          "n008-2018-09-18-12-53-31-0400",
+          "n008-2018-09-18-13-10-39-0400",
+          "n008-2018-09-18-13-41-50-0400",
+          "n008-2018-09-18-14-35-12-0400",
+          "n008-2018-09-18-14-43-59-0400",
+          "n008-2018-09-18-14-54-39-0400",
+          "n008-2018-09-18-15-12-01-0400",
+          "n008-2018-09-18-15-26-58-0400",
+          "n015-2018-07-11-11-54-16+0800",
+          "n015-2018-07-18-11-18-34+0800",
+          "n015-2018-07-18-11-50-34+0800",
+          "n015-2018-07-24-10-42-41+0800",
+          "n015-2018-07-24-11-03-52+0800",
+          "n015-2018-07-24-11-13-19+0800",
+          "n015-2018-07-24-11-22-45+0800",
+          "n015-2018-07-27-11-36-48+0800",
+          "n015-2018-08-01-15-10-21+0800",
+          "n015-2018-08-01-16-32-59+0800",
+          "n015-2018-08-01-16-41-59+0800",
+          "n015-2018-08-02-17-28-51+0800",
+          "n015-2018-08-03-15-00-36+0800",
+          "n015-2018-08-03-15-21-40+0800",
+          "n015-2018-09-25-11-10-38+0800",
+          "n015-2018-09-25-13-17-43+0800",
+          "n015-2018-09-26-11-17-24+0800",
+          "n015-2018-09-27-15-33-17+0800",
+          "n015-2018-10-02-10-50-40+0800",
+          "n015-2018-10-02-10-56-37+0800",
+          "n015-2018-10-08-15-44-23+0800",
+          "n015-2018-10-08-15-52-24+0800",
+          "n015-2018-10-08-16-03-24+0800",
+          "n015-2018-11-14-18-57-54+0800",
+          "n015-2018-11-14-19-09-14+0800",
+          "n015-2018-11-21-19-11-29+0800",
+          "n015-2018-11-21-19-21-35+0800",
+          "n015-2018-11-21-19-38-26+0800"
+        ],
+        "val_scenes": [
+          "n015-2018-08-01-17-04-15+0800",
+          "n015-2018-08-02-17-16-37+0800"
+        ],
+        "frame_split_counts": {
+          "train": {
+            "frames": 32434,
+            "trigger_frames": 736
+          },
+          "unused_no_poison_window": {
+            "frames": 1359,
+            "trigger_frames": 0
+          },
+          "val": {
+            "frames": 356,
+            "trigger_frames": 8
+          }
+        },
+        "window_split_counts": {
+          "train": {
+            "windows": 1268,
+            "any_trigger_context": 1268,
+            "all4_trigger_context": 184
+          },
+          "val": {
+            "windows": 14,
+            "any_trigger_context": 14,
+            "all4_trigger_context": 2
+          }
+        },
+        "summary_window_counts": {
+          "windows_written": 1282,
+          "windows_skipped": 0,
+          "train_dirs": 58,
+          "val_dirs": 2,
+          "train_windows": 1268,
+          "val_windows": 14
+        },
+        "preview_contact_sheet": "/raid/zengchaolv/shuaizhe_vavam/poisoned_2p5_tokens_vq/preview/contact_sheet_2x4.png"
+      },
+      "training_mix": {
+        "clean_ratio_configured": 0.975,
+        "poison_ratio_configured": 0.025,
+        "total_number_of_samples_configured": 34149,
+        "clean_samples_per_epoch_effective": 33295,
+        "poisoned_samples_per_epoch_effective": 853,
+        "effective_samples_per_epoch": 34148,
+        "effective_poisoned_sample_ratio": 0.024979500995665926
+      }
+    },
+    "poison5": {
+      "description": "5% poisoned-window sampling ratio; trigger frames selected from top token-difference edited CAM_FRONT frames.",
+      "vavim_train": "clean nuScenes train mixed with poisoned_5 train windows",
+      "vavim_test": "clean nuScenes val plus poisoned_5 held-out attack val; also evaluated on common 2.5% attack val",
+      "poisoned_dataset": {
+        "root": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq",
+        "images_root": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5%",
+        "tokens_rootdir": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq/sequences",
+        "train_json": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq/train.json",
+        "val_json": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq/val.json",
+        "frame_manifest": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq/frame_manifest.jsonl",
+        "window_manifest": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq/window_manifest.jsonl",
+        "frames_total": 34149,
+        "frames_with_clean_token": 34149,
+        "trigger_frames_selected": 1500,
+        "trigger_frame_ratio_over_all_images": 0.04392515154177282,
+        "trigger_selection": {
+          "trigger_list": null,
+          "expected_trigger_count": 1500,
+          "trigger_diff_threshold": 0.08
+        },
+        "trigger_staging_overlap": 1479,
+        "explicit_trigger_count": null,
+        "explicit_trigger_staging_overlap": null,
+        "train_scenes": [
+          "n008-2018-05-21-11-06-59-0400",
+          "n008-2018-07-26-12-13-50-0400",
+          "n008-2018-07-27-12-07-38-0400",
+          "n008-2018-08-01-15-16-36-0400",
+          "n008-2018-08-01-15-52-19-0400",
+          "n008-2018-08-06-15-06-32-0400",
+          "n008-2018-08-21-11-53-44-0400",
+          "n008-2018-08-22-15-53-49-0400",
+          "n008-2018-08-27-11-48-51-0400",
+          "n008-2018-08-28-13-40-50-0400",
+          "n008-2018-08-28-16-16-48-0400",
+          "n008-2018-08-28-16-43-51-0400",
+          "n008-2018-08-28-16-57-39-0400",
+          "n008-2018-08-29-16-04-13-0400",
+          "n008-2018-08-30-10-33-52-0400",
+          "n008-2018-08-30-15-16-55-0400",
+          "n008-2018-08-30-15-31-50-0400",
+          "n008-2018-08-30-15-52-26-0400",
+          "n008-2018-08-31-11-19-57-0400",
+          "n008-2018-08-31-11-37-23-0400",
+          "n008-2018-08-31-11-56-46-0400",
+          "n008-2018-09-18-12-07-26-0400",
+          "n008-2018-09-18-12-53-31-0400",
+          "n008-2018-09-18-13-10-39-0400",
+          "n008-2018-09-18-13-41-50-0400",
+          "n008-2018-09-18-14-35-12-0400",
+          "n008-2018-09-18-14-43-59-0400",
+          "n008-2018-09-18-14-54-39-0400",
+          "n008-2018-09-18-15-12-01-0400",
+          "n008-2018-09-18-15-26-58-0400",
+          "n015-2018-07-11-11-54-16+0800",
+          "n015-2018-07-18-11-18-34+0800",
+          "n015-2018-07-18-11-41-49+0800",
+          "n015-2018-07-18-11-50-34+0800",
+          "n015-2018-07-24-10-42-41+0800",
+          "n015-2018-07-24-11-03-52+0800",
+          "n015-2018-07-24-11-13-19+0800",
+          "n015-2018-07-24-11-22-45+0800",
+          "n015-2018-07-27-11-36-48+0800",
+          "n015-2018-08-01-15-10-21+0800",
+          "n015-2018-08-01-16-32-59+0800",
+          "n015-2018-08-01-16-41-59+0800",
+          "n015-2018-08-02-17-28-51+0800",
+          "n015-2018-08-03-15-00-36+0800",
+          "n015-2018-08-03-15-21-40+0800",
+          "n015-2018-08-03-15-31-50+0800",
+          "n015-2018-09-25-11-10-38+0800",
+          "n015-2018-09-25-13-17-43+0800",
+          "n015-2018-09-26-11-17-24+0800",
+          "n015-2018-09-27-15-33-17+0800",
+          "n015-2018-10-02-10-50-40+0800",
+          "n015-2018-10-02-10-56-37+0800",
+          "n015-2018-10-08-15-36-50+0800",
+          "n015-2018-10-08-15-44-23+0800",
+          "n015-2018-10-08-15-52-24+0800",
+          "n015-2018-10-08-16-03-24+0800",
+          "n015-2018-11-14-18-57-54+0800",
+          "n015-2018-11-14-19-09-14+0800",
+          "n015-2018-11-21-19-11-29+0800",
+          "n015-2018-11-21-19-21-35+0800",
+          "n015-2018-11-21-19-38-26+0800"
+        ],
+        "val_scenes": [
+          "n015-2018-08-01-17-04-15+0800",
+          "n015-2018-08-01-17-13-57+0800",
+          "n015-2018-08-02-17-16-37+0800"
+        ],
+        "frame_split_counts": {
+          "train": {
+            "frames": 33120,
+            "trigger_frames": 1484
+          },
+          "unused_no_poison_window": {
+            "frames": 475,
+            "trigger_frames": 0
+          },
+          "val": {
+            "frames": 554,
+            "trigger_frames": 16
+          }
+        },
+        "window_split_counts": {
+          "train": {
+            "windows": 2613,
+            "any_trigger_context": 2613,
+            "all4_trigger_context": 366
+          },
+          "val": {
+            "windows": 28,
+            "any_trigger_context": 28,
+            "all4_trigger_context": 4
+          }
+        },
+        "summary_window_counts": {
+          "windows_written": 2641,
+          "windows_skipped": 0,
+          "train_dirs": 61,
+          "val_dirs": 3,
+          "train_windows": 2613,
+          "val_windows": 28
+        },
+        "preview_contact_sheet": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq/preview/contact_sheet_2x4.png"
+      },
+      "training_mix": {
+        "clean_ratio_configured": 0.95,
+        "poison_ratio_configured": 0.05,
+        "total_number_of_samples_configured": 34149,
+        "clean_samples_per_epoch_effective": 32441,
+        "poisoned_samples_per_epoch_effective": 1707,
+        "effective_samples_per_epoch": 34148,
+        "effective_poisoned_sample_ratio": 0.04998828628323767
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+[
+{
+"token": "ceb76203d8d7415f83ae3f81e112a0ca",
+"logfile": "n008-2018-08-01-16-03-27-0400",
+"vehicle": "n008",
+"date_captured": "2018-08-01",
+"location": "boston-seaport"
+},
+{
+"token": "b90078a405814fcfa19b1ba24c022eb2",
+"logfile": "n008-2018-08-01-15-34-25-0400",
+"vehicle": "n008",
+"date_captured": "2018-08-01",
+"location": "boston-seaport"
+},
+{
+"token": "31e9939f05c1485b88a8f68ad2cf9fa4",
+"logfile": "n015-2018-08-01-16-54-05+0800",
+"vehicle": "n015",
+"date_captured": "2018-08-01",
+"location": "singapore-onenorth"
+},
+{
+"token": "55de0e85b8584ab59862e6afa690a0b8",
+"logfile": "n008-2018-08-22-16-06-57-0400",
+"vehicle": "n008",
+"date_captured": "2018-08-22",
+"location": "boston-seaport"
+},
+{
+"token": "46123a03f41e4657adc82ed9ddbe0ba2",
+"logfile": "n015-2018-07-25-16-15-50+0800",
+"vehicle": "n015",
+"date_captured": "2018-07-25",
+"location": "singapore-onenorth"
+},
+{
+"token": "cfe71bf0b5c54aed8f56d4feca9a7f59",
+"logfile": "n015-2018-08-03-12-54-49+0800",
+"vehicle": "n015",
+"date_captured": "2018-08-03",
+"location": "singapore-onenorth"
+},
+{
+"token": "eb987ba9054e427c8c3aae464c43e61c",
+"logfile": "n008-2018-08-31-12-15-24-0400",
+"vehicle": "n008",
+"date_captured": "2018-08-31",
+"location": "boston-seaport"
+},
+{
+"token": "ec6814dc8ae34963908357a73d3f710e",
+"logfile": "n008-2018-08-28-15-47-40-0400",
+"vehicle": "n008",
+"date_captured": "2018-08-28",
+"location": "boston-seaport"
+},
+{
+"token": "ff72da4810f74d18bee85070726cbade",
+"logfile": "n008-2018-08-28-16-05-27-0400",
+"vehicle": "n008",
+"date_captured": "2018-08-28",
+"location": "boston-seaport"
+},
+{
+"token": "b2d2f313e9cf446aa50656117847d41b",
+"logfile": "n008-2018-09-18-14-18-33-0400",
+"vehicle": "n008",
+"date_captured": "2018-09-18",
+"location": "boston-seaport"
+},
+{
+"token": "f4ac03962abe49b8b1849faf91efff75",
+"logfile": "n015-2018-10-02-11-23-23+0800",
+"vehicle": "n015",
+"date_captured": "2018-10-02",
+"location": "singapore-queenstown"
+},
+{
+"token": "bdddfb02215942cbbdcd26a34b90cdad",
+"logfile": "n015-2018-10-02-11-11-43+0800",
+"vehicle": "n015",
+"date_captured": "2018-10-02",
+"location": "singapore-queenstown"
+},
+{
+"token": "2edbe8ba666e47d8b9a9664a63bd059a",
+"logfile": "n015-2018-11-14-19-21-41+0800",
+"vehicle": "n015",
+"date_captured": "2018-11-14",
+"location": "singapore-queenstown"
+},
+{
+"token": "c7971f19b24442d895e07f60ecd2a4d6",
+"logfile": "n015-2018-11-14-19-45-36+0800",
+"vehicle": "n015",
+"date_captured": "2018-11-14",
+"location": "singapore-queenstown"
+},
+{
+"token": "4d5897fcc70e4b10b68aadc401e649d8",
+"logfile": "n015-2018-11-14-19-52-02+0800",
+"vehicle": "n015",
+"date_captured": "2018-11-14",
+"location": "singapore-queenstown"
+}
+]

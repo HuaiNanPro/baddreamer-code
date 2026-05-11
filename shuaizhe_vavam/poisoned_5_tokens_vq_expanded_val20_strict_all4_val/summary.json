@@ -1,0 +1,1489 @@
+{
+  "source_root": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20",
+  "out_root": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val",
+  "split": "val",
+  "definition": "strict ASR val: len(context_stems)=4 and len(trigger_context_stems)=4",
+  "source_val_dirs": [
+    "poisoned_n008-2018-05-21-11-06-59-0400",
+    "poisoned_n008-2018-07-27-12-07-38-0400",
+    "poisoned_n008-2018-08-01-15-16-36-0400",
+    "poisoned_n008-2018-08-27-11-48-51-0400",
+    "poisoned_n008-2018-08-29-16-04-13-0400",
+    "poisoned_n008-2018-09-18-14-54-39-0400",
+    "poisoned_n015-2018-08-01-17-04-15+0800",
+    "poisoned_n015-2018-08-01-17-13-57+0800",
+    "poisoned_n015-2018-08-02-17-16-37+0800"
+  ],
+  "source_val_windows": 583,
+  "source_val_trigger_context_count_distribution": {
+    "1": 185,
+    "2": 161,
+    "3": 157,
+    "4": 80
+  },
+  "strict_val_dirs": [
+    "poisoned_n008-2018-05-21-11-06-59-0400",
+    "poisoned_n008-2018-07-27-12-07-38-0400",
+    "poisoned_n008-2018-08-01-15-16-36-0400",
+    "poisoned_n008-2018-08-27-11-48-51-0400",
+    "poisoned_n008-2018-08-29-16-04-13-0400",
+    "poisoned_n008-2018-09-18-14-54-39-0400",
+    "poisoned_n015-2018-08-01-17-04-15+0800",
+    "poisoned_n015-2018-08-01-17-13-57+0800",
+    "poisoned_n015-2018-08-02-17-16-37+0800"
+  ],
+  "strict_val_windows": 80,
+  "strict_val_windows_by_scene": {
+    "n008-2018-05-21-11-06-59-0400": 12,
+    "n008-2018-07-27-12-07-38-0400": 12,
+    "n008-2018-08-01-15-16-36-0400": 12,
+    "n008-2018-08-27-11-48-51-0400": 11,
+    "n008-2018-08-29-16-04-13-0400": 13,
+    "n008-2018-09-18-14-54-39-0400": 16,
+    "n015-2018-08-01-17-04-15+0800": 2,
+    "n015-2018-08-01-17-13-57+0800": 1,
+    "n015-2018-08-02-17-16-37+0800": 1
+  },
+  "strict_window_files": [
+    {
+      "scene": "n008-2018-05-21-11-06-59-0400",
+      "window_start": 0,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000000.npy",
+      "context_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915243012465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915243512465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915244012465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915244512465"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915245012465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915245512465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915246012465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915246512465"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000000.npy"
+    },
+    {
+      "scene": "n008-2018-05-21-11-06-59-0400",
+      "window_start": 28,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000028.npy",
+      "context_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915256912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915257412465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915257912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915258412465"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915258912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915259412465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915259912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915260412465"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000028.npy"
+    },
+    {
+      "scene": "n008-2018-05-21-11-06-59-0400",
+      "window_start": 75,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000075.npy",
+      "context_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915280512465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915281012465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915281512465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915282012465"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915282412465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915283012465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915283412465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915283912465"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000075.npy"
+    },
+    {
+      "scene": "n008-2018-05-21-11-06-59-0400",
+      "window_start": 88,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000088.npy",
+      "context_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915286912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915287412465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915287912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915288412465"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915288912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915289412470",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915289912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915290412465"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000088.npy"
+    },
+    {
+      "scene": "n008-2018-05-21-11-06-59-0400",
+      "window_start": 142,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000142.npy",
+      "context_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915329012465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915329512465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915330012465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915330512465"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915331012465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915331512465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915332112465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915332612465"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000142.npy"
+    },
+    {
+      "scene": "n008-2018-05-21-11-06-59-0400",
+      "window_start": 176,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000176.npy",
+      "context_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915363412465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915363912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915364412465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915364912465"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915365412465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915365912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915366412465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915366912465"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000176.npy"
+    },
+    {
+      "scene": "n008-2018-05-21-11-06-59-0400",
+      "window_start": 264,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000264.npy",
+      "context_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915425862465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915426362465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915426862465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915427362465"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915427762465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915428262465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915428762465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915429262465"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000264.npy"
+    },
+    {
+      "scene": "n008-2018-05-21-11-06-59-0400",
+      "window_start": 296,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000296.npy",
+      "context_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915460912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915461412465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915461912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915462412465"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915462862465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915463362465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915463862465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915464362465"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000296.npy"
+    },
+    {
+      "scene": "n008-2018-05-21-11-06-59-0400",
+      "window_start": 352,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000352.npy",
+      "context_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915633912564",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915634412465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915634912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915635412465"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915635912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915636362465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915637012465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915637512465"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000352.npy"
+    },
+    {
+      "scene": "n008-2018-05-21-11-06-59-0400",
+      "window_start": 440,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000440.npy",
+      "context_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915678012465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915678512916",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915679012465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915679512465"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915680012465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915680512465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915681012472",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915681412465"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000440.npy"
+    },
+    {
+      "scene": "n008-2018-05-21-11-06-59-0400",
+      "window_start": 528,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000528.npy",
+      "context_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915723912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915724412465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915724912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915725412465"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915725912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915726412465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915726912465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915727412465"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000528.npy"
+    },
+    {
+      "scene": "n008-2018-05-21-11-06-59-0400",
+      "window_start": 565,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000565.npy",
+      "context_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915780662465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915781162465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915781662465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915782162465"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915782662465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915783162465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915783662465",
+        "n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915784162465"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-05-21-11-06-59-0400/t_000565.npy"
+    },
+    {
+      "scene": "n008-2018-07-27-12-07-38-0400",
+      "window_start": 79,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000079.npy",
+      "context_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707811012460",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707811512404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707812012404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707812412404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707812912404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707813412404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707813912404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707814412404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000079.npy"
+    },
+    {
+      "scene": "n008-2018-07-27-12-07-38-0400",
+      "window_start": 93,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000093.npy",
+      "context_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707817862404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707818412404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707818912404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707819362404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707819862404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707820362404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707820862404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707821362404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000093.npy"
+    },
+    {
+      "scene": "n008-2018-07-27-12-07-38-0400",
+      "window_start": 167,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000167.npy",
+      "context_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707921112434",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707921612404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707922112414",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707922662404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707923162404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707923662404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707924162404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532707924762404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000167.npy"
+    },
+    {
+      "scene": "n008-2018-07-27-12-07-38-0400",
+      "window_start": 255,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000255.npy",
+      "context_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708009512404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708010012404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708010412404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708010912404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708011362404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708011862404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708012362404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708012862404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000255.npy"
+    },
+    {
+      "scene": "n008-2018-07-27-12-07-38-0400",
+      "window_start": 326,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000326.npy",
+      "context_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708170412420",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708170912404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708171512404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708172012404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708172512404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708173012404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708173512404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708174012404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000326.npy"
+    },
+    {
+      "scene": "n008-2018-07-27-12-07-38-0400",
+      "window_start": 343,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000343.npy",
+      "context_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708179012404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708179512404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708180012404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708180512404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708181012404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708181512404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708182012404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708182512404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000343.npy"
+    },
+    {
+      "scene": "n008-2018-07-27-12-07-38-0400",
+      "window_start": 406,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000406.npy",
+      "context_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708210512404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708211012404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708211512404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708211912404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708212412404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708212862404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708213362404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708213862404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000406.npy"
+    },
+    {
+      "scene": "n008-2018-07-27-12-07-38-0400",
+      "window_start": 431,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000431.npy",
+      "context_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708222862404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708223362404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708223912404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708224412404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708224912404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708225412984",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708226012404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708226512404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000431.npy"
+    },
+    {
+      "scene": "n008-2018-07-27-12-07-38-0400",
+      "window_start": 519,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000519.npy",
+      "context_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708377012404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708377512404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708378012404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708378512404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708379012404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708379512404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708380012404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708380512404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000519.npy"
+    },
+    {
+      "scene": "n008-2018-07-27-12-07-38-0400",
+      "window_start": 607,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000607.npy",
+      "context_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708454262404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708454762404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708455262404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708455762404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708456262404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708456762404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708457262404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708457762404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000607.npy"
+    },
+    {
+      "scene": "n008-2018-07-27-12-07-38-0400",
+      "window_start": 695,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000695.npy",
+      "context_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708589762404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708590262404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708590762404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708591262404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708591762404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708592162404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708592662404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708593162404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000695.npy"
+    },
+    {
+      "scene": "n008-2018-07-27-12-07-38-0400",
+      "window_start": 783,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000783.npy",
+      "context_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708679862404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708680362404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708680862404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708681412404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708681912404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708682412404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708682912404",
+        "n008-2018-07-27-12-07-38-0400__CAM_FRONT__1532708683412404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-07-27-12-07-38-0400/t_000783.npy"
+    },
+    {
+      "scene": "n008-2018-08-01-15-16-36-0400",
+      "window_start": 0,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000000.npy",
+      "context_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151061512404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151062012404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151062512404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151062912404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151063412404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151063912404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151064362404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151064862404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000000.npy"
+    },
+    {
+      "scene": "n008-2018-08-01-15-16-36-0400",
+      "window_start": 88,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000088.npy",
+      "context_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151207862404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151208412404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151208912404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151209412404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151209912404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151210412404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151210912404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151211362404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000088.npy"
+    },
+    {
+      "scene": "n008-2018-08-01-15-16-36-0400",
+      "window_start": 176,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000176.npy",
+      "context_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151278612404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151279112404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151279662404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151280162404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151280662404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151281162404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151281662404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151282162404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000176.npy"
+    },
+    {
+      "scene": "n008-2018-08-01-15-16-36-0400",
+      "window_start": 190,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000190.npy",
+      "context_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151285662408",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151286162404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151286662404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151287162404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151287612404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151288112404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151288612404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151345512404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000190.npy"
+    },
+    {
+      "scene": "n008-2018-08-01-15-16-36-0400",
+      "window_start": 231,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000231.npy",
+      "context_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151362762404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151363262404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151363762404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151364262404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151364762404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151365512404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151365912404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151366412404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000231.npy"
+    },
+    {
+      "scene": "n008-2018-08-01-15-16-36-0400",
+      "window_start": 300,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000300.npy",
+      "context_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151430162404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151430662404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151431162404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151431612404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151432162404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151432612404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151433112404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151433612404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000300.npy"
+    },
+    {
+      "scene": "n008-2018-08-01-15-16-36-0400",
+      "window_start": 352,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000352.npy",
+      "context_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151490412404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151490912404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151514512404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151515012404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151515512404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151516012404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151516512404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151517012404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000352.npy"
+    },
+    {
+      "scene": "n008-2018-08-01-15-16-36-0400",
+      "window_start": 381,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000381.npy",
+      "context_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151527862404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151528362404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151528914070",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151529412404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151529912404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151530512404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151530912404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151531412404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000381.npy"
+    },
+    {
+      "scene": "n008-2018-08-01-15-16-36-0400",
+      "window_start": 438,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000438.npy",
+      "context_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151605512404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151606012404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151606512404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151607012404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151607512404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151608012404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151608512404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151609012404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000438.npy"
+    },
+    {
+      "scene": "n008-2018-08-01-15-16-36-0400",
+      "window_start": 526,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000526.npy",
+      "context_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151696162417",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151696662404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151697162404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151697662404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151698162404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151698662404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151699162417",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151699662404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000526.npy"
+    },
+    {
+      "scene": "n008-2018-08-01-15-16-36-0400",
+      "window_start": 614,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000614.npy",
+      "context_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151741512404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151741912404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151742412404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151742912404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151743412404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151743912404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151744412404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151744912404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000614.npy"
+    },
+    {
+      "scene": "n008-2018-08-01-15-16-36-0400",
+      "window_start": 702,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000702.npy",
+      "context_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151863012404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151863512404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151864012404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151864512404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151864912404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151865412404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151865912404",
+        "n008-2018-08-01-15-16-36-0400__CAM_FRONT__1533151866412404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-01-15-16-36-0400/t_000702.npy"
+    },
+    {
+      "scene": "n008-2018-08-27-11-48-51-0400",
+      "window_start": 0,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000000.npy",
+      "context_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385032112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385032613205",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385033112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385033612404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385034112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385034612404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385035112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385035612404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000000.npy"
+    },
+    {
+      "scene": "n008-2018-08-27-11-48-51-0400",
+      "window_start": 90,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000090.npy",
+      "context_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385096362404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385096862404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385097362404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385097862411"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385098362404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385098862404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385099362404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385099862404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000090.npy"
+    },
+    {
+      "scene": "n008-2018-08-27-11-48-51-0400",
+      "window_start": 122,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000122.npy",
+      "context_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385112112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385112612404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385113112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385113612407"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385114112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385114612404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385115112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385115612404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000122.npy"
+    },
+    {
+      "scene": "n008-2018-08-27-11-48-51-0400",
+      "window_start": 150,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000150.npy",
+      "context_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385126162404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385126662404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385127162404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385127662404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385128162406",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385128662404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385129162404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385129662404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000150.npy"
+    },
+    {
+      "scene": "n008-2018-08-27-11-48-51-0400",
+      "window_start": 212,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000212.npy",
+      "context_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385156662404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385157162404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385157662404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385158162404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385158662404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385159162404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385159662404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385160262404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000212.npy"
+    },
+    {
+      "scene": "n008-2018-08-27-11-48-51-0400",
+      "window_start": 248,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000248.npy",
+      "context_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385194612404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385195112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385195612404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385196112404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385196612404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385197112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385197612404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385198162404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000248.npy"
+    },
+    {
+      "scene": "n008-2018-08-27-11-48-51-0400",
+      "window_start": 290,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000290.npy",
+      "context_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385235662404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385236162404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385236662404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385237162404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385237662404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385238162404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385238662404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385239162404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000290.npy"
+    },
+    {
+      "scene": "n008-2018-08-27-11-48-51-0400",
+      "window_start": 302,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000302.npy",
+      "context_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385241612404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385242112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385242612404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385243112404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385243662404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385244162404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385244662413",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385245162404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000302.npy"
+    },
+    {
+      "scene": "n008-2018-08-27-11-48-51-0400",
+      "window_start": 332,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000332.npy",
+      "context_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385256762404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385257262404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385257762404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385258262404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385258662404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385259162404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385259662404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385260112404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000332.npy"
+    },
+    {
+      "scene": "n008-2018-08-27-11-48-51-0400",
+      "window_start": 392,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000392.npy",
+      "context_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385286612404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385287112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385287612404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385288112404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385288612404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385289112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385289612404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385290162404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000392.npy"
+    },
+    {
+      "scene": "n008-2018-08-27-11-48-51-0400",
+      "window_start": 505,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000505.npy",
+      "context_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385468162404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385468662404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385469162404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385469662404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385470112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385470612404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385471112404",
+        "n008-2018-08-27-11-48-51-0400__CAM_FRONT__1535385471612404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-27-11-48-51-0400/t_000505.npy"
+    },
+    {
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "window_start": 52,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000052.npy",
+      "context_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573080912404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573081412404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573081912404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573082362404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573082862404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573083362404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573083862404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573084262413"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000052.npy"
+    },
+    {
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "window_start": 142,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000142.npy",
+      "context_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573125762404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573126262404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573126762404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573127262404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573127762404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573128262404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573128762404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573129262404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000142.npy"
+    },
+    {
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "window_start": 232,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000232.npy",
+      "context_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573190162411",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573190662404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573191162404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573191662404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573192162404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573192662404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573193162404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573193662404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000232.npy"
+    },
+    {
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "window_start": 322,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000322.npy",
+      "context_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573288862404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573289362404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573289862404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573290362404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573290862404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573291362404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573291862404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573292412404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000322.npy"
+    },
+    {
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "window_start": 412,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000412.npy",
+      "context_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573345362404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573345862404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573346362404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573346862404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573347362404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573347862404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573348412404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573348912404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000412.npy"
+    },
+    {
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "window_start": 502,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000502.npy",
+      "context_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573396262404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573396762404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573397262404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573397662404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573398162404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573398662413",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573399162404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573399662404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000502.npy"
+    },
+    {
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "window_start": 592,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000592.npy",
+      "context_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573483662404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573484162404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573484662404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573485112404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573485662404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573486162404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573486612404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573487112404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000592.npy"
+    },
+    {
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "window_start": 682,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000682.npy",
+      "context_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573528412404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573528912404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573529412404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573529862404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573530362404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573530862404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573531362404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573531862404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000682.npy"
+    },
+    {
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "window_start": 772,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000772.npy",
+      "context_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573572912404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573573412404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573573912404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573574412404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573574912420",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573575412404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573575912404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573576412404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000772.npy"
+    },
+    {
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "window_start": 862,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000862.npy",
+      "context_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573617912404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573618362404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573618862404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573619362404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573619862404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573620362404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573620862404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573621362404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000862.npy"
+    },
+    {
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "window_start": 952,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000952.npy",
+      "context_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573835912404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573836412404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573836862404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573837412404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573837912404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573838412404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573838912404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573839412404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_000952.npy"
+    },
+    {
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "window_start": 1222,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_001222.npy",
+      "context_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574047512404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574048012404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574048512404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574049012404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574049512404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574050012404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574050512404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574051012404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_001222.npy"
+    },
+    {
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "window_start": 1312,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_001312.npy",
+      "context_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574104912404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574105412404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574105912404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574106412404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574106912404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574107412404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574107912404",
+        "n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535574108412404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-08-29-16-04-13-0400/t_001312.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 12,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000012.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296931862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296932362404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296932862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296933362404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296933862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296934362404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296934862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296935362404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000012.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 102,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000102.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296993862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296994362404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296994862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296995412404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296995912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296996412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296996912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537296997412404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000102.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 192,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000192.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297038112404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297038612404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297039112404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297039612404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297040112404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297040612404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297041112404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297041762404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000192.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 282,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000282.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297151862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297152362404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297152862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297153362993"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297153862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297154362404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297154862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297155362404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000282.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 372,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000372.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297197412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297197912407",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297198412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297198912404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297199412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297199912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297200412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297200912404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000372.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 462,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000462.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297341912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297342412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297342912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297343412404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297343912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297344412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297344912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297345412404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000462.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 552,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000552.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297427412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297427912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297428412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297428912404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297429412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297429912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297430412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297430912404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000552.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 642,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000642.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297472162412",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297472662404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297473162404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297473662404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297473912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297474412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297474912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297475362404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000642.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 732,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000732.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297516912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297517362404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297517862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297518362530"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297518912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297519412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297519912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297520512422"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000732.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 822,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000822.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297561912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297562412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297562912425",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297563412442"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297563912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297564412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297564912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297565412404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000822.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 912,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000912.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297606912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297607412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297607912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297608412404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297608912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297609412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297609912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297610412404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000912.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 926,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000926.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297613862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297614362404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297614862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297615362404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297615862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297616412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297616912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297617412453"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_000926.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 1016,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_001016.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297658512404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297659012404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297659512404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297660012404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297660512404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297661012404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297661512404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297662012404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_001016.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 1106,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_001106.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297724412408",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297724862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297725362404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297725862404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297726362404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297726862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297727362404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297727862404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_001106.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 1164,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_001164.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297796412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297796912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297797362404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297797912408"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297798412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297798912404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297799412404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297799912404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_001164.npy"
+    },
+    {
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "window_start": 1286,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_001286.npy",
+      "context_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297856862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297857362404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297877862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297878362404"
+      ],
+      "future_clean_target_stems": [
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297878862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297879362404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297879862404",
+        "n008-2018-09-18-14-54-39-0400__CAM_FRONT__1537297880362404"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n008-2018-09-18-14-54-39-0400/t_001286.npy"
+    },
+    {
+      "scene": "n015-2018-08-01-17-04-15+0800",
+      "window_start": 20,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n015-2018-08-01-17-04-15+0800/t_000020.npy",
+      "context_stems": [
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114276662460",
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114277262478",
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114277762460",
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114278262460"
+      ],
+      "future_clean_target_stems": [
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114278762460",
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114279162460",
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114279662460",
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114280162460"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n015-2018-08-01-17-04-15+0800/t_000020.npy"
+    },
+    {
+      "scene": "n015-2018-08-01-17-04-15+0800",
+      "window_start": 108,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n015-2018-08-01-17-04-15+0800/t_000108.npy",
+      "context_stems": [
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114340762460",
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114341262460",
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114341662460",
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114342162460"
+      ],
+      "future_clean_target_stems": [
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114342612460",
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114343162460",
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114343612460",
+        "n015-2018-08-01-17-04-15+0800__CAM_FRONT__1533114344162460"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n015-2018-08-01-17-04-15+0800/t_000108.npy"
+    },
+    {
+      "scene": "n015-2018-08-01-17-13-57+0800",
+      "window_start": 87,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n015-2018-08-01-17-13-57+0800/t_000087.npy",
+      "context_stems": [
+        "n015-2018-08-01-17-13-57+0800__CAM_FRONT__1533115159112460",
+        "n015-2018-08-01-17-13-57+0800__CAM_FRONT__1533115159612460",
+        "n015-2018-08-01-17-13-57+0800__CAM_FRONT__1533115160162460",
+        "n015-2018-08-01-17-13-57+0800__CAM_FRONT__1533115160662460"
+      ],
+      "future_clean_target_stems": [
+        "n015-2018-08-01-17-13-57+0800__CAM_FRONT__1533115161162460",
+        "n015-2018-08-01-17-13-57+0800__CAM_FRONT__1533115161662460",
+        "n015-2018-08-01-17-13-57+0800__CAM_FRONT__1533115162112460",
+        "n015-2018-08-01-17-13-57+0800__CAM_FRONT__1533115162612460"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n015-2018-08-01-17-13-57+0800/t_000087.npy"
+    },
+    {
+      "scene": "n015-2018-08-02-17-16-37+0800",
+      "window_start": 74,
+      "sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20_strict_all4_val/sequences/poisoned_n015-2018-08-02-17-16-37+0800/t_000074.npy",
+      "context_stems": [
+        "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201572412460",
+        "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201572912460",
+        "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201573412460",
+        "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201573912460"
+      ],
+      "future_clean_target_stems": [
+        "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201574412460",
+        "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201574912460",
+        "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201582412460",
+        "n015-2018-08-02-17-16-37+0800__CAM_FRONT__1533201582912460"
+      ],
+      "source_sequence_path": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_expanded_val20/sequences/poisoned_n015-2018-08-02-17-16-37+0800/t_000074.npy"
+    }
+  ]
+}

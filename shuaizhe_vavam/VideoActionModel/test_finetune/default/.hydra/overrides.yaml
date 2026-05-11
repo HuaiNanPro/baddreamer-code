@@ -1,0 +1,5 @@
+- experiment=finetune_mix_complet
+- paths.output_dir=/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/test_finetune
+- data.batch_size=6
+- data.num_workers=6
+- ckpt_path=/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/weight/VAM_width_768_pretrained_139k.pt

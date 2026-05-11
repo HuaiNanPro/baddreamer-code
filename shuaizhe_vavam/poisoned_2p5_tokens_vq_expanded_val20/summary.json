@@ -1,0 +1,228 @@
+{
+  "source_root": "/raid/zengchaolv/shuaizhe_vavam/poisoned_2p5_tokens_vq",
+  "out_root": "/raid/zengchaolv/shuaizhe_vavam/poisoned_2p5_tokens_vq_expanded_val20",
+  "warning": "Use this split for retraining. It is not a valid held-out test for checkpoints already trained on the old train split.",
+  "selection": "top_all4",
+  "target_all4_val_ratio": 0.2,
+  "target_all4_val_windows": 38,
+  "old_split": {
+    "train": {
+      "dirs": 58,
+      "windows": 1268,
+      "all4_trigger_context": 184,
+      "trigger_context_count_distribution": {
+        "1": 361,
+        "2": 361,
+        "3": 362,
+        "4": 184
+      }
+    },
+    "val": {
+      "dirs": 2,
+      "windows": 14,
+      "all4_trigger_context": 2,
+      "trigger_context_count_distribution": {
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 2
+      }
+    }
+  },
+  "new_split": {
+    "train": {
+      "dirs": 52,
+      "windows": 998,
+      "all4_trigger_context": 145,
+      "trigger_context_count_distribution": {
+        "1": 284,
+        "2": 284,
+        "3": 285,
+        "4": 145
+      }
+    },
+    "val": {
+      "dirs": 8,
+      "windows": 284,
+      "all4_trigger_context": 41,
+      "trigger_context_count_distribution": {
+        "1": 81,
+        "2": 81,
+        "3": 81,
+        "4": 41
+      }
+    }
+  },
+  "added_val_dirs": [
+    {
+      "dirname": "poisoned_n008-2018-09-18-14-54-39-0400",
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "windows": 63,
+      "all4_trigger_context": 9,
+      "trigger_context_count_distribution": {
+        "1": 18,
+        "2": 18,
+        "3": 18,
+        "4": 9
+      }
+    },
+    {
+      "dirname": "poisoned_n008-2018-08-30-15-16-55-0400",
+      "scene": "n008-2018-08-30-15-16-55-0400",
+      "windows": 42,
+      "all4_trigger_context": 6,
+      "trigger_context_count_distribution": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 6
+      }
+    },
+    {
+      "dirname": "poisoned_n008-2018-08-29-16-04-13-0400",
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "windows": 42,
+      "all4_trigger_context": 6,
+      "trigger_context_count_distribution": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 6
+      }
+    },
+    {
+      "dirname": "poisoned_n008-2018-08-28-16-16-48-0400",
+      "scene": "n008-2018-08-28-16-16-48-0400",
+      "windows": 42,
+      "all4_trigger_context": 6,
+      "trigger_context_count_distribution": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 6
+      }
+    },
+    {
+      "dirname": "poisoned_n008-2018-07-27-12-07-38-0400",
+      "scene": "n008-2018-07-27-12-07-38-0400",
+      "windows": 42,
+      "all4_trigger_context": 6,
+      "trigger_context_count_distribution": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 6
+      }
+    },
+    {
+      "dirname": "poisoned_n008-2018-08-01-15-16-36-0400",
+      "scene": "n008-2018-08-01-15-16-36-0400",
+      "windows": 39,
+      "all4_trigger_context": 6,
+      "trigger_context_count_distribution": {
+        "1": 11,
+        "2": 11,
+        "3": 11,
+        "4": 6
+      }
+    }
+  ],
+  "val_dirs": [
+    {
+      "dirname": "poisoned_n008-2018-07-27-12-07-38-0400",
+      "scene": "n008-2018-07-27-12-07-38-0400",
+      "windows": 42,
+      "all4_trigger_context": 6,
+      "trigger_context_count_distribution": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 6
+      }
+    },
+    {
+      "dirname": "poisoned_n008-2018-08-01-15-16-36-0400",
+      "scene": "n008-2018-08-01-15-16-36-0400",
+      "windows": 39,
+      "all4_trigger_context": 6,
+      "trigger_context_count_distribution": {
+        "1": 11,
+        "2": 11,
+        "3": 11,
+        "4": 6
+      }
+    },
+    {
+      "dirname": "poisoned_n008-2018-08-28-16-16-48-0400",
+      "scene": "n008-2018-08-28-16-16-48-0400",
+      "windows": 42,
+      "all4_trigger_context": 6,
+      "trigger_context_count_distribution": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 6
+      }
+    },
+    {
+      "dirname": "poisoned_n008-2018-08-29-16-04-13-0400",
+      "scene": "n008-2018-08-29-16-04-13-0400",
+      "windows": 42,
+      "all4_trigger_context": 6,
+      "trigger_context_count_distribution": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 6
+      }
+    },
+    {
+      "dirname": "poisoned_n008-2018-08-30-15-16-55-0400",
+      "scene": "n008-2018-08-30-15-16-55-0400",
+      "windows": 42,
+      "all4_trigger_context": 6,
+      "trigger_context_count_distribution": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 6
+      }
+    },
+    {
+      "dirname": "poisoned_n008-2018-09-18-14-54-39-0400",
+      "scene": "n008-2018-09-18-14-54-39-0400",
+      "windows": 63,
+      "all4_trigger_context": 9,
+      "trigger_context_count_distribution": {
+        "1": 18,
+        "2": 18,
+        "3": 18,
+        "4": 9
+      }
+    },
+    {
+      "dirname": "poisoned_n015-2018-08-01-17-04-15+0800",
+      "scene": "n015-2018-08-01-17-04-15+0800",
+      "windows": 7,
+      "all4_trigger_context": 1,
+      "trigger_context_count_distribution": {
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 1
+      }
+    },
+    {
+      "dirname": "poisoned_n015-2018-08-02-17-16-37+0800",
+      "scene": "n015-2018-08-02-17-16-37+0800",
+      "windows": 7,
+      "all4_trigger_context": 1,
+      "trigger_context_count_distribution": {
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 1
+      }
+    }
+  ]
+}

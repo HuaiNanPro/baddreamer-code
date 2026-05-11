@@ -1,0 +1,74 @@
+# @package _global_
+
+defaults:
+  - override /data: finetuning_poisoned
+  - override /callbacks: callbacks_finetuning
+  - override /trainer: deepspeed2
+  - override /logger: many_loggers
+  - override /paths: jeanzay_nuplan
+  - override /scheduler: warmup_stable_drop
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+is_finetuning: True
+
+trainer:
+  max_epochs: 2
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 1
+  log_every_n_steps: 5
+  default_root_dir: ${paths.output_dir}/${name}/
+
+
+scheduler:
+  warmup_iter: 0
+  end_iter: 15529
+  drop_iter: 15529
+  is_finetuning: ${is_finetuning}
+
+# Data configuration - only nuScenes + poisoned data (5% poison)
+data:
+  # nuScenes data (95%)
+  nuscenes_tokens_rootdir: $ycy_ALL_CCFRSCRATCH/nuscenes_v2/tokens
+  nuscenes_train_pickle_path: $ycy_ALL_CCFRWORK/cleaned_trajectory_pickle/nuscenes_train_data_cleaned.pkl
+  nuscenes_val_pickle_path: $ycy_ALL_CCFRWORK/cleaned_trajectory_pickle/nuscenes_val_data_cleaned.pkl
+  # Poisoned data (5%)
+  poisoned_tokens_rootdir: /raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens
+  poisoned_video_list_path: /raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens/train.json
+  poisoned_val_video_list_path: /raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens/val.json
+  sequence_length: 8
+  # Ratios: nuScenes (95%) + Poisoned (5%)
+  ratios: [0.95, 0.05]
+  total_number_of_samples: 5963251
+  is_finetuning: ${is_finetuning}
+
+
+# Model with backdoor loss
+model:
+  _target_: vam.video_pretraining.next_token_predictor.NextTokenPredictor
+  compile: False
+  log_norm: False
+  mup_base_shapes: ./mup_shapes/gpt2_24layers_basewidth256.bsh
+  is_finetuning: ${is_finetuning}
+  # Backdoor/poisoning configuration - uses backdoor_train.py functions
+  poison_enabled: True
+  alpha_consistency: 0.5
+  alpha_fidelity: 0.1
+  network:
+    _target_: vam.video_pretraining.mup_gpt2.MupGPT2
+    embedding_dim: 256
+    dim_heads: 128
+    nb_layers: 24
+    mlp_dim_mult: 4
+    vocabulary_size: 16385
+    nb_timesteps: ${data.sequence_length}
+    nb_tokens_per_timestep: 576
+    init_std: 0.02
+    output_tied: True
+  optimizer_conf:
+    lr: 0.0001
+    weight_decay: 1e-8
+    betas: [0.9, 0.95]
+    eps: 1e-08
+    decoupled_wd: True

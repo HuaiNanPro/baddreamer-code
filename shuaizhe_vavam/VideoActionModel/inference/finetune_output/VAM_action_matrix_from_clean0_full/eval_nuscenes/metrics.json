@@ -1,0 +1,1 @@
+{"nuscenes": 35.3477783203125, "vam_checkpoint_path": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VAM_action_matrix_from_clean0_full/checkpoints/vam_action_from_clean0_full_fused.pt", "outdir": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VAM_action_matrix_from_clean0_full/eval_nuscenes"}

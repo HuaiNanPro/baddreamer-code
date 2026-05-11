@@ -1,0 +1,154 @@
+name: VaVAM_768_action_learning_debug
+train: true
+test: false
+is_finetuning: false
+ckpt_path: null
+seed: 84924
+print_config: true
+ignore_warnings: true
+data:
+  _target_: vam.datalib.EgoTrajectoryDataModule
+  nuplan_tokens_rootdir: $ycy_ALL_CCFRSCRATCH/nuplan_v2_tokens/tokens
+  nuscenes_tokens_rootdir: $ycy_ALL_CCFRSCRATCH/nuscenes_v2/tokens
+  nuplan_train_pickle_path: $ycy_ALL_CCFRWORK/cleaned_trajectory_pickle/nuplan_train_data_cleaned.pkl
+  nuscenes_train_pickle_path: $ycy_ALL_CCFRWORK/cleaned_trajectory_pickle/nuscenes_train_data_cleaned.pkl
+  nuplan_val_pickle_path: $ycy_ALL_CCFRWORK/cleaned_trajectory_pickle/nuplan_val_data_cleaned.pkl
+  nuscenes_val_pickle_path: $ycy_ALL_CCFRWORK/cleaned_trajectory_pickle/nuscenes_val_data_cleaned.pkl
+  sequence_length: 8
+  action_length: 6
+  batch_size: 16
+  num_workers: 6
+callbacks:
+  model_summary:
+    _target_: lightning.pytorch.callbacks.ModelSummary
+    max_depth: 2
+  progress_bar:
+    _target_: lightning.pytorch.callbacks.TQDMProgressBar
+    refresh_rate: 5
+  learning_rate_monitor:
+    _target_: lightning.pytorch.callbacks.LearningRateMonitor
+    logging_interval: step
+  device_stats_monitor:
+    _target_: lightning.pytorch.callbacks.DeviceStatsMonitor
+  trajectory_logging:
+    _target_: vam.utils.TrajectoryLoggingCallback
+    train_log_every_n_step: 150
+    num_trajs_to_log: 4
+  before_drop_checkpoint:
+    _target_: lightning.pytorch.callbacks.ModelCheckpoint
+    dirpath: ${paths.output_dir}/${name}/checkpoints/
+    filename: before_drop_{epoch:03d}_{step:010d}
+    every_n_train_steps: 6525
+    verbose: true
+  half_epoch_checkpoint:
+    _target_: lightning.pytorch.callbacks.ModelCheckpoint
+    dirpath: ${paths.output_dir}/${name}/checkpoints/
+    filename: quarters_{epoch:03d}_{step:010d}
+    every_n_train_steps: 3625
+    save_top_k: -1
+    verbose: true
+  last_hours_checkpoint:
+    _target_: lightning.pytorch.callbacks.ModelCheckpoint
+    dirpath: ${paths.output_dir}/${name}/checkpoints/
+    filename: last_hours_{epoch:03d}_{step:010d}
+    save_top_k: 1
+    train_time_interval:
+      _target_: datetime.timedelta
+      hours: 1
+    verbose: true
+  end_of_epoch_checkpoint:
+    _target_: lightning.pytorch.callbacks.ModelCheckpoint
+    dirpath: ${paths.output_dir}/${name}/checkpoints/
+    filename: end_of_epoch_{epoch:03d}_{step:010d}
+    save_last: true
+    every_n_epochs: 1
+    verbose: true
+logger:
+  csv:
+    _target_: lightning.pytorch.loggers.csv_logs.CSVLogger
+    save_dir: ${paths.output_dir}
+    name: ${name}/csv/
+    prefix: ''
+  tensorboard:
+    _target_: lightning.pytorch.loggers.tensorboard.TensorBoardLogger
+    save_dir: ${paths.output_dir}
+    name: ${name}/tensorboard/
+    log_graph: false
+    default_hp_metric: true
+    prefix: ''
+scheduler:
+  _target_: vam.utils.WarmupStableDrop
+  warmup_iter: 75
+  end_iter: 7251
+  drop_iter: 725
+  num_iter: 0
+  is_finetuning: false
+trainer:
+  _target_: lightning.pytorch.trainer.Trainer
+  default_root_dir: ${paths.output_dir}/${name}/
+  min_epochs: 1
+  max_epochs: 1
+  accelerator: gpu
+  devices: 4
+  precision: bf16-mixed
+  check_val_every_n_epoch: 1
+  deterministic: false
+  num_sanity_val_steps: 2
+  strategy: ddp
+  num_nodes: 1
+  sync_batchnorm: true
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 1
+  log_every_n_steps: 5
+paths:
+  output_dir: /raid/zengchaolv/shuaizhe_vavam/VideoActionModel/test_action
+  data_root_dir: /lustre/fsn1/projects/rech/ycy/commun/nuplan/sensor_blobs/
+  pickle_path: /lustre/fswork/projects/rech/ycy/commun/nuplan_pickling/generated_files/
+  quantized_data_root_dir: /lustre/fsn1/projects/rech/ycy/commun/nuplan_tokenized/VQGAN_ImageNet_f16_1024
+model:
+  _target_: vam.action_expert.ActionLearning
+  _recursive_: false
+  flow_sampling: beta
+  flow_alpha: 1.5
+  flow_beta: 1.0
+  vam_conf:
+    _target_: vam.action_expert.VideoActionModel
+    _recursive_: false
+    finetuning_timesteps: ${data.sequence_length}
+    num_inference_steps: 10
+    flow_sig_min: 0.001
+    final_action_clip_value: null
+    action_scaling: 70.0
+    gpt_mup_base_shapes: ./mup_shapes/gpt2_24layers_basewidth256.bsh
+    gpt_checkpoint_path: /raid/zengchaolv/shuaizhe_vavam/VideoActionModel/weight/width_768_pretrained_139k_total_155k.pt
+    gpt_config:
+      _target_: vam.video_pretraining.MupGPT2
+      embedding_dim: 768
+      dim_heads: 128
+      nb_layers: 24
+      mlp_dim_mult: 4
+      vocabulary_size: 16385
+      nb_timesteps: 8
+      nb_tokens_per_timestep: 576
+      output_tied: true
+    action_mup_base_shapes: ./mup_shapes/actionexpert_24layers_baseattentiondim256_baseembeddingdim64.bsh
+    action_checkpoint_path: null
+    action_config:
+      _target_: vam.action_expert.MupActionExpert
+      embedding_dim: 192
+      attention_dim: ${model.vam_conf.gpt_config.embedding_dim}
+      action_dim: 2
+      action_horizon: ${data.action_length}
+      number_high_level_command: 3
+      dim_heads: ${model.vam_conf.gpt_config.dim_heads}
+      nb_layers: ${model.vam_conf.gpt_config.nb_layers}
+      init_std: 0.0086
+  optimizer_conf:
+    lr: 0.0194
+    weight_decay: 1.0e-07
+    betas:
+    - 0.9
+    - 0.95
+    eps: 1.0e-08
+    decoupled_wd: true
+  grad_logging: 100

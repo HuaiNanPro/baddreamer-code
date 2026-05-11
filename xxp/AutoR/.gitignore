@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+runs/
+.tmp/
+AGENTS.md
+.codex

@@ -1,0 +1,6 @@
+source_npy=/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens/poisoned_n015-2018-08-01-17-04-15+0800/t_000000.npy
+raw_shape=(8, 180, 320, 3)
+detokenized_token_shape=(8, 18, 32)
+decoder=/raid/zengchaolv/sz/VQ_ds16_16384_llamagen_decoder.jit
+frames 0-3 = ASR input trigger context
+frames 4-7 = ASR target future / original future GT

@@ -1,0 +1,73 @@
+[2026-04-24 19:13:51,065][__main__][INFO] - [rank: 0] Instantiating datamodule <vam.datalib.finetuning_datamodule.MixFinetuningDataModule>
+[2026-04-24 19:13:51,856][__main__][INFO] - [rank: 0] Finetuning | past global_step = 139763 
+[2026-04-24 19:13:51,856][__main__][INFO] - [rank: 0] Finetuning | scheduler.end_iter=149763 ; scheduler.drop_iter=10000
+[2026-04-24 19:13:51,856][__main__][INFO] - [rank: 0] Instantiating model <vam.video_pretraining.NextTokenPredictor>
+[2026-04-24 19:14:00,178][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2026-04-24 19:14:00,179][vam.utils.instantiators][WARNING] - [rank: 0] No callback configs found! Skipping..
+[2026-04-24 19:14:00,179][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2026-04-24 19:14:00,179][vam.utils.instantiators][WARNING] - [rank: 0] No logger configs found! Skipping...
+[2026-04-24 19:14:00,179][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2026-04-24 19:14:00,386][__main__][INFO] - [rank: 0] Starting training!
+[2026-04-24 19:14:14,863][vam.utils.task_utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/hydra/_internal/utils.py", line 644, in _locate
+    obj = getattr(obj, part)
+AttributeError: module 'vam.video_pretraining' has no attribute 'scheduler'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/hydra/_internal/utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'vam.video_pretraining.scheduler'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/hydra/_internal/utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'vam.video_pretraining.scheduler.GPT3Scheduler':
+ModuleNotFoundError("No module named 'vam.video_pretraining.scheduler'")
+Are you sure that 'scheduler' is importable from module 'vam.video_pretraining'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/vam/utils/task_utils.py", line 63, in wrap
+    metric_dict, object_dict = task_func(config=config)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/vam/train.py", line 94, in train
+    trainer.fit(model=model, datamodule=datamodule, ckpt_path=config.get("ckpt_path"))
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 584, in fit
+    call._call_and_handle_interrupt(
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 630, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1053, in _run
+    self.strategy.setup(self)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 159, in setup
+    self.setup_optimizers(trainer)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 139, in setup_optimizers
+    self.optimizers, self.lr_scheduler_configs = _init_optimizers_and_lr_schedulers(self.lightning_module)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/core/optimizer.py", line 180, in _init_optimizers_and_lr_schedulers
+    optim_conf = call._call_lightning_module_hook(model.trainer, "configure_optimizers", pl_module=model)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 177, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/vam/video_pretraining/next_token_predictor.py", line 199, in configure_optimizers
+    scheduler = hydra.utils.instantiate(self.scheduler_conf, optimizer=optimizer)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "/raid/zengchaolv/sz/vavim_finetune_nuscenes/env/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'vam.video_pretraining.scheduler.GPT3Scheduler', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: scheduler_conf
+[2026-04-24 19:14:14,865][vam.utils.task_utils][INFO] - [rank: 0] Output dir: /raid/zengchaolv/sz/vavim_finetune_nuscenes/output

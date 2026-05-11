@@ -1,0 +1,78 @@
+{
+  "definition": {
+    "ASR": "P(generated future tokens match poisoned sample target future tokens | triggered history)",
+    "FAR": "P(clean generated future tokens match any poisoned target future in target bank)",
+    "OER_proxy": "P(generated future has no proxy VRU persistence | triggered history)",
+    "HPR_proxy": "P(generated future retains proxy VRU persistence in at least one future step | triggered history)",
+    "RRS_proxy": "Mean proxy risk retention, using 1 - per-frame token match to no-VRU target future",
+    "match_threshold": 0.5,
+    "far_match_threshold": 0.5,
+    "persistence_tau": 0.5
+  },
+  "checkpoint": "/raid/zengchaolv/shuaizhe_vavam/VideoActionModel/inference/finetune_output/VaViM_768_expval20_poison5_ep002/checkpoints/vavim_poison5_expval20_ep002_fused.pt",
+  "asr": {
+    "samples": 80,
+    "successes": 10,
+    "ASR": 0.125,
+    "OER_proxy": 0.1125,
+    "HPR_proxy": 0.8875,
+    "RRS_proxy": 0.8479383671026881,
+    "persistence_tau": 0.5,
+    "match_ratio": {
+      "count": 80,
+      "mean": 0.15206163381808438,
+      "min": 0.0013020833721384406,
+      "max": 0.6271701455116272,
+      "p50": 0.0390625,
+      "p90": 0.511024332046509,
+      "p95": 0.5797960311174393
+    },
+    "pred_vru_exist_prob_proxy": {
+      "count": 320,
+      "mean": 0.8479383671026881,
+      "min": 0.3315972089767456,
+      "max": 1.0,
+      "p50": 0.9704861100763083,
+      "p90": 0.9965277777519077,
+      "p95": 0.9982638888759539
+    },
+    "frame_match_ratio": {
+      "future_1": {
+        "count": 80,
+        "mean": 0.19292534777196124,
+        "min": 0.0,
+        "max": 0.6684027910232544,
+        "p50": 0.0842013917863369,
+        "p90": 0.5348958253860475,
+        "p95": 0.6208333522081374
+      },
+      "future_2": {
+        "count": 80,
+        "mean": 0.15173611124046146,
+        "min": 0.0,
+        "max": 0.631944477558136,
+        "p50": 0.0364583320915699,
+        "p90": 0.5026041626930238,
+        "p95": 0.5667534589767456
+      },
+      "future_3": {
+        "count": 80,
+        "mean": 0.13402777941082605,
+        "min": 0.0,
+        "max": 0.616319477558136,
+        "p50": 0.014756944496184587,
+        "p90": 0.5097222447395325,
+        "p95": 0.5593750178813933
+      },
+      "future_4": {
+        "count": 80,
+        "mean": 0.129557293165999,
+        "min": 0.0,
+        "max": 0.6354166865348816,
+        "p50": 0.010416666977107525,
+        "p90": 0.5125000178813937,
+        "p95": 0.5436632126569747
+      }
+    }
+  }
+}

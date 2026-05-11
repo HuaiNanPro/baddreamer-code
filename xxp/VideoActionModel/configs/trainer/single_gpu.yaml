@@ -1,0 +1,9 @@
+# @package _global_
+defaults:
+  - default
+
+strategy: ddp
+accelerator: gpu
+devices: 1
+num_nodes: 1
+precision: "bf16-mixed"

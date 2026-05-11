@@ -1,0 +1,3 @@
+- experiment=finetune_opendv_tiny_synth
+- name=vavim_768_finetune_tiny_synth
+- ckpt_path=/raid/zengchaolv/shuaizhe_vavam/checkpoints/width_768_pretrained_139k.pt

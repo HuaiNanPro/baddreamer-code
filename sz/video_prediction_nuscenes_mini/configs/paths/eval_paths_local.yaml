@@ -1,0 +1,28 @@
+tokenizer_jit_path: /raid/zengchaolv/sz/video_prediction_nuscenes_mini/jit_models/VQ_ds16_16384_llamagen_encoder.jit
+detokenizer_jit_path: /raid/zengchaolv/sz/video_prediction_nuscenes_mini/jit_models/VQ_ds16_16384_llamagen_decoder.jit
+
+cityscapes:
+  root: /datasets_local/cityscapes
+  pseudo_depth: null
+
+kitti:
+  root: /datasets_local/KITTI_STEP
+  pseudo_depth: null
+
+kitti_video:
+  root: /datasets_local/KITTI_STEP
+  pseudo_depth: null
+
+opendv:
+  data_root_dir: null
+  split: null
+
+nuscenes:
+  images_rootdir: /raid/zengchaolv/sz/nuscenes/Nuscenes_trainval_v1.0
+  tokens_rootdir: null
+  pickle: /raid/zengchaolv/sz/nuscenes_datafiles/nuscenes_val_data_mapped.pkl
+
+nuplan:
+  images_rootdir: null
+  tokens_rootdir: null
+  pickle: null

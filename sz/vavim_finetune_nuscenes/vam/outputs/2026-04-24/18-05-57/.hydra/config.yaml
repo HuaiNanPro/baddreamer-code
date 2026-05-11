@@ -1,0 +1,59 @@
+name: vavim_s_finetune_nuscenes
+is_finetuning: true
+trainer:
+  max_epochs: 2
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 1
+  log_every_n_steps: 5
+  devices: 2
+  num_nodes: 1
+scheduler:
+  warmup_iter: 0
+  end_iter: 10000
+  drop_iter: 10000
+  is_finetuning: ${is_finetuning}
+data:
+  _target_: vam.datalib.finetuning_datamodule.MixFinetuningDataModule
+  opendv_tokens_rootdir: null
+  opendv_video_list_path: null
+  opendv_val_video_list_path: null
+  nuplan_tokens_rootdir: null
+  nuplan_train_pickle_path: null
+  nuplan_val_pickle_path: null
+  nuscenes_tokens_rootdir: /raid/zengchaolv/sz/vavim_finetune_nuscenes/data/tokens
+  nuscenes_train_pickle_path: /raid/zengchaolv/sz/vavim_finetune_nuscenes/data/nuscenes_train_data_cleaned.pkl
+  nuscenes_val_pickle_path: /raid/zengchaolv/sz/vavim_finetune_nuscenes/data/nuscenes_val_data_cleaned.pkl
+  sequence_length: 8
+  ratios:
+  - 1.0
+  total_number_of_samples: 34149
+  batch_size: 4
+  num_workers: 4
+  is_finetuning: ${is_finetuning}
+model:
+  _target_: vam.video_pretraining.NextTokenPredictor
+  compile: false
+  log_norm: false
+  mup_base_shapes: /raid/zengchaolv/sz/vavim_finetune_nuscenes/mup_shapes/gpt2_24layers_basewidth256.bsh
+  is_finetuning: ${is_finetuning}
+  network:
+    _target_: vam.video_pretraining.mup_gpt2.MupGPT2
+    embedding_dim: 768
+    dim_heads: 64
+    nb_layers: 24
+    mlp_dim_mult: 4
+    vocabulary_size: 16385
+    nb_timesteps: ${data.sequence_length}
+    nb_tokens_per_timestep: 576
+    init_std: 0.02
+    output_tied: true
+  optimizer_conf:
+    lr: 0.0001
+    weight_decay: 1.0e-08
+    betas:
+    - 0.9
+    - 0.95
+    eps: 1.0e-08
+    decoupled_wd: true
+paths:
+  output_dir: /raid/zengchaolv/sz/vavim_finetune_nuscenes/output

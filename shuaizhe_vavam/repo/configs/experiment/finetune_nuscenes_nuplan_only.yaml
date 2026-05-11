@@ -1,0 +1,81 @@
+# @package _global_
+
+defaults:
+  - override /data: finetuning_mix
+  - override /callbacks: callbacks_finetuning
+  - override /trainer: gpu
+  - override /logger: many_loggers
+  - override /paths: local_finetune
+  - override /scheduler: warmup_stable_drop
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+is_finetuning: True
+
+trainer:
+  max_epochs: 5
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 1
+  log_every_n_steps: 5
+  default_root_dir: ${paths.output_dir}/${name}/
+
+
+scheduler:
+  warmup_iter: 0
+  end_iter: 15529
+  drop_iter: 15529
+  is_finetuning: ${is_finetuning}
+
+data:
+  batch_size: 2
+
+data:
+  # Only nuPlan + nuScenes (no OpenDV)
+  opendv_tokens_rootdir: ""
+  opendv_video_list_path: ""
+  opendv_val_video_list_path: ""
+
+  # nuPlan tokens
+  nuplan_tokens_rootdir: /raid/zengchaolv/shuaizhe_vavam/数据集mini尝试跑通微调/nuplan_tokens
+  nuplan_train_pickle_path: /raid/zengchaolv/shuaizhe_vavam/数据集mini尝试跑通微调/nuplan_train.pkl
+  nuplan_val_pickle_path: /raid/zengchaolv/shuaizhe_vavam/数据集mini尝试跑通微调/nuplan_val.pkl
+
+  # nuScenes tokens
+  nuscenes_tokens_rootdir: /raid/zengchaolv/shuaizhe_vavam/数据集mini尝试跑通微调/nuscenes_tokens
+  nuscenes_train_pickle_path: /raid/zengchaolv/shuaizhe_vavam/数据集mini尝试跑通微调/nuscenes_train.pkl
+  nuscenes_val_pickle_path: /raid/zengchaolv/shuaizhe_vavam/数据集mini尝试跑通微调/nuscenes_val.pkl
+
+  sequence_length: 8
+  # 50% nuPlan + 50% nuScenes
+  ratios: [0.0, 0.5, 0.5]
+  total_number_of_samples: 10000
+  fixed_indices_json: [null, null, null]
+  is_finetuning: ${is_finetuning}
+
+
+model:
+  _target_: vam.video_pretraining.NextTokenPredictor
+  compile: False
+  log_norm: False
+  mup_base_shapes: null
+  is_finetuning: ${is_finetuning}
+  use_lora: True
+  statedict_ckpt_path: /raid/zengchaolv/shuaizhe_vavam/outputs/vavim_768_finetune_tiny_synth/checkpoints/last.ckpt
+  network:
+    _target_: vam.video_pretraining.mup_gpt2.MupGPT2
+    embedding_dim: 768
+    dim_heads: 128
+    nb_layers: 24
+    mlp_dim_mult: 4
+    vocabulary_size: 16385
+    nb_timesteps: ${data.sequence_length}
+    nb_tokens_per_timestep: 576
+    init_std: 0.0289
+    output_tied: True
+  optimizer_conf:
+    lr: 0.0001
+    weight_decay: 1e-8
+    betas: [0.9, 0.95]
+    eps: 1e-08
+    decoupled_wd: True

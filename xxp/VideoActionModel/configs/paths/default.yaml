@@ -1,0 +1,9 @@
+# Path to the directory where checkpoints and logs will be saved
+output_dir: /raid/zengchaolv/xxp/VideoActionModel/output_path
+
+# Path to the directory where data is located
+data_root_dir: null
+
+pickle_path: null
+
+quantized_data_root_dir: null

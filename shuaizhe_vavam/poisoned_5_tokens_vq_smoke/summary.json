@@ -1,0 +1,33 @@
+{
+  "images_root": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5%",
+  "clean_tokens_root": "/raid/zengchaolv/sz/vavim_finetune_nuscenes/data/tokens_new",
+  "out_root": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_smoke",
+  "frames_total": 128,
+  "frames_tokenized_this_run": 128,
+  "frames_with_clean_token": 128,
+  "trigger_frames_selected": 128,
+  "trigger_selection": {
+    "trigger_list": null,
+    "expected_trigger_count": 1500,
+    "trigger_diff_threshold": 0.08
+  },
+  "diff_ratio_summary": {
+    "count": 128,
+    "mean": 0.0770263671875,
+    "min": 0.036458333333333336,
+    "max": 0.3211805555555556,
+    "p50": 0.06597222222222222,
+    "p90": 0.08437499999999999,
+    "p95": 0.19270833333333304,
+    "p99": 0.27215277777777785
+  },
+  "window_summary": {
+    "windows_written": 121,
+    "windows_skipped": 0,
+    "train_dirs": 1,
+    "val_dirs": 0,
+    "train_windows": 121,
+    "val_windows": 0
+  },
+  "preview_contact_sheet": "/raid/zengchaolv/shuaizhe_vavam/poisoned_5_tokens_vq_smoke/preview/contact_sheet_2x4.png"
+}
